@@ -1,3 +1,46 @@
+GIT
+  remote: git://github.com/maestrano/mno-enterprise.git
+  revision: ae009202f036bf0d0cf22994114c0ee39578d66b
+  specs:
+    mno-enterprise (3.0.1)
+      mno-enterprise-api (= 3.0.1)
+      mno-enterprise-core (= 3.0.1)
+      mno-enterprise-frontend (= 3.0.1)
+    mno-enterprise-api (3.0.1)
+      coffee-rails (~> 4.1)
+      haml (~> 4.0)
+      health_check (~> 1.5)
+      httparty (~> 0.13.7)
+      jbuilder (~> 2.2.16)
+      mno-enterprise-core (= 3.0.1)
+      sprockets-rails (~> 2.3)
+    mno-enterprise-core (3.0.1)
+      cancancan (~> 1.10)
+      config (~> 1.0.0)
+      countries (~> 0.11.3)
+      deepstruct (~> 0.0.7)
+      devise (~> 3.0)
+      faraday_middleware (~> 0.10.0)
+      figaro
+      her (~> 0.7.3)
+      jwt (~> 1.4)
+      mandrill-api (~> 1.0, >= 1.0.53)
+      money (~> 6.5, >= 6.5.1)
+      prawn (~> 2.0, >= 2.0.1)
+      prawn-table (~> 0.2.1)
+      rails (~> 4.2, >= 4.2.0)
+      redcarpet (~> 3.3, >= 3.3.3)
+      sanitize (~> 4.0)
+    mno-enterprise-frontend (3.0.1)
+      haml-rails (~> 0.9)
+      jquery-rails (~> 4.0)
+      less-rails (~> 2.7)
+      mno-enterprise-api (= 3.0.1)
+      mno-enterprise-core (= 3.0.1)
+      ngannotate-rails (~> 1.0)
+      rack-rewrite
+      therubyracer (~> 0.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -153,44 +196,6 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    mno-enterprise (3.0.1)
-      mno-enterprise-api (= 3.0.1)
-      mno-enterprise-core (= 3.0.1)
-      mno-enterprise-frontend (= 3.0.1)
-    mno-enterprise-api (3.0.1)
-      coffee-rails (~> 4.1)
-      haml (~> 4.0)
-      health_check (~> 1.5)
-      httparty (~> 0.13.7)
-      jbuilder (~> 2.2.16)
-      mno-enterprise-core (= 3.0.1)
-      sprockets-rails (~> 2.3)
-    mno-enterprise-core (3.0.1)
-      cancancan (~> 1.10)
-      config (~> 1.0.0)
-      countries (~> 0.11.3)
-      deepstruct (~> 0.0.7)
-      devise (~> 3.0)
-      faraday_middleware (~> 0.10.0)
-      figaro
-      her (~> 0.7.3)
-      jwt (~> 1.4)
-      mandrill-api (~> 1.0, >= 1.0.53)
-      money (~> 6.5, >= 6.5.1)
-      prawn (~> 2.0, >= 2.0.1)
-      prawn-table (~> 0.2.1)
-      rails (~> 4.2, >= 4.2.0)
-      redcarpet (~> 3.3, >= 3.3.3)
-      sanitize (~> 4.0)
-    mno-enterprise-frontend (3.0.1)
-      haml-rails (~> 0.9)
-      jquery-rails (~> 4.0)
-      less-rails (~> 2.7)
-      mno-enterprise-api (= 3.0.1)
-      mno-enterprise-core (= 3.0.1)
-      ngannotate-rails (~> 1.0)
-      rack-rewrite
-      therubyracer (~> 0.12)
     money (6.7.0)
       i18n (>= 0.6.4, <= 0.7.0)
       sixarm_ruby_unaccent (>= 1.1.1, < 2)
@@ -339,7 +344,7 @@ DEPENDENCIES
   brakeman
   bundler-audit
   factory_girl_rails
-  mno-enterprise (~> 3.0)
+  mno-enterprise!
   newrelic_rpm
   puma
   rails (~> 4.2.6)
