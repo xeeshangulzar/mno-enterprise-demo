@@ -6,6 +6,9 @@ gem 'rails', '~> 4.2.6'
 # Bundle edge Mnoe instead:
 gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise'
 
+# Transactional emails
+gem 'sparkpost', '~> 0.1.4'
+
 # Use puma as the app server
 gem 'puma'
 
