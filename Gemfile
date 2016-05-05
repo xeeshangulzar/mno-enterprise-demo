@@ -4,7 +4,7 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', github: 'maestrano/mno-enterprise'
+gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise'
 
 # Use puma as the app server
 gem 'puma'

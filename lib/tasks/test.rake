@@ -2,11 +2,9 @@
 begin
   require 'bundler/audit/task'
   require 'rubocop/rake_task'
-  require 'rspec/core/rake_task'
 
   Bundler::Audit::Task.new
   RuboCop::RakeTask.new
-  RSpec::Core::RakeTask.new(:spec)
 rescue LoadError
 end
 
@@ -16,7 +14,6 @@ namespace :test do
     Rake::Task['bundle:audit'].invoke
     Rake::Task['brakeman:run'].invoke
     Rake::Task['rubocop'].invoke
-    Rake::Task['spec'].invoke
   end
 end
 

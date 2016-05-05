@@ -184,5 +184,4 @@ MnoEnterprise.configure do |config|
   #   'sales/forecast',
   #   'sales/performance'
   # ]
-
 end
