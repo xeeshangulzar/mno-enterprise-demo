@@ -17,4 +17,4 @@ Open http://localhost:7000/ in your browser
 ## What's in it?
 
 * Generic mno-enterprise host project, generated using the [rails app template](https://github.com/maestrano/mno-enterprise/tree/master/rails-template)
-* [Custom fonts]()
+* [Custom fonts](https://github.com/maestrano/mno-enterprise#adding-a-custom-font)
