@@ -73,11 +73,6 @@ MnoEnterprise.configure do |config|
   # config.mno_api_host = "https://api-enterprise.maestrano.com"
   config.mno_api_host = "#{Settings.mno.protocol}://#{Settings.mno.host}"
 
-  # Configure private API host if defined
-  if Settings.mno.private_protocol && Settings.mno.private_host
-    config.mno_api_private_host = "#{Settings.mno.private_protocol}://#{Settings.mno.private_host}"
-  end
-
   # Configure the API root path
   # config.mno_api_root_path = "/v1"
   config.mno_api_root_path = Settings.mno.paths.root
