@@ -4,7 +4,7 @@ Generic mno-enterprise express project
 
 ## Getting started
 
-Update `config/settings/development.yml` and `config/settings/development.yml` with the configuration you've been provided with.
+Update `config/settings/development.yml` and `config/application.yml` with the configuration you've been provided with.
 
 
 ```
