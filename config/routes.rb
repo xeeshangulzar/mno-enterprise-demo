@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     mount MnoEnterprise::Engine, at: '/mnoe', as: :mno_enterprise
   end
 
-  root to: redirect(MnoEnterprise.router.dashboard_path)
+  root to: redirect('mnoe/auth/users/sign_in')
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
