@@ -3,4 +3,4 @@ impac:
   host: api-impac-uat.maestrano.io
 mno:
   protocol: https
-  host: uat.maestrano.io
+  host: api-hub-uat.maestrano.io
