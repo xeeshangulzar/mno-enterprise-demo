@@ -28,5 +28,5 @@ bundle update mno-enterprise
 # Rebuild the admin-frontend
 rm -rf tmp/build tmp/cache
 bin/rake mnoe:admin:dist
-bin/rake mnoe:frontend:dist
+bin/rake mnoe:frontend:update
 ```
