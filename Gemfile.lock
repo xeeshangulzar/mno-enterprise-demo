@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/maestrano/mno-enterprise
-  revision: 9228c82eb3e2a3efd6a2728a99840e4f28e1ac8d
+  revision: 3bce005951d37041e424bd03b0c6151d4dbcbc23
   specs:
     mno-enterprise (3.1.0)
       mno-enterprise-api (= 3.1.0)
@@ -257,7 +257,7 @@ GEM
     rake (11.2.2)
     redcarpet (3.3.4)
     ref (2.0.0)
-    responders (2.2.0)
+    responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
