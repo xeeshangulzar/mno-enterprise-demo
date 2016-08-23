@@ -191,7 +191,7 @@ html, body {
 // Company select box (top right)
 //--------------------------------------
 @dashboard-cpy-select-bg-color:                 @bg-inverse-intense-color;
-@dashboard-cpy-select-border-radius:            0px;
+@dashboard-cpy-select-border-radius:            0px 0px 0px 10px;
 @dashboard-cpy-select-padding:                  15px 25px;
 
 @dashboard-cpy-select-header-text-color:        @bg-inverse-color;
@@ -506,6 +506,14 @@ html, body {
 #dashboard {
   margin-left: @menu-left-width;
 
+  .container {
+    position: relative;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    padding-top: 40px;
+  }
+
   /* Fix the container width if the screen is sm+ */
   @media screen and (min-width: @screen-sm-min) {
     .container {
@@ -525,11 +533,6 @@ html, body {
     .container {
       width: @container-lg - @menu-left-width;
     }
-  }
-
-  @media (max-width: @screen-xs-max) {
-    padding-top: 40px;
-    margin-left: 0;
   }
 }
 
