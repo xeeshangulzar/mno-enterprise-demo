@@ -23,6 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 # Ops gems
 group :uat, :production do
   gem 'newrelic_rpm'
+  gem 'rails_12factor'
 end
 
 # CI gems

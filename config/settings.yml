@@ -7,3 +7,5 @@ mno:
 frontend_host:
 pricing:
   enabled: true
+dock:
+  enabled: true
