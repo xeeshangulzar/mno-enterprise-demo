@@ -17,12 +17,21 @@ Bundler.require(*Rails.groups)
 
 module MnoEnterpriseDemo
   class Application < Rails::Application
-        config.generators do |g|
+    config.generators do |g|
       g.test_framework :rspec, fixture: false
       g.view_specs false
       g.helper_specs false
     end
 
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :authentication => :plain,
+      address: ENV['SMTP_HOST'],
+      port: ENV['SMTP_PORT'],
+      domain: ENV['SMTP_DOMAIN'],
+      user_name: ENV['SMTP_USERNAME'],
+      password: ENV['SMTP_PASSWORD']
+    }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

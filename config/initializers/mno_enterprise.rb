@@ -25,7 +25,7 @@ MnoEnterprise.configure do |config|
   # Emailing
   #===============================================
   # Adapter used to send emails
-  config.mail_adapter = :sparkpost
+  config.mail_adapter = :smtp
 
   # Support email address
   config.support_email = 'support@example.com'
