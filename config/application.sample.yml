@@ -4,6 +4,9 @@
 tenant_id: my_tenant_id
 tenant_key: my_tenant_access_key
 
+# Websockets via Pusher for Impac!
+impac_pusher_key: my_impac_pusher_key
+
 # Rails secret key
 SECRET_KEY_BASE: e2bff2d7bb2e338c36e80162a10041d7411f694a956de90b5c3fac637d84e67639bdc80d12be3a675438f239af5e88afc68f01d1d4497ddd981c1db0a6b73d08
 
