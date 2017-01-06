@@ -1,0 +1,8 @@
+{
+  "name": "mno-enterprise-demo",
+  "private": true,
+  "dependencies": {
+    "mno-enterprise-angular": "git+https://git@github.com/maestrano/mno-enterprise-angular.git#1.0.x",
+    "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.4.x"
+  }
+}
