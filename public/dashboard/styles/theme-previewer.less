@@ -161,7 +161,7 @@ html, body {
 @login-box-grid-position:            { margin-top: 80px; .make-sm-column(4); .make-sm-column-offset(4); };
 
 @login-box-corners:                  0px;
-@login-box-title-color:              @decorator-main-color;
+@login-box-title-color:              @bg-on-bg-inverse-color;
 @login-box-title:                    { text-transform: uppercase; };
 @login-box-title-display-box-arrow:  false;
 
@@ -235,13 +235,6 @@ html, body {
 @dashboard-cpy-select-link-hover-color:         @text-inverse-link-hover-color;
 @dashboard-cpy-select-link-hover-bg-color:      @bg-inverse-link-hover;
 @dashboard-cpy-select-link-create-text-color:   @text-inverse-strong-color;
-@dashboard-cpy-select-link-create-color:        @decorator-alt-color;
-@dashboard-cpy-select-link-admin-color:         @elem-positive-color;
-
-@dashboard-cpy-select-switch-btn-color:         @dashboard-cpy-select-header-text-color;
-@dashboard-cpy-select-switch-btn-bg-color:      @dashboard-cpy-select-bg-color;
-@dashboard-cpy-select-switch-btn-icon:          { .icon-fa(caret-down); }; //pass a ruleset
-@dashboard-cpy-select-switch-btn-icon-active:   { .icon-fa(caret-up); }; //pass a ruleset
 
 // Loaders
 //--------------------------------------
@@ -269,9 +262,11 @@ html, body {
 /*-----------------------------------------------------------------------*/
 /*                      Dashboard > My account Section                   */
 /*-----------------------------------------------------------------------*/
-@dashboard-account-tabs-bg-color:                    @bg-inverse-color;
-@dashboard-account-tabs-text-color:                  @text-strong-color;
-@dashboard-account-panel-bg-color:                   @bg-inverse-color;
+@dashboard-account-tabs-bg-color:                    @bg-on-bg-inverse-color;
+@dashboard-account-tabs-text-color:                  @text-inverse-color;
+@dashboard-account-panel-header-bg-color:            @bg-inverse-color;
+@dashboard-account-panel-body-bg-color:              @bg-inverse-color;
+@dashboard-account-panel-header-text-color:          @text-inverse-color;
 @dashboard-account-panel-text-color:                 @text-strong-color;
 @dashboard-account-inline-text-color-checked:        #33d375;
 @dashboard-account-inline-text-color-unchecked:      @elem-cozy-color;
@@ -281,7 +276,7 @@ html, body {
 /*-----------------------------------------------------------------------*/
 // Tab Heading
 //--------------------------------------
-@dashboard-cpy-tabs-bg-color:                    @decorator-main-color;
+@dashboard-cpy-tabs-bg-color:                    @bg-inverse-color;
 @dashboard-cpy-tabs-text-color:                  @text-inverse-color;
 @dashboard-cpy-tabs-border-radius:               2px;
 
@@ -296,12 +291,17 @@ html, body {
 
 // Tab Content
 //--------------------------------------
+@dashboard-cpy-tabcontent-header-bg-color:       @bg-inverse-color;
+@dashboard-cpy-tabcontent-body-bg-color:         @bg-inverse-color;
 @dashboard-cpy-tabcontent-bg-color:              @dashboard-cpy-tabs-bg-color;
 
 // Teams section
 //--------------------------------------
 @dashboard-cpy-teams-matrix-bg-color:            @bg-inverse-color;
 @dashboard-cpy-teams-matrix-border-color:        @bg-inverse-color;
+@dashboard-cpy-teams-matrix-text-color:          @text-inverse-color;
+@dashboard-cpy-teams-matrix-text-hover-color:    @text-inverse-color;
+@dashboard-cpy-teams-matrix-text-edit-color:     @text-strong-color;
 
 /*-----------------------------------------------------------------------*/
 /*                              Dock                                     */
@@ -432,7 +432,9 @@ html, body {
 /*-----------------------------------------------------------------------*/
 /*                     Responsive Table (cell table)                     */
 /*-----------------------------------------------------------------------*/
-@table-cell-row-spacing:               10px;
+@table-cell-header-row-spacing:        10px;
+@table-cell-header-row-padding:        3px;
+@table-cell-row-spacing:               0px;
 @table-cell-row-padding:               3px;
 
 @table-cell-header-text-size:          12px;
@@ -866,19 +868,6 @@ dashboard-company-selectbox {
       border-radius: 0;
     }
 
-    // Change company button
-    .btn.switch-company {
-      color: @dashboard-cpy-select-header-text-color;
-      background-color: @dashboard-cpy-select-switch-btn-bg-color;
-      margin-left: 15px;
-    }
-    .btn.switch-company i {
-      @dashboard-cpy-select-switch-btn-icon();
-    }
-    .btn.switch-company i.active {
-      @dashboard-cpy-select-switch-btn-icon-active();
-    }
-
     // Section always visible
     .box-header {
       cursor: pointer;
@@ -978,7 +967,7 @@ dashboard-company-selectbox {
           text-decoration: none;
           color: @dashboard-cpy-select-link-hover-color;
           background-color: @dashboard-cpy-select-link-hover-bg-color;
-          border-bottom-left-radius: 10px;
+          border-bottom-left-radius: 5px;
         }
 
         // Icon on the side of the link
@@ -1323,8 +1312,7 @@ mno-password {
 
   .panel-group > .panel,
   .panel-group > .panel > .panel-heading {
-    color: @dashboard-account-tabs-text-color;
-    background-color: @dashboard-account-panel-bg-color;
+    background-color: @dashboard-account-panel-body-bg-color;
     border: none;
     box-shadow: none;
   }
@@ -1351,8 +1339,9 @@ mno-password {
   }
 
   .panel-group .panel .panel-heading {
+    color: @dashboard-account-panel-header-text-color;
     padding: 0;
-    background-color: @dashboard-account-panel-bg-color;
+    background-color: @dashboard-account-panel-header-bg-color;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 
@@ -1654,7 +1643,19 @@ input.ng-dirty.ng-invalid {
 // see templates/dashboard/organization/invoices.html
 // for an example
 //-----------------------------------------
-.table-cell .th-row,
+.table-cell .th-row {
+  margin-top: @table-cell-header-row-spacing;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: @table-cell-header-row-padding;
+  padding-bottom: @table-cell-header-row-padding;
+  color: @table-cell-header-text-color;
+  background-color: @table-cell-header-bg-color;
+  font-size: @table-cell-header-text-size;
+  line-height: (@table-cell-header-text-size + @table-cell-row-padding)*2;
+  @table-cell-header-additional-rule();
+}
+
 .table-cell .td-row {
   margin-top: @table-cell-row-spacing;
   margin-bottom: @table-cell-row-spacing;
@@ -1662,14 +1663,6 @@ input.ng-dirty.ng-invalid {
   margin-right: 0px;
   padding-top: @table-cell-row-padding;
   padding-bottom: @table-cell-row-padding;
-}
-
-.table-cell .th-row {
-  color: @text-color;
-  background-color: @table-cell-header-bg-color;
-  font-size: @table-cell-header-text-size;
-  line-height: (@table-cell-header-text-size + @table-cell-row-padding)*2;
-  @table-cell-header-additional-rule();
 }
 
 .table-cell .td-row {
@@ -2055,12 +2048,12 @@ form.editable-wrap .editable-controls input {
   }
 
   .panel-group .panel .panel-heading {
-    background-color: @dashboard-cpy-tabcontent-bg-color;
+    background-color: @dashboard-cpy-tabcontent-header-bg-color;
     border: none;
   }
 
   .panel-group .panel-collapse > .panel-body {
-    background-color: @dashboard-cpy-tabcontent-bg-color;
+    background-color: @dashboard-cpy-tabcontent-body-bg-color;
     border: none;
   }
 
@@ -2070,7 +2063,7 @@ form.editable-wrap .editable-controls input {
   .cc-header small div {
     display: inline-block;
     vertical-align: top;
-    
+
     i {
       display: inline-block;
       zoom: 0.40;
@@ -2292,13 +2285,24 @@ form.editable-wrap .editable-controls input {
   //-------------------------------
   .marketplace-app-card {
     background-color: @dashboard-marketplace-tile-bg-color;
-    color: rgb(51, 51, 51);
+    color: @dashboard-marketplace-tile-text-color;
     cursor: pointer;
     @dashboard-marketplace-app-card();
 
+    img.media-object {
+      max-width: 100px;
+      border: solid 1px @dashboard-marketplace-tile-img-border-color;
+      border-radius: 5px;
+    }
+
     &:hover {
       text-decoration: none;
+      color: @dashboard-marketplace-tile-hover-text-color;
       background-color: @dashboard-marketplace-tile-hover-bg-color;
+
+      img.media-object {
+        border: solid 1px @dashboard-marketplace-tile-hover-img-border-color;
+      }
     }
   }
 
@@ -2422,14 +2426,18 @@ form.editable-wrap .editable-controls input {
 
       .editable.editable-click,
       a.editable.editable-click {
-        color: @decorator-alt-color;
+        color: @dashboard-cpy-teams-matrix-text-color;
         border: none;
 
         &:hover {
-          color: @decorator-alt-color;
-          border-bottom: dashed 1px fadeout(@decorator-alt-color,60%);
+          color: @dashboard-cpy-teams-matrix-text-hover-color;
+          border-bottom: dashed 1px @dashboard-cpy-teams-matrix-text-hover-color;
         }
       }
+    }
+
+    form.editable-wrap .editable-controls input {
+      color: @dashboard-cpy-teams-matrix-text-edit-color;
     }
   }
 
@@ -2450,64 +2458,62 @@ form.editable-wrap .editable-controls input {
   }
 
   table.permission-matrix {
-      width: 100%;
+    width: 100%;
 
-      thead > tr > th:first-child,
-      tbody > tr > td:first-child {
-        width: 20%;
+    thead > tr > th:first-child,
+    tbody > tr > td:first-child {
+      width: 20%;
+    }
+
+    tr > th.th-first {
+      text-align: left;
+    }
+
+    tr td.td-first {
+      text-align: left;
+      padding-left: 10px;
+      line-height: 52px;
+    }
+
+    thead > tr {
+      th {
+        color: @dashboard-cpy-teams-matrix-text-color;
+        text-align: center;
+        border-bottom: solid 2px darken(@dashboard-cpy-teams-matrix-border-color,5%);
+        padding-bottom: 10px;
+        vertical-align: bottom;
+        height: 95px;
       }
 
-      tr > th.th-first {
-        text-align: left;
+      th img {
+        height: 40px;
+        width: 40px;
+        margin: 10px auto;
+      }
+    }
+
+    tbody > tr {
+      td {
+        height: 60px;
+        padding: 0px;
+        text-align: center;
+        border-bottom: solid 1px darken(@dashboard-cpy-teams-matrix-border-color,5%);
       }
 
-      tr td.td-first {
-        text-align: left;
-        padding-left: 10px;
-        line-height: 52px;
+      &.btn-group-row > td {
+        border: none;
+        vertical-align: bottom;
       }
 
-      thead > tr {
-        th {
-          text-align: center;
-          border-bottom: solid 2px darken(@dashboard-cpy-teams-matrix-border-color,5%);
-          padding-bottom: 10px;
-          vertical-align: bottom;
-          height: 95px;
-        }
-
-        th img {
-          height: 40px;
-          width: 40px;
-          margin: 10px auto;
-        }
+      td.team-name .team-remove {
+        margin-left: 5px;
+        visibility: hidden;
       }
 
-      tbody > tr {
-        td {
-          height: 60px;
-          padding: 0px;
-          text-align: center;
-          border-bottom: solid 1px darken(@dashboard-cpy-teams-matrix-border-color,5%);
-        }
-
-        &.btn-group-row > td {
-          border: none;
-          vertical-align: bottom;
-        }
-
-        td.team-name .team-remove {
-          margin-left: 5px;
-          visibility: hidden;
-        }
-
-        td.team-name:hover .team-remove {
-          visibility: visible;
-        }
-
+      td.team-name:hover .team-remove {
+        visibility: visible;
       }
-
-
+    }
   }
 
   .permission-matrix-wrapper .table-right thead > tr > th,
