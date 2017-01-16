@@ -5,26 +5,12 @@ angular.module 'mnoEnterpriseAngular'
 #======================================================================================
 .config((ImpacRoutesProvider, IMPAC_CONFIG) ->
   mnoHub = IMPAC_CONFIG.paths.mnohub_api
-  impacPrefix = "/impac"
 
   data =
     mnoHub: mnoHub
-    impacPrefix: impacPrefix
     impacApi: "#{IMPAC_CONFIG.protocol}://#{IMPAC_CONFIG.host}/api"
-    dashboards:
-      index: "#{mnoHub}#{impacPrefix}/dashboards"
-    widgets:
-      index: "#{mnoHub}#{impacPrefix}/widgets"
-      create: "#{mnoHub}#{impacPrefix}/dashboards/:dashboard_id/widgets"
     kpis:
-      index: "#{mnoHub}#{impacPrefix}/kpis"
-      create: "#{mnoHub}#{impacPrefix}/dashboards/:dashboard_id/kpis"
-      update: "#{mnoHub}#{impacPrefix}/kpis/:id"
-      del: "#{mnoHub}#{impacPrefix}/kpis/:id"
-    alerts:
-      index: "#{mnoHub}#{impacPrefix}/alerts"
-      create: "#{mnoHub}#{impacPrefix}/kpis/:kpi_id/alerts"
-      del: "#{mnoHub}#{impacPrefix}/alerts/:id"
+      index: "#{mnoHub}/impac/kpis"
 
   ImpacRoutesProvider.configureRoutes(data)
 )
@@ -60,11 +46,12 @@ angular.module 'mnoEnterpriseAngular'
 #======================================================================================
 # IMPAC-LINKING: Configuring linking
 #======================================================================================
-.run((ImpacLinking, ImpacConfigSvc) ->
+.run((ImpacLinking, ImpacConfigSvc, IMPAC_CONFIG) ->
   data =
     user: ImpacConfigSvc.getUserData
     organizations: ImpacConfigSvc.getOrganizations
-    pusher_key: 'e98dfd8e4a359a7faf48'
+
+  data.pusher_key = IMPAC_CONFIG.pusher.key if IMPAC_CONFIG.pusher? && IMPAC_CONFIG.pusher.key?
 
   ImpacLinking.linkData(data)
 )
