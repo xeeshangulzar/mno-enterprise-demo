@@ -20,8 +20,8 @@ angular.module 'mnoEnterpriseAngular'
     fyEndMonth = undefined
     from = undefined
     to = undefined
-    paramsString = ""
-      .concat('sso_session=', ssoSessionId, '&')
+    paramsString = ->
+      "".concat('sso_session=', ssoSessionId, '&')
       .concat('attributes[transaction_date]=~m/~d/~Y', '&')
       .concat('attributes[transaction_number]=0', '&')
       .concat('attributes[contact_name]=0', '&')
@@ -40,7 +40,7 @@ angular.module 'mnoEnterpriseAngular'
     vm.getInvoices = ->
       promise = $http({
         method: 'GET',
-        url: exportUrl().concat('?', paramsString),
+        url: exportUrl().concat('?', paramsString()),
       }).then(
         (response) ->
           # Impac! may return errors in case of empty file
