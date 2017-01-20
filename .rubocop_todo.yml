@@ -31,7 +31,9 @@ Lint/UnusedBlockArgument:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 130
-
+  Exclude:
+    - 'app/models/mno_enterprise/impac/dashboard.rb'
+    
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/BlockComments:
