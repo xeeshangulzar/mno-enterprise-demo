@@ -15,7 +15,7 @@ angular.module 'mnoEnterpriseAngular'
 
     # Download invoices
     impacBase = "#{IMPAC_CONFIG.protocol}://#{IMPAC_CONFIG.host}/api"
-    ssoSessionId = MnoeCurrentUser.user.sso_session
+    ssoSessionId = undefined
     orgUid = undefined
     fyEndMonth = undefined
     from = undefined
@@ -38,9 +38,10 @@ angular.module 'mnoEnterpriseAngular'
     exportUrl = -> "#{impacBase}/export/#{orgUid}/invoice_with_credit_note"
 
     vm.getInvoices = ->
+      vm.invoicesUrl = exportUrl() + '?' + paramsString()
       promise = $http({
         method: 'GET',
-        url: exportUrl().concat('?', paramsString()),
+        url: vm.invoicesUrl,
       }).then(
         (response) ->
           # Impac! may return errors in case of empty file
@@ -73,6 +74,8 @@ angular.module 'mnoEnterpriseAngular'
     $scope.$watch(MnoeOrganizations.getSelectedId, (newValue, oldValue) ->
       MnoeCurrentUser.get().then(
         (response) ->
+          ssoSessionId = response.sso_session
+
           selectedOrg = _.find(response.organizations, {id: parseInt(newValue)})
 
           orgUid = selectedOrg.uid
