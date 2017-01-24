@@ -6,13 +6,6 @@ angular.module 'mnoEnterpriseAngular'
     vm.isImpacShown = false
     vm.isDockEnabled = DOCK_CONFIG.enabled
 
-    # Show button after dashboard load
-    vm.showInvoicesButton = false
-    ImpacDashboardsSvc.load().then (dhb) ->
-      $timeout ->
-        vm.showInvoicesButton = true
-      ,2000
-
     # Download invoices
     impacBase = "#{IMPAC_CONFIG.protocol}://#{IMPAC_CONFIG.host}/api"
     ssoSessionId = MnoeCurrentUser.user.sso_session
