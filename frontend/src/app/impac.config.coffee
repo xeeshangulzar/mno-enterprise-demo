@@ -20,6 +20,14 @@ angular.module 'mnoEnterpriseAngular'
 #======================================================================================
 .config((ImpacThemingProvider) ->
   options =
+    # link to the marketplace
+    dataNotFoundConfig:
+      linkUrl: '#!/marketplace'
+      linkTarget: '_self'
+    # remove useless messages
+    dhbErrorsConfig:
+      firstTimeCreated:
+        note: ''
     # configurations for the dashboard selector feature.
     dhbSelectorConfig:
       pdfModeEnabled: true
