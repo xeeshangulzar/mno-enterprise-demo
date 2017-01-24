@@ -8,4 +8,4 @@
 
 "mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#master":
   version "0.0.0"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#6c6aa8babd70a14ac8f21a8149943c03dfe9f1d6"
+  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#726f1d8178e96870be4989941b86e6fba23668dd"
