@@ -66,9 +66,9 @@ MnoEnterprise.configure do |config|
   # config.google_tag_container = nil
 
   # intercom
-  # config.intercom_id = ENV['INTERCOM_ID']
-  # config.intercom_api_secret = ENV['INTERCOM_API_SECRET']
-  # config.intercom_api_key = ENV['INTERCOM_API_KEY']
+  config.intercom_app_id = ENV['INTERCOM_APP_ID']
+  config.intercom_api_secret = ENV['INTERCOM_API_SECRET']
+  config.intercom_token = ENV['INTERCOM_TOKEN']
 
   #===============================================
   # API Configuration
