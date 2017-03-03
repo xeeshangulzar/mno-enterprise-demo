@@ -8,6 +8,8 @@ gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise'
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
 
+gem 'intercom', '~> 3.5.4'
+
 # Transactional emails
 gem 'sparkpost', '~> 0.1.4'
 

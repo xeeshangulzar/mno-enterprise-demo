@@ -172,6 +172,8 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
     i18n_data (0.7.0)
+    intercom (3.5.12)
+      json (>= 1.8)
     jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -349,6 +351,7 @@ DEPENDENCIES
   brakeman
   bundler-audit
   factory_girl_rails
+  intercom (~> 3.5.4)
   mno-enterprise!
   newrelic_rpm
   puma
@@ -366,4 +369,4 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
 
 BUNDLED WITH
-   1.13.7
+   1.14.3
