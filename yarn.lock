@@ -7,5 +7,5 @@
   resolved "git+https://git@github.com/maestrano/impac-angular.git#fff26392ddc0d82215224e24f2a8b4ee39b90c27"
 
 "mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#master":
-  version "0.0.0"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#726f1d8178e96870be4989941b86e6fba23668dd"
+  version "1.0.0"
+  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#72a58080fc164ce6fbc076c756d02b5dde0ad1c6"
