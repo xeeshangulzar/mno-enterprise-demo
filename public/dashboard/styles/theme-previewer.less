@@ -222,10 +222,12 @@ html, body {
 @dashboard-cpy-select-border-radius:            0 0 0 6px;
 @dashboard-cpy-select-border-color:             @text-inverse-color;
 @dashboard-cpy-select-list-border-color:        lighten(@bg-inverse-color, 10%);
-@dashboard-cpy-select-header-text-bold-color:   @text-inverse-color;
-@dashboard-cpy-select-header-text-color:        @text-inverse-color;
+
+@dashboard-cpy-select-header-title-color:       @text-inverse-color;
+@dashboard-cpy-select-header-company-color:     @decorator-inverse-color;
 @dashboard-cpy-select-header-text-size:         13px;
 
+@dashboard-cpy-select-link-text-color:          @link-color;
 @dashboard-cpy-select-link-icon-color:          @decorator-touch-color;
 
 @dashboard-cpy-select-link-color:               @text-inverse-strong-color;
@@ -413,6 +415,7 @@ html, body {
 
 @dashboard-marketplace-tile-bg-color:                 @bg-on-bg-inverse-color;
 @dashboard-marketplace-tile-text-color:               @text-strong-color;
+@dashboard-marketplace-tile-name-color:               @bg-inverse-color;
 @dashboard-marketplace-tile-img-border-color:         @decorator-main-color;
 
 @dashboard-marketplace-tile-hover-bg-color:           @decorator-main-color;
@@ -549,17 +552,23 @@ html, body {
 #dashboard {
   .container {
     position: relative;
-  }
+    padding-top: 110px;
 
-  @media (max-width: @screen-xs-max) {
-    padding-top: 40px;
+    .analytics {
+      padding-top: 0;
+    }
   }
 
   /* Fix the container width if the screen is sm+ */
   @media screen and (min-width: @screen-sm-min) {
     margin-left: @menu-left-width;
     .container {
+      padding-top: 70px;
       width: @container-sm - @menu-left-width;
+
+      .analytics {
+        padding-top: 0;
+      }
     }
   }
 
@@ -567,7 +576,12 @@ html, body {
   @media screen and (min-width: @screen-md-min) {
     margin-left: @menu-left-width;
     .container {
+      padding-top: 40px;
       width: @container-md - @menu-left-width;
+
+      .analytics {
+        padding-top: 10px;
+      }
     }
   }
 
@@ -862,7 +876,6 @@ dashboard-company-selectbox {
     right: 0;
     width: @dashboard-cpy-select-width;
     background-color: @dashboard-cpy-select-bg-color;
-    color: @dashboard-cpy-select-header-text-color;
     font-size: @dashboard-cpy-select-header-text-size;
     border-radius: @dashboard-cpy-select-border-radius;
     border-left: 1px solid @dashboard-cpy-select-border-color;
@@ -894,16 +907,18 @@ dashboard-company-selectbox {
         width: ~'calc(100% -' (2 * @dashboard-cpy-select-pic-width) ~')';
         text-align: left;
 
+        .name {
+          font-weight: bold;
+          color: @dashboard-cpy-select-header-title-color;
+        }
+
         .company {
           width: 100%;
           display: block;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-        }
-        .name {
-          font-weight: bold;
-          color: @dashboard-cpy-select-header-text-bold-color;
+          color: @dashboard-cpy-select-header-company-color;
         }
       }
       .expand-menu {
@@ -937,6 +952,7 @@ dashboard-company-selectbox {
             text-decoration: none;
             padding: 4px;
             display: flex;
+            color: @dashboard-cpy-select-link-text-color;
 
             &:hover {
               background-color: @dashboard-cpy-select-link-hover-bg-color;
@@ -1202,8 +1218,26 @@ dashboard-menu {
   }
 }
 
+mno-audit-events-list {
+  .table > thead > tr {
+    color: @table-cell-header-text-color;
+    background-color: @table-cell-header-bg-color;
+  }
+
+  .table-striped > tbody > tr {
+    &:nth-of-type(even) {
+      background-color: @table-cell-row-even-bg-color
+    }
+
+    &:nth-of-type(odd) {
+      background-color: @table-cell-row-odd-bg-color
+    }
+  }
+}
+
 mno-impersonation-bar {
   #impersonate-bar {
+    color: @text-inverse-strong-color;
     background-color: @bg-inverse-color;
     padding-top: 3px;
     padding-bottom: 3px;
