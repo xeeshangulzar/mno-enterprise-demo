@@ -11,7 +11,9 @@ frontend_host:
 #===============================================
 # Feature Flags
 #===============================================
-
+# Display Audit Log in Organization Panel
+audit_log:
+  enabled: true
 # Display App Pricing on Marketplace
 pricing:
   enabled: true
