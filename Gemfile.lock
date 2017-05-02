@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/maestrano/mno-enterprise
-  revision: 5a29323f1cced09ceb54b88cb0034b89322d38f5
+  revision: 87bb43c28c1d3cbabe0df7762a51e6029fc52f89
   specs:
     mno-enterprise (3.1.3)
       mno-enterprise-api (= 3.1.3)
@@ -156,9 +156,9 @@ GEM
       activesupport (>= 3.0.0, <= 4.3.0)
       faraday (>= 0.8, < 1.0)
       multi_json (~> 1.7)
-    html2haml (2.1.0)
+    html2haml (2.2.0)
       erubis (~> 2.7.0)
-      haml (~> 4.0)
+      haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     http (0.9.8)
@@ -196,7 +196,7 @@ GEM
     libv8 (3.16.14.19)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mail (2.6.4)
+    mail (2.6.5)
       mime-types (>= 1.16, < 4)
     mandrill-api (1.0.53)
       excon (>= 0.16.0, < 1.0)
@@ -266,8 +266,9 @@ GEM
     rake (12.0.0)
     redcarpet (3.4.0)
     ref (2.0.0)
-    responders (2.3.0)
-      railties (>= 4.2.0, < 5.1)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
