@@ -5,5 +5,8 @@
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.5.0",
     "mno-enterprise-angular": "git+https://git@github.com/maestrano/mno-enterprise-angular.git#master",
     "mnoe-admin-panel": "git+https://git@github.com/maestrano/mnoe-admin-panel.git#master"
+  },
+  "engines": {
+    "node": ">= 6.9.0"
   }
 }
