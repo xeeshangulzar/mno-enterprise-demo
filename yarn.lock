@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"impac-angular@git+https://git@github.com/maestrano/impac-angular.git#1.5.0-rc7":
-  version "1.5.0-rc7"
-  resolved "git+https://git@github.com/maestrano/impac-angular.git#5d078a91b5a7609d025427046820d0cb16361c54"
+"impac-angular@git+https://git@github.com/maestrano/impac-angular.git#1.5.0":
+  version "1.5.0"
+  resolved "git+https://git@github.com/maestrano/impac-angular.git#0f302eefa6eababa10faec57a7f322cf3eb90d3d"
 
 "mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#master":
   version "1.0.0"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#982a3242fde367d39898e87c4e69939d7afa0f9a"
+  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#b9a746d5b8e1514d8cdcb51ea00ba1680ecffd06"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#master":
   version "1.0.0-rc.3"
