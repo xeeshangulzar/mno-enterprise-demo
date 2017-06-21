@@ -35,11 +35,12 @@ export PHANTOMJS_HOST="https://s3.amazonaws.com/codeship-packages"
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/phantomjs.sh | bash -s
 
 # Build the frontend
+bower cache clean
 bin/rake mnoe:frontend:build
 bin/rake mnoe:admin:build
 
 # Tar and upload to S3 bucket
-tar -czf app.tar.gz ./* --exclude=tmp --exclude=spec --exclude=log --exclude=doc --exclude=coverage
+tar -czf app.tar.gz ./* ./.??* --exclude=*.tar.gz --exclude=tmp --exclude=spec --exclude=log --exclude=doc --exclude=coverage
 pip install awscli
 
 # Check if it's a tag (ie: branch start with "v")
