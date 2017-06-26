@@ -1,29 +1,12 @@
 impac:
+  protocol: https
+  host: api-impac.maestrano.com
   paths:
     mnohub_api: /mnoe/jpi/v1
   pusher:
     key: <%= ENV['impac_pusher_key'] %>
 mno:
+  protocol: https
+  host: api-hub.maestrano.com
   paths:
     root: /api/mnoe/v1
-frontend_host:
-
-#===============================================
-# Feature Flags
-#===============================================
-# Display Audit Log in Organization Panel
-audit_log:
-  enabled: true
-# Display App Pricing on Marketplace
-pricing:
-  enabled: true
-# Enable the App Dock
-dock:
-  enabled: true
-# Enable Reviews in the marketplace
-reviews:
-  enabled: true
-# Enable comparison of apps
-marketplace:
-  comparison:
-    enabled: true

@@ -60,6 +60,11 @@
 @dashboard-section-title-alignment:             center;
 @dashboard-section-title-display-subline:       true;
 
+// Loaders
+//--------------------------------------
+@dashboard-loader-color:                        @text-strong-color;
+@dashboard-loader-icon:                         { .icon-fa(refresh); .fa-2x; .fa-spin; }; //pass a ruleset
+
 // User without organisation
 //--------------------------------------
 @without-organisation-well-bg:                  @bg-inverse-color;
@@ -118,10 +123,58 @@
 @dashboard-cpy-select-link-hover-color:         @text-strong-color;
 @dashboard-cpy-select-link-hover-bg-color:      @text-inverse-strong-color;
 
-// Loaders
+/*-----------------------------------------------------------------------*/
+/*                           Onboarding                                  */
+/*-----------------------------------------------------------------------*/
+// Layout
 //--------------------------------------
-@dashboard-loader-color:                        @text-strong-color;
-@dashboard-loader-icon:                         { .icon-fa(refresh); .fa-2x; .fa-spin; }; //pass a ruleset
+@onboarding-header-height: 60px;
+@onboarding-header-background-color: @bg-inverse-color;
+@onboarding-header-font-color: @text-inverse-color;
+@onboarding-subheader-height: 50px;
+@onboarding-subheader-background-color: @decorator-main-color;
+@onboarding-subheader-font-color: @text-strong-color;
+@onboarding-breadcrumb-badge-color: @text-inverse-strong-color;
+@onboarding-breadcrumb-badge-color-active: @text-inverse-strong-color;
+@onboarding-breadcrumb-badge-bg: @bg-inverse-color;
+@onboarding-breadcrumb-badge-bg-active: @decorator-touch-color;
+@onboarding-breadcrumb-link-color: @text-strong-color;
+@onboarding-content-panel-bg: @bg-inverse-color;
+@onboarding-content-panel-color: @bg-on-bg-inverse-color;
+@onboarding-content-panel-border-radius: 4px;
+
+// App features
+//--------------------------------------
+@onboarding-app-features-border: 1px solid @text-strong-color;
+@onboarding-app-features-color: @text-strong-color;
+@onboarding-app-features-checked: @brand-success;
+@onboarding-app-features-unchecked: @text-strong-color;
+
+// App selector
+//--------------------------------------
+@onboarding-app-selector-title: @text-strong-color;
+@onboarding-app-selector-info: @text-strong-color;
+@onboarding-app-selector-check-color: rgba(red(@brand-success), green(@brand-success), blue(@brand-success), 0.3);
+
+// App cards
+//--------------------------------------
+@onboarding-app-card-bg-color: white;
+@onboarding-app-card-text-color: @text-strong-color;
+@onboarding-app-card-padding: 10px;
+
+// App cards fetching loader
+//--------------------------------------
+@onboarding-fetching-apps-loader-color: white;
+
+// Connec! entities
+//--------------------------------------
+@onboarding-app-entities-checked: @brand-success;
+@onboarding-app-entities-unchecked: @brand-danger;
+
+// App connect
+//--------------------------------------
+@onboarding-app-connect-check: @brand-success;
+@onboarding-app-connect-loader: @decorator-main-color;
 
 /*-----------------------------------------------------------------------*/
 /*                        Dashboard > Apps Section                       */
@@ -190,12 +243,12 @@
 /*                              Dock                                     */
 /*-----------------------------------------------------------------------*/
 @mno-dock-bg-color:                             @decorator-inverse-color;
-
 @mno-dock-add-app-border-color:                 white;
 @mno-dock-add-app-text-color:                   white;
 @mno-dock-expand-arrow-color:                   white;
 @mno-dock-expand-arrow-color-hover:             darken(@mno-dock-expand-arrow-color, 5%);
 @mno-dock-expand-left-border-color:             white;
+@mno-dock-app-loader-color:                     @mno-dock-expand-arrow-color;
 @mno-dock-app-title-color:                      white;
 @mno-dock-app-logo-square-width:                70px;
 @mno-dock-app-logo-minimized-square-width:      50px;
@@ -250,9 +303,10 @@
 // Global
 @impac-widget-background-color:                 @bg-on-bg-inverse-color;
 @impac-widget-text-color:                       black;
-@impac-widget-text-color-light:                 lighten(@impac-widget-text-color,70%);
-@impac-widget-borders-color:                    lighten(@impac-widget-text-color-light,10%);
+@impac-widget-text-color-light:                 @text-strong-color;
+@impac-widget-borders-color:                    lighten(@impac-widget-text-color, 80%);
 @impac-widget-link-color:                       @decorator-inverse-color;
+@impac-widget-top-buttons-color:                lighten(@impac-widget-text-color, 70%);
 
 // Title
 @impac-widget-title-text-color:                 white;
@@ -264,7 +318,7 @@
 
 // Content
 @impac-widget-content-border-radius:            0px 0px 5px 5px;
-@impac-widget-lines-container-max-height: 			210px;
+@impac-widget-lines-container-max-height:       210px;
 
 // Hist Mode Choser
 @impac-widget-hist-text-transform:              uppercase;
@@ -292,7 +346,7 @@
 @impac-widget-accounts-comparison-lines-container-max-height: 250px;
 
 /*-----------------------------------------------------------------------*/
-/*                 Mno Enterprise > Marketplace Section                  */
+/*                       Marketplace Section                             */
 /*-----------------------------------------------------------------------*/
 @dashboard-marketplace-search-text-color:             @text-strong-color;
 @dashboard-marketplace-search-border-color:           @text-strong-color;
@@ -312,6 +366,22 @@
 @dashboard-marketplace-show-sections-text-color:      @text-strong-color;
 
 @dashboard-marketplace-app-card:                      { display: block; padding: 10px; height: 120px; margin-bottom: 10px; font-weight: 300; };
+
+/*-----------------------------------------------------------------------*/
+/*                          Reviews and comments                         */
+/*-----------------------------------------------------------------------*/
+@no-review-bg-panel-color:       darken(@bg-on-bg-inverse-color, 5%);
+
+@comment-bg:                     @bg-main-color;
+@comment-text-color:             @text-strong-color;
+@comment-attributes-color:       @bg-inverse-color;
+
+@no-question-bg-panel-color:     darken(@bg-on-bg-inverse-color, 5%);
+@question-search-btn-bg:         @bg-inverse-color;
+@question-search-btn-color:      @text-inverse-color;
+@question-search-border:         1px solid @bg-inverse-color;
+@question-bg:                    @bg-on-bg-inverse-color;
+@question-ribbon-bg:             @bg-on-bg-inverse-color;
 
 /*-----------------------------------------------------------------------*/
 /*                     Responsive Table (cell table)                     */
@@ -349,29 +419,13 @@
 /*-----------------------------------------------------------------------*/
 /*                          Form Customization                           */
 /*-----------------------------------------------------------------------*/
-@input-bg:                      @bg-on-bg-inverse-color;
-@input-color:                   @text-strong-color;
-@input-color-placeholder:       @input-color;
-@input-label-color:             @text-inverse-color;
+@input-bg:                       @bg-on-bg-inverse-color;
+@input-color:                    @text-strong-color;
+@input-color-placeholder:        @input-color;
+@input-label-color:              @text-inverse-color;
 @deletion-sentence-color:        @brand-danger;
 
 /*-----------------------------------------------------------------------*/
 /*                                 Buttons                               */
 /*-----------------------------------------------------------------------*/
 @btn-danger-background:          @brand-danger;
-
-/*-----------------------------------------------------------------------*/
-/*                          Reviews and comments                         */
-/*-----------------------------------------------------------------------*/
-@no-review-bg-panel-color:       darken(@bg-on-bg-inverse-color, 5%);
-
-@comment-bg:                     @bg-main-color;
-@comment-text-color:             @text-strong-color;
-@comment-attributes-color:       @bg-inverse-color;
-
-@no-question-bg-panel-color:     darken(@bg-on-bg-inverse-color, 5%);
-@question-search-btn-bg:         @bg-inverse-color;
-@question-search-btn-color:      @text-inverse-color;
-@question-search-border:         1px solid @bg-inverse-color;
-@question-bg:                    @bg-on-bg-inverse-color;
-@question-ribbon-bg:             @bg-on-bg-inverse-color;

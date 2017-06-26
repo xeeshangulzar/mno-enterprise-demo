@@ -4,14 +4,11 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise'
+gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise', branch: '4.0'
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
 
 gem 'intercom', '~> 3.5.4'
-
-# Transactional emails
-gem 'sparkpost', '~> 0.1.4'
 
 # Use puma as the app server
 gem 'puma'
@@ -26,6 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 group :uat, :production do
   gem 'newrelic_rpm'
   gem 'rails_stdout_logging' # For Nex! logs
+  gem 'nex_client', '~> 0.16.0'
 end
 
 # CI gems
@@ -40,6 +38,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'figaro'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-commands-rspec'

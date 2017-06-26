@@ -3,7 +3,7 @@ MnoEnterprise.configure do |config|
   # General Configuration
   #===============================================
   # Name of your company/application
-  config.app_name = "My Company"
+  config.app_name = Settings.system.app_name
 
   # Fallback default country.
   # Used as default in geolocalised fields (e.g.: country, phone number)
@@ -28,11 +28,11 @@ MnoEnterprise.configure do |config|
   config.mail_adapter = :smtp
 
   # Support email address
-  config.support_email = 'support@example.com'
+  config.support_email = Settings.system.email.support_email
 
   # Default sender for system generated emails
-  config.default_sender_name = 'My Company'
-  config.default_sender_email = ENV['default_sender_email'] || 'no-reply@example.com'
+  config.default_sender_name = Settings.system.email.default_sender.name || Settings.system.email.app_name
+  config.default_sender_email = Settings.system.email.default_sender.email
 
   #===============================================
   # External Routes
@@ -57,7 +57,7 @@ MnoEnterprise.configure do |config|
   # I18n - Controls:
   #   - Routing in development
   #   - Filter and locale management in controllers
-  config.i18n_enabled = true
+  config.i18n_enabled = Settings.system.i18n.enabled
 
   #===============================================
   # Third Party Plugins
