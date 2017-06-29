@@ -1,0 +1,54 @@
+FROM maestrano/web-ruby:latest
+MAINTAINER developpers@maestrano.com
+
+# Shared volumes for cache folder (TODO: mount external volume)
+ENV YARN_CACHE_FOLDER /cache/yarn
+ENV bower_storage__packages /cache/bower
+ENV GEM_SPEC_CACHE /cache/gem
+
+# Install yarn
+ADD https://dl.yarnpkg.com/debian/pubkey.gpg /tmp/yarn-pubkey.gpg
+RUN set -ex && \
+    apt-key add /tmp/yarn-pubkey.gpg && rm /tmp/yarn-pubkey.gpg && \
+    echo "deb http://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
+    apt-get -y update && \
+    apt-get install -y --no-install-recommends yarn && \
+    # TODO: TMP add vim
+    apt-get install -y vim && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# TODO: replace by mnoe:frontend:install_dependencies
+RUN yarn global add bower
+
+# TODO: TMP add rg
+RUN set -ex && \
+    wget https://github.com/BurntSushi/ripgrep/releases/download/0.5.2/ripgrep-0.5.2-x86_64-unknown-linux-musl.tar.gz && \
+    tar zxf ripgrep-0.5.2-x86_64-unknown-linux-musl.tar.gz && \
+    cp -a ripgrep-0.5.2-x86_64-unknown-linux-musl/rg /usr/local/bin/
+
+WORKDIR /app
+ADD Gemfile Gemfile.lock /app/
+ADD vendor/cache vendor/cache/
+
+RUN set -ex \
+    && export BUNDLE_JOBS=${BUNDLE_JOBS:-$(nproc)} \
+    # default to number of cores
+    && echo 'gem: --no-document' >> ~/.gemrc \
+    && gem install bundler \
+    && bundle install --frozen --local --without development test
+
+COPY docker/docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+ADD . /app
+
+RUN set -ex \
+    && echo '{ "allow_root": true }' > /root/.bowerrc \
+    && SECRET_KEY_BASE=secret bundle exec rake mnoe:frontend:build
+
+# TODO: HACK
+RUN set -ex && \
+    chmod a+r -R /usr/local/share/.config/yarn/global/ && \
+    mkdir -p /root/.config/yarn/global/ && \
+    chmod a+r -R /root/.config/yarn/global/
