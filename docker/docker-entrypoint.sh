@@ -25,9 +25,10 @@ fi
 
 # Sync assets from Minio
 if [ -n "$MINIO_URL" ] && [ -n "$MINIO_BUCKET" ]; then
-  export AWS_ACCESS_KEY_ID=${MINIO_ACCESS_KEY}
-  export AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
-  aws --endpoint-url ${MINIO_URL} s3 sync s3://${MINIO_BUCKET}/public /app/public/
+#  export AWS_ACCESS_KEY_ID=${MINIO_ACCESS_KEY}
+#  export AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
+#  aws --endpoint-url ${MINIO_URL} s3 sync s3://${MINIO_BUCKET}/public /app/public/
+   bundle exec rails runner "MnoEnterprise::SystemManager.fetch_assets"
 fi
 
 # Run bundler
