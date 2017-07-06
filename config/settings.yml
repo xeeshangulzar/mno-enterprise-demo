@@ -10,3 +10,12 @@ mno:
   host: api-hub.maestrano.com
   paths:
     root: /api/mnoe/v1
+
+# Allow for a default SMTP server to be set via MnoHub
+system:
+  smtp:
+    address: <%= ENV['SMTP_HOST'] %>
+    port: <%= ENV['SMTP_PORT'] %>
+    domain: <%= ENV['SMTP_DOMAIN'] %>
+    user_name: <%= ENV['SMTP_USERNAME'] %>
+    password: <%= ENV['SMTP_PASSWORD'] %>
