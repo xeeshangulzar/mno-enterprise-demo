@@ -6,6 +6,8 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "../bower_components/impac-angular/dist/impac-angular.less";
+@import "../bower_components/material-shadows/material-shadows.less";
+@import "../bower_components/mno-ui-elements/dist/mno-ui-elements.less";
 // endbower
 
 /**
@@ -172,6 +174,60 @@ html, body {
 @login-box-oauth-bg-color-linkedin:   #0074C4;
 @login-box-oauth-bg-color-intuit:     #fff;
 
+
+/*-----------------------------------------------------------------------*/
+/*                           Onboarding                                  */
+/*-----------------------------------------------------------------------*/
+// Layout
+//--------------------------------------
+@onboarding-header-height: 60px;
+@onboarding-header-background-color: @bg-inverse-color;
+@onboarding-header-font-color: @text-inverse-color;
+@onboarding-subheader-height: 50px;
+@onboarding-subheader-background-color: @decorator-main-color;
+@onboarding-subheader-font-color: @text-strong-color;
+@onboarding-breadcrumb-badge-color: @text-inverse-strong-color;
+@onboarding-breadcrumb-badge-color-active: @text-inverse-strong-color;
+@onboarding-breadcrumb-badge-bg: @bg-inverse-color;
+@onboarding-breadcrumb-badge-bg-active: @decorator-touch-color;
+@onboarding-breadcrumb-link-color: @text-strong-color;
+@onboarding-content-panel-bg: @bg-inverse-color;
+@onboarding-content-panel-color: @bg-on-bg-inverse-color;
+@onboarding-content-panel-border-radius: 4px;
+
+// App features
+//--------------------------------------
+@onboarding-app-features-border: 1px solid @text-strong-color;
+@onboarding-app-features-color: @text-strong-color;
+@onboarding-app-features-checked: @brand-success;
+@onboarding-app-features-unchecked: @text-strong-color;
+
+// App selector
+//--------------------------------------
+@onboarding-app-selector-title: @text-strong-color;
+@onboarding-app-selector-info: @text-strong-color;
+@onboarding-app-selector-check-color: rgba(red(@brand-success), green(@brand-success), blue(@brand-success), 0.3);
+
+// App cards
+//--------------------------------------
+@onboarding-app-card-bg-color: white;
+@onboarding-app-card-text-color: @text-strong-color;
+@onboarding-app-card-padding: 10px;
+
+// App cards fetching loader
+//--------------------------------------
+@onboarding-fetching-apps-loader-color: white;
+
+// Connec! entities
+//--------------------------------------
+@onboarding-app-entities-checked: @brand-success;
+@onboarding-app-entities-unchecked: @brand-danger;
+
+// App connect
+//--------------------------------------
+@onboarding-app-connect-check: @brand-success;
+@onboarding-app-connect-loader: @decorator-main-color;
+
 /*-----------------------------------------------------------------------*/
 /*                           Dashboard Layout                            */
 /*-----------------------------------------------------------------------*/
@@ -317,6 +373,7 @@ html, body {
 @mno-dock-expand-arrow-color:                   white;
 @mno-dock-expand-arrow-color-hover:             darken(@mno-dock-expand-arrow-color, 5%);
 @mno-dock-expand-left-border-color:             white;
+@mno-dock-app-loader-color:                     @mno-dock-expand-arrow-color;
 @mno-dock-app-title-color:                      white;
 @mno-dock-app-logo-square-width:                70px;
 @mno-dock-app-logo-minimized-square-width:      50px;
@@ -623,6 +680,12 @@ ul.dock {
     position: relative;
     vertical-align: top;
 
+    .loader-icon {
+      color: @mno-dock-app-loader-color;
+      font-size: 40px;
+      margin: 10px 8px 0 10px;
+    }
+
     .title {
       position: absolute;
       top: 0;
@@ -872,6 +935,16 @@ ul.dock > li.prev img.app-logo {
   }
 }
 
+
+dashboard-language-selectbox {
+  display: block;
+
+  .selector-line {
+    display: inline-block;
+    margin: 5px auto;
+  }
+}
+
 dashboard-company-selectbox {
   /*-----------------------------------------------------------------------*/
   /*                       Company Select Box                              */
@@ -1019,16 +1092,6 @@ dashboard-company-selectbox {
       border-top: 1px solid @dashboard-cpy-select-border-color;
       top: ~'calc(1px + ' @navbar-height ~')';  // Add top border
     }
-  }
-}
-
-
-dashboard-language-selectbox {
-  display: block;
-
-  .selector-line {
-    display: inline-block;
-    margin: 5px auto;
   }
 }
 
@@ -1220,6 +1283,39 @@ dashboard-menu {
     .dashboard-button.active i.dhb-icon-logout {
       @dashboard-side-menu-btn-logout-active();
     }
+  }
+}
+
+#app-features {
+  border: @onboarding-app-features-border;
+  color: @onboarding-app-features-color;
+
+  .center-element {
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
+
+  .fa-check-square-o {
+    color: @onboarding-app-features-checked;
+  }
+  .fa-square-o {
+    color: @onboarding-app-features-unchecked;
+  }
+}
+
+mno-app-onboarding-btn {
+  display: block;
+
+  .button-check {
+    color: @onboarding-app-connect-check;
+  }
+
+  .button-loader {
+    color: @onboarding-app-connect-loader;
+  }
+
+  .btn {
+    margin-top: 5px;
   }
 }
 
@@ -2363,6 +2459,253 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+
+#onboarding {
+  header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: @onboarding-header-height;
+    background: @onboarding-header-background-color;
+    color: @onboarding-header-font-color;
+
+    @media (max-width: @screen-xs-max) {
+      .name {
+        display: none;
+      }
+    }
+
+    .logo {
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .avatar {
+      .img-circle;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .sub-header {
+    .z-depth(3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: @onboarding-subheader-height;
+    background: @onboarding-subheader-background-color;
+    color: @onboarding-subheader-font-color;
+    margin-bottom: 20px;
+
+    .breadcrumb-item {
+      text-decoration: none;
+
+      // Deactivate the link
+      pointer-events: none;
+
+      .badge {
+        color: @onboarding-breadcrumb-badge-color;
+        background-color: @onboarding-breadcrumb-badge-bg;
+      }
+
+      &.active {
+        .badge {
+          color: @onboarding-breadcrumb-badge-color-active;
+          background: @onboarding-breadcrumb-badge-bg-active;
+        }
+      }
+
+      .title {
+        color: @onboarding-breadcrumb-link-color;
+
+        @media (max-width: @screen-xs-max) {
+          display: none;
+        }
+
+        &:hover, &:focus {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .content-panel {
+    .z-depth(6);
+    border-radius: @onboarding-content-panel-border-radius;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: @onboarding-content-panel-bg;
+    color: @onboarding-content-panel-color;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .next-button {
+    .top-buffer-2;
+    font-size: larger;
+  }
+}
+
+#step1 {
+
+}
+
+#step2 {
+  .apps-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-start;
+
+    #apps-widget, #data-shared {
+      flex: 1;
+    }
+
+    #apps-widget {
+      #widget-header-bar {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+
+        #app-search, #app-category {
+          width: 45%;
+          flex: 1;
+        }
+
+        #app-category {
+          margin-left: 5%;
+        }
+      }
+
+      .app-tile {
+        position: relative;
+        max-width: 112px;
+        margin: 10px;
+        float: left;
+
+        .app-info-modal {
+          position: absolute;
+          top: 0;
+          right: 3px;
+          z-index: 10;
+          width: 14px;
+          color: @onboarding-app-selector-info;
+        }
+
+        .app-icon {
+          outline: none;
+          position: relative;
+
+          .app-logo {
+            width: 100%;
+          }
+
+          .checked {
+            position: absolute;
+            border-radius: 6px;
+            background-color: @onboarding-app-selector-check-color;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            // Center the tick
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        .app-title {
+          color: @onboarding-app-selector-title;
+          text-align: center;
+          margin-top: 5px;
+          .ellipsis;
+        }
+      }
+    }
+
+    #data-shared {
+      max-width: 50%;
+
+      @media (max-width: @screen-sm-max) {
+        display: none;
+      }
+
+      .table-data-shared {
+        table-layout: fixed;
+        text-align: center;
+        margin: 5px 5px 0 10px;
+
+        .fa-check {
+          color: @onboarding-app-entities-checked;
+        }
+
+        .fa-times {
+          color: @onboarding-app-entities-unchecked;
+        }
+
+        .th-app {
+          text-align: center;
+
+          .header-logo {
+            width: 60px;
+          }
+
+          .app-title {
+            margin-top: 5px;
+            .ellipsis;
+          }
+        }
+      }
+    }
+  }
+
+  .onboarding-footer {
+    margin-top: 15px;
+  }
+}
+
+#step3 {
+
+  .apps-loader {
+    color: @onboarding-fetching-apps-loader-color;
+  }
+
+  .apps-wrapper {
+    .top-buffer-1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .app-card {
+      .top-buffer-1;
+      text-align: center;
+      background-color: @onboarding-app-card-bg-color;
+      color: @onboarding-app-card-text-color;
+      padding: @onboarding-app-card-padding;
+      .z-depth(3);
+      width: 220px;
+
+      h4 {
+        margin-top: 5px;
+      }
+
+      mno-app-install-btn {
+        display: block;
+        .top-buffer-1;
+      }
+    }
+  }
+
+  .next-button-wrapper {
+    width: 100%;
+    float: left;
+  }
+}
+
 #app-connect-modal {
 
   select {
@@ -2606,6 +2949,25 @@ form.editable-wrap .editable-controls input {
   textarea.form-control {
     max-width: 100%;
     background-color: white;
+  }
+}
+
+#app-info {
+  ul {
+    margin: 0;
+
+    li:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  .close {
+    margin: 10px;
+  }
+
+  mno-app-features {
+    float: right;
+    width: 250px;
   }
 }
 
