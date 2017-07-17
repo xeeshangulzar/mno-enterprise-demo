@@ -23,6 +23,8 @@ dock:
 # Enable Reviews in the marketplace
 reviews:
   enabled: true
+questions:
+  enabled: true
 # Enable comparison of apps
 marketplace:
   comparison:
