@@ -183,6 +183,10 @@ html, body {
 @onboarding-header-height: 60px;
 @onboarding-header-background-color: @bg-inverse-color;
 @onboarding-header-font-color: @text-inverse-color;
+@onboarding-header-menu-text: @text-inverse-color;
+@onboarding-header-menu-text-hover: @text-strong-color;
+@onboarding-header-bg-menu: @bg-inverse-color;
+@onboarding-header-bg-menu-hover: @bg-on-bg-inverse-color;
 @onboarding-subheader-height: 50px;
 @onboarding-subheader-background-color: @decorator-main-color;
 @onboarding-subheader-font-color: @text-strong-color;
@@ -662,6 +666,11 @@ html, body {
   top: 0;
   right: 0;
   text-align: center;
+  
+  .top-right-corner {
+    line-height: 0;
+    margin-right: -10px;
+  }
 }
 
 ul.dock {
@@ -2068,6 +2077,10 @@ form.editable-wrap .editable-controls input {
     color: @dashboard-marketplace-show-header-text-color;
   }
 
+  .show-header .links {
+    padding-top: 5px;
+  }
+
   blockquote {
     overflow-wrap: break-word;
   }
@@ -2224,19 +2237,26 @@ form.editable-wrap .editable-controls input {
     }
 
     blockquote {
-      margin-bottom: 0;
+      margin-bottom: 15px;
     }
 
     mno-pagination {
       margin-bottom: 15px;
     }
 
+    .comments-show {
+      margin-left: 5px;
+    }
+
     .comment {
       float: right;
       width: 85%;
       background-color: @comment-bg;
-      margin-top: 5px;
       padding: 5px 15px;
+    }
+
+    .clearfix:last-child {
+      margin-bottom: 5px;
     }
   }
 
@@ -2474,6 +2494,39 @@ form.editable-wrap .editable-controls input {
         display: none;
       }
     }
+    
+    .onboarding-menu {
+      padding-right: 10px;
+
+      .default-link {
+        color: @onboarding-header-menu-text;
+        background: @onboarding-header-bg-menu;
+        padding: 10px 20px;
+
+        i {
+          width: 20px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: @onboarding-header-menu-text-hover;
+          background-color: @onboarding-header-bg-menu-hover;
+        }
+      }
+      
+      .box-content {
+        padding-top: 5px;
+        position: absolute;
+        margin-right: 10px;
+        width: 100%;
+        overflow: hidden;
+        border-bottom-left-radius: 1em;
+
+        a {
+          display: block;
+        }  
+      }
+    }
 
     .logo {
       height: 40px;
@@ -2558,9 +2611,17 @@ form.editable-wrap .editable-controls input {
     flex-wrap: wrap;
     text-align: center;
     justify-content: flex-start;
+    padding: 1em;
 
-    #apps-widget, #data-shared {
+    #data-shared {
+      margin-left: 0.5em;
       flex: 1;
+      padding: 0.5em;
+    }
+
+    #apps-widget {
+      flex: 1;
+      padding: 0.5em;
     }
 
     #apps-widget {
@@ -2581,7 +2642,7 @@ form.editable-wrap .editable-controls input {
 
       .app-tile {
         position: relative;
-        max-width: 112px;
+        max-width: 108px;
         margin: 10px;
         float: left;
 
