@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/maestrano/mno-enterprise
-  revision: 76bdedd73c37df67912b7dc8f097b649bc677d9e
+  revision: 629390d60f5be5b8c59dd3c7092fe2a9e2cdafe3
   branch: 3.3
   specs:
     mno-enterprise (3.3.0)
