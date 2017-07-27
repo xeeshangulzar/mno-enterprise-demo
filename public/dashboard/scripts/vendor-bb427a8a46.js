@@ -1,3 +1,8 @@
+/**
+ * mno-enterprise-angular - MnoEnterprise AngularJS Frontend
+ * @version v1.1.1
+ * @git git@github.com:maestrano/mno-enterprise-angular.git
+ */
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/
