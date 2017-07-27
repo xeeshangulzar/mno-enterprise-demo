@@ -1,22 +1,22 @@
 GIT
   remote: https://github.com/maestrano/mno-enterprise
-  revision: 629390d60f5be5b8c59dd3c7092fe2a9e2cdafe3
+  revision: 26f5ce5da53c16008fc5f6cd4d3eaeffd6b8e760
   branch: 3.3
   specs:
-    mno-enterprise (3.3.0)
-      mno-enterprise-api (= 3.3.0)
-      mno-enterprise-core (= 3.3.0)
-      mno-enterprise-frontend (= 3.3.0)
-    mno-enterprise-api (3.3.0)
+    mno-enterprise (3.3.1)
+      mno-enterprise-api (= 3.3.1)
+      mno-enterprise-core (= 3.3.1)
+      mno-enterprise-frontend (= 3.3.1)
+    mno-enterprise-api (3.3.1)
       coffee-rails (~> 4.1)
       credit_card_validations (~> 3.4.0)
       haml (~> 4.0)
       health_check (~> 2.4)
       httparty (~> 0.13.7)
       jbuilder (~> 2.2.16)
-      mno-enterprise-core (= 3.3.0)
+      mno-enterprise-core (= 3.3.1)
       sprockets-rails (~> 2.3)
-    mno-enterprise-core (3.3.0)
+    mno-enterprise-core (3.3.1)
       cancancan (~> 1.10)
       config (~> 1.0, < 1.3)
       countries (~> 0.11.3)
@@ -35,12 +35,12 @@ GIT
       rails (~> 4.2, >= 4.2.0)
       redcarpet (~> 3.3, >= 3.3.3)
       sanitize (~> 4.0)
-    mno-enterprise-frontend (3.3.0)
+    mno-enterprise-frontend (3.3.1)
       haml-rails (~> 0.9)
       jquery-rails (~> 4.0)
       less-rails (~> 2.7)
-      mno-enterprise-api (= 3.3.0)
-      mno-enterprise-core (= 3.3.0)
+      mno-enterprise-api (= 3.3.1)
+      mno-enterprise-core (= 3.3.1)
       ngannotate-rails (~> 1.0)
       rack-rewrite
       therubyracer (~> 0.12)
@@ -133,7 +133,7 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
-    faraday (0.12.1)
+    faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.1)
       faraday (>= 0.7.4, < 1.0)
@@ -206,7 +206,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     money (6.9.0)
       i18n (>= 0.6.4, < 0.9)
     multi_json (1.12.1)
@@ -296,8 +296,8 @@ GEM
     rubocop-rspec (1.5.0)
       rubocop (>= 0.40.0)
     ruby-progressbar (1.8.1)
-    ruby_parser (3.9.0)
-      sexp_processor (~> 4.1)
+    ruby_parser (3.10.1)
+      sexp_processor (~> 4.9)
     sanitize (4.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
@@ -309,7 +309,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sexp_processor (4.9.0)
+    sexp_processor (4.10.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simplecov (0.11.2)
@@ -334,7 +334,7 @@ GEM
       ref
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     ttfunk (1.5.1)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
@@ -372,4 +372,4 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
 
 BUNDLED WITH
-   1.15.1
+   1.15.3
