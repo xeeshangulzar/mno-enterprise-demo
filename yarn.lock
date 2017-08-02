@@ -6,9 +6,9 @@
   version "1.5.3"
   resolved "git+https://git@github.com/maestrano/impac-angular.git#95a3a89d9ee5acdcd8e3b3f86fec65085465f7a7"
 
-"mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#d132005":
+"mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#e76f31c":
   version "1.1.1"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#d132005"
+  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#e76f31c"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#ef64e15":
   version "1.0.1"
