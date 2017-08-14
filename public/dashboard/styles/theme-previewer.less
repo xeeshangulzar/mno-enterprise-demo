@@ -944,6 +944,16 @@ ul.dock > li.prev img.app-logo {
   }
 }
 
+
+dashboard-language-selectbox {
+  display: block;
+
+  .selector-line {
+    display: inline-block;
+    margin: 5px auto;
+  }
+}
+
 dashboard-company-selectbox {
   /*-----------------------------------------------------------------------*/
   /*                       Company Select Box                              */
@@ -1091,16 +1101,6 @@ dashboard-company-selectbox {
       border-top: 1px solid @dashboard-cpy-select-border-color;
       top: ~'calc(1px + ' @navbar-height ~')';  // Add top border
     }
-  }
-}
-
-
-dashboard-language-selectbox {
-  display: block;
-
-  .selector-line {
-    display: inline-block;
-    margin: 5px auto;
   }
 }
 
@@ -1358,6 +1358,16 @@ mno-impersonation-bar {
   }
 }
 
+mno-inline-message {
+  .mno-inline-checked {
+    color: @dashboard-account-inline-text-color-checked;
+  }
+
+  .mno-inline-unchecked {
+    color: @dashboard-account-inline-text-color-unchecked;
+  }
+}
+
 mno-loader {
   display: block;
 
@@ -1387,16 +1397,6 @@ mno-loader {
   position: relative;
 }
 
-mno-inline-message {
-  .mno-inline-checked {
-    color: @dashboard-account-inline-text-color-checked;
-  }
-
-  .mno-inline-unchecked {
-    color: @dashboard-account-inline-text-color-unchecked;
-  }
-}
-
 mno-pagination {
   display: block;
   overflow: auto;
@@ -1419,6 +1419,10 @@ mno-pagination {
   }
 }
 
+mno-password {
+  display: block;
+}
+
 mno-without-organisation {
   .well {
     background-color: @without-organisation-well-bg;
@@ -1428,10 +1432,6 @@ mno-without-organisation {
       margin-top: 0;
     }
   }
-}
-
-mno-password {
-  display: block;
 }
 
 average-star-rating, star-rating {
