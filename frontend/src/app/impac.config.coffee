@@ -31,6 +31,8 @@ angular.module 'mnoEnterpriseAngular'
     dhbErrorsConfig:
       firstTimeCreated:
         note: ''
+    dhbConfig:
+      multiCompany: true
     # configurations for the dashboard selector feature.
     dhbSelectorConfig:
       pdfModeEnabled: true
