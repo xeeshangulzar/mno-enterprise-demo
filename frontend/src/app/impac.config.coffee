@@ -12,7 +12,10 @@ angular.module 'mnoEnterpriseAngular'
     kpis:
       index: "#{mnoHub}/impac/kpis"
 
+  # bolts = [{ provider: 'maestrano', name: 'finance', category: 'accounts' }]
+
   ImpacRoutesProvider.configureRoutes(data)
+  # ImpacRoutesProvider.configureBolts('v2', bolts)
 )
 
 #======================================================================================
@@ -28,6 +31,8 @@ angular.module 'mnoEnterpriseAngular'
     dhbErrorsConfig:
       firstTimeCreated:
         note: ''
+    dhbConfig:
+      multiCompany: true
     # configurations for the dashboard selector feature.
     dhbSelectorConfig:
       pdfModeEnabled: true
