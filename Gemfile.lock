@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/x4d3/mno-enterprise
-  revision: aa7f8e2984275cdcc11f254c0728dec632a76dea
+  revision: a68c34fa61095c6e49e721495dda29c68e855ed2
   branch: feature/access_request
   specs:
     mno-enterprise (3.3.1)
