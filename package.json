@@ -3,8 +3,8 @@
   "private": true,
   "dependencies": {
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#v1.5.x",
-    "mno-enterprise-angular": "git+https://git@github.com/maestrano/mno-enterprise-angular.git#2.0",
-    "mnoe-admin-panel": "git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0"
+    "mno-enterprise-angular": "git+https://git@github.com/x4d3/mno-enterprise-angular.git#feature/access_request",
+    "mnoe-admin-panel": "git+https://git@github.com/x4d3/mnoe-admin-panel.git#feature/access_request"
   },
   "engines": {
     "node": ">= 6.9.0"
