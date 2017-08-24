@@ -1391,6 +1391,16 @@ ul.dock > li.prev img.app-logo {
   }
 }
 
+
+dashboard-language-selectbox {
+  display: block;
+
+  .selector-line {
+    display: inline-block;
+    margin: 5px auto;
+  }
+}
+
 dashboard-company-selectbox {
   /*-----------------------------------------------------------------------*/
   /*                       Company Select Box                              */
@@ -1538,16 +1548,6 @@ dashboard-company-selectbox {
       border-top: 1px solid @dashboard-cpy-select-border-color;
       top: ~'calc(1px + ' @navbar-height ~')';  // Add top border
     }
-  }
-}
-
-
-dashboard-language-selectbox {
-  display: block;
-
-  .selector-line {
-    display: inline-block;
-    margin: 5px auto;
   }
 }
 
@@ -1750,6 +1750,12 @@ dashboard-menu {
   }
 }
 
+impersonification-notification {
+  .notifications {
+    padding-top: 70px;
+  }
+}
+
 #app-features {
   border: @onboarding-app-features-border;
   color: @onboarding-app-features-color;
@@ -1852,6 +1858,10 @@ mno-loader {
   position: relative;
 }
 
+mno-password {
+  display: block;
+}
+
 mno-pagination {
   display: block;
   overflow: auto;
@@ -1872,10 +1882,6 @@ mno-pagination {
       }
     }
   }
-}
-
-mno-password {
-  display: block;
 }
 
 mno-without-organisation {
@@ -2279,12 +2285,6 @@ form.editable-wrap .editable-controls input {
   padding-left: 5px;
 }
 
-#account {
-  .row:not(:first-child) {
-    margin-top: 15px;
-  }
-}
-
 #dashboard-apps-list {
   .app-dashboard {
     min-height: 280px;
@@ -2374,6 +2374,12 @@ form.editable-wrap .editable-controls input {
         color: @brand-warning;
       }
     }
+  }
+}
+
+#account {
+  .row:not(:first-child) {
+    margin-top: 15px;
   }
 }
 
@@ -2965,6 +2971,71 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#provisioning-confirm {
+
+}
+
+#provisioning-details {
+
+}
+
+#provisioning-layout {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    .top-buffer-5;
+
+    .breadcrumb-item {
+      // Deactivate the link
+      pointer-events: none;
+      color: @provisioning-breadcrumb-item-color;
+
+      .badge {
+        background-color: @provisioning-breadcrumb-item-badge-bg;
+      }
+
+      &.active {
+        color: @provisioning-breadcrumb-item-active-color;
+
+        .badge {
+          background-color: @provisioning-breadcrumb-item-active-badge-bg;
+        }
+      }
+    }
+  }
+
+  h1 {
+    .top-buffer-3;
+  }
+
+  .well {
+    .top-buffer-1;
+    background-color: @provisioning-well-bg-color;
+  }
+}
+
+#provisioning-order {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .radio-selector {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#provisioning-subscriptions {
+  .well {
+    background-color: @provisioning-well-bg-color;
+  }
+}
+
+#provisioning-summary {
+
+}
+
 
 #onboarding {
   header.header {
@@ -3253,71 +3324,6 @@ form.editable-wrap .editable-controls input {
   }
 }
 
-#provisioning-confirm {
-
-}
-
-#provisioning-details {
-
-}
-
-#provisioning-layout {
-  nav {
-    display: flex;
-    justify-content: space-around;
-    .top-buffer-5;
-
-    .breadcrumb-item {
-      // Deactivate the link
-      pointer-events: none;
-      color: @provisioning-breadcrumb-item-color;
-
-      .badge {
-        background-color: @provisioning-breadcrumb-item-badge-bg;
-      }
-
-      &.active {
-        color: @provisioning-breadcrumb-item-active-color;
-
-        .badge {
-          background-color: @provisioning-breadcrumb-item-active-badge-bg;
-        }
-      }
-    }
-  }
-
-  h1 {
-    .top-buffer-3;
-  }
-
-  .well {
-    .top-buffer-1;
-    background-color: @provisioning-well-bg-color;
-  }
-}
-
-#provisioning-order {
-  .row {
-    display: flex;
-    align-items: center;
-  }
-
-  .radio-selector {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-#provisioning-subscriptions {
-  .well {
-    background-color: @provisioning-well-bg-color;
-  }
-}
-
-#provisioning-summary {
-
-}
-
 #app-connect-modal {
 
   select {
@@ -3399,21 +3405,6 @@ form.editable-wrap .editable-controls input {
         color: @deletion-sentence-color;
       }
     }
-  }
-}
-
-.dashboard-organization {
-  // credit card icons display modes
-  //---------------------------------
-
-  [class^="mnoe-icon-cc-icons-mno-cc-"].disabled,
-  [class*="mnoe-icon-cc-icons-mno-cc-"].disabled {
-    opacity: 0.4;
-  }
-
-  [class^="mnoe-icon-cc-icons-mno-cc-"].enabled,
-  [class*="mnoe-icon-cc-icons-mno-cc-"].enabled {
-    opacity: 1;
   }
 }
 
@@ -3554,6 +3545,21 @@ form.editable-wrap .editable-controls input {
   .permission-matrix-wrapper .table-right thead > tr > th {
     font-size: 11px;
     font-weight: 400;
+  }
+}
+
+.dashboard-organization {
+  // credit card icons display modes
+  //---------------------------------
+
+  [class^="mnoe-icon-cc-icons-mno-cc-"].disabled,
+  [class*="mnoe-icon-cc-icons-mno-cc-"].disabled {
+    opacity: 0.4;
+  }
+
+  [class^="mnoe-icon-cc-icons-mno-cc-"].enabled,
+  [class*="mnoe-icon-cc-icons-mno-cc-"].enabled {
+    opacity: 1;
   }
 }
 
