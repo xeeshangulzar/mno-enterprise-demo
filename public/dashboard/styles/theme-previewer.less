@@ -740,16 +740,6 @@ dashboard-menu .menu .dashboard-button, dashboard-menu .menu .dashboard-button .
   }
 }
 
-
-dashboard-language-selectbox {
-  display: block;
-
-  .selector-line {
-    display: inline-block;
-    margin: 5px auto;
-  }
-}
-
 #app-dock-container {
   position: absolute;
   left: 0;
@@ -1184,6 +1174,16 @@ dashboard-company-selectbox {
   }
 }
 
+
+dashboard-language-selectbox {
+  display: block;
+
+  .selector-line {
+    display: inline-block;
+    margin: 5px auto;
+  }
+}
+
 dashboard-menu {
   /*-----------------------------------------------------------------------*/
   /*                         Mobile menu                                   */
@@ -1425,16 +1425,6 @@ mno-audit-events-list {
   }
 }
 
-mno-inline-message {
-  .mno-inline-checked {
-    color: @dashboard-account-inline-text-color-checked;
-  }
-
-  .mno-inline-unchecked {
-    color: @dashboard-account-inline-text-color-unchecked;
-  }
-}
-
 mno-impersonation-bar {
   #impersonate-bar {
     color: @text-inverse-strong-color;
@@ -1445,6 +1435,16 @@ mno-impersonation-bar {
     @media (max-width: @screen-xs-max) {
       padding-top: 40px;
     }
+  }
+}
+
+mno-inline-message {
+  .mno-inline-checked {
+    color: @dashboard-account-inline-text-color-checked;
+  }
+
+  .mno-inline-unchecked {
+    color: @dashboard-account-inline-text-color-unchecked;
   }
 }
 
@@ -1477,6 +1477,10 @@ mno-loader {
   position: relative;
 }
 
+mno-password {
+  display: block;
+}
+
 mno-pagination {
   display: block;
   overflow: auto;
@@ -1497,10 +1501,6 @@ mno-pagination {
       }
     }
   }
-}
-
-mno-password {
-  display: block;
 }
 
 mno-without-organisation {
