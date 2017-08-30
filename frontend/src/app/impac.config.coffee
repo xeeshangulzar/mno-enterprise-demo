@@ -25,8 +25,7 @@ angular.module 'mnoEnterpriseAngular'
   options =
     # link to the marketplace
     dataNotFoundConfig:
-      linkUrl: '#!/marketplace'
-      linkTarget: '_self'
+      linkUrl: 'marketplace'
     # remove useless messages
     dhbErrorsConfig:
       firstTimeCreated:
