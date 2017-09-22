@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/maestrano/mno-enterprise.git
+  remote: https://github.com/maestrano/mno-enterprise
   revision: 7c6a6060ec6d0fb20a1caa45b6a1cbffa75a15d5
   branch: 3.3
   specs:
@@ -264,7 +264,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
-    rake (12.0.0)
+    rake (12.1.0)
     redcarpet (3.4.0)
     ref (2.0.0)
     responders (2.4.0)
