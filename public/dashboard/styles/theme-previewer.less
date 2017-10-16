@@ -26,6 +26,7 @@ body {
 
   &.translate-cloak {
     opacity: 0;
+    display: none !important;
   }
 }
 .browsehappy {
@@ -70,6 +71,13 @@ body {
 .bottom-buffer-9 { margin-bottom: 9*@bottom-buffer-height; }
 .bottom-buffer-10 { margin-bottom: 10*@bottom-buffer-height; }
 
+#toast-container {
+  z-index: 99999;
+}
+
+.content-template-wrapper.ng-hide {
+  display: none !important;
+}
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your less files automatically
@@ -1365,16 +1373,6 @@ mno-impersonation-bar {
   }
 }
 
-mno-inline-message {
-  .mno-inline-checked {
-    color: @dashboard-account-inline-text-color-checked;
-  }
-
-  .mno-inline-unchecked {
-    color: @dashboard-account-inline-text-color-unchecked;
-  }
-}
-
 mno-loader {
   display: block;
 
@@ -1402,6 +1400,16 @@ mno-loader {
 
 .loader-content {
   position: relative;
+}
+
+mno-inline-message {
+  .mno-inline-checked {
+    color: @dashboard-account-inline-text-color-checked;
+  }
+
+  .mno-inline-unchecked {
+    color: @dashboard-account-inline-text-color-unchecked;
+  }
 }
 
 mno-pagination {
@@ -2495,6 +2503,97 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#app-connect-modal {
+
+  select {
+    display: block;
+    margin: auto;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: auto;
+  }
+}
+
+.app-deletion-modal {
+  .deletion-sentence {
+    color: @brand-danger;
+  }
+}
+
+//=======================================
+// Settings Modals
+//=======================================
+#app-settings-modal {
+
+  .modal-body {
+    padding: 5px;
+
+    div.app-name {
+      border: 0px;
+
+      .fa {
+        margin-left: 5px;
+      }
+    }
+
+    h4, .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .sentence-check {
+      width: 100%;
+    }
+
+    .buttons {
+      width: 100%;
+      text-align: right;
+      padding-top: 20px;
+    }
+
+    .label {
+      font-size: 100%;
+      text-transform: capitalize;
+      padding: 6px 12px;
+
+      &.updating, &.upgrading, &.provisioning {
+        background-color: @mno-dock-settings-app-upgrading;
+      }
+      &.running, &.starting, &.restarting {
+        background-color: @mno-dock-settings-app-running;
+      }
+      &.terminating, &.terminated {
+        background-color: @mno-dock-settings-app-terminating;
+      }
+      &.neutral {
+        background-color: @mno-dock-settings-app-neutral;
+      }
+    }
+
+    .centered-buttons {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+    }
+
+    .app-deletion {
+      .deletion-sentence {
+        color: @deletion-sentence-color;
+      }
+    }
+  }
+}
+
+.create-review-modal {
+  textarea.form-control {
+    max-width: 100%;
+    background-color: white;
+  }
+}
+
 
 #onboarding {
   header.header {
@@ -2783,87 +2882,22 @@ form.editable-wrap .editable-controls input {
   }
 }
 
-#app-connect-modal {
+#app-info {
+  ul {
+    margin: 0;
 
-  select {
-    display: block;
-    margin: auto;
+    li:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 
-  button[type="submit"] {
-    display: block;
-    margin: auto;
+  .close {
+    margin: 10px;
   }
-}
 
-.app-deletion-modal {
-  .deletion-sentence {
-    color: @brand-danger;
-  }
-}
-
-//=======================================
-// Settings Modals
-//=======================================
-#app-settings-modal {
-
-  .modal-body {
-    padding: 5px;
-
-    div.app-name {
-      border: 0px;
-
-      .fa {
-        margin-left: 5px;
-      }
-    }
-
-    h4, .title {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .sentence-check {
-      width: 100%;
-    }
-
-    .buttons {
-      width: 100%;
-      text-align: right;
-      padding-top: 20px;
-    }
-
-    .label {
-      font-size: 100%;
-      text-transform: capitalize;
-      padding: 6px 12px;
-
-      &.updating, &.upgrading, &.provisioning {
-        background-color: @mno-dock-settings-app-upgrading;
-      }
-      &.running, &.starting, &.restarting {
-        background-color: @mno-dock-settings-app-running;
-      }
-      &.terminating, &.terminated {
-        background-color: @mno-dock-settings-app-terminating;
-      }
-      &.neutral {
-        background-color: @mno-dock-settings-app-neutral;
-      }
-    }
-
-    .centered-buttons {
-      display: flex;
-      align-content: center;
-      justify-content: space-around;
-    }
-
-    .app-deletion {
-      .deletion-sentence {
-        color: @deletion-sentence-color;
-      }
-    }
+  mno-app-features {
+    float: right;
+    width: 250px;
   }
 }
 
@@ -3019,32 +3053,6 @@ form.editable-wrap .editable-controls input {
   .permission-matrix-wrapper .table-right thead > tr > th {
     font-size: 11px;
     font-weight: 400;
-  }
-}
-
-.create-review-modal {
-  textarea.form-control {
-    max-width: 100%;
-    background-color: white;
-  }
-}
-
-#app-info {
-  ul {
-    margin: 0;
-
-    li:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-
-  .close {
-    margin: 10px;
-  }
-
-  mno-app-features {
-    float: right;
-    width: 250px;
   }
 }
 
