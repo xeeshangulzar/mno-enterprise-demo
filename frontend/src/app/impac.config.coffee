@@ -41,6 +41,9 @@ angular.module 'mnoEnterpriseAngular'
     # alert notifications options
     alertsConfig:
       enableAlerts: true
+    widgetSettings:
+      tagging:
+        enabled: true
 
   ImpacThemingProvider.configure(options)
 )
