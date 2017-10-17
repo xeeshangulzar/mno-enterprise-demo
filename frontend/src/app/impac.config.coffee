@@ -12,10 +12,10 @@ angular.module 'mnoEnterpriseAngular'
     kpis:
       index: "#{mnoHub}/impac/kpis"
 
-  # bolts = [{ provider: 'maestrano', name: 'finance', category: 'accounts' }]
+  bolts = [{ provider: 'maestrano', name: 'finance', category: 'accounts' }]
 
   ImpacRoutesProvider.configureRoutes(data)
-  # ImpacRoutesProvider.configureBolts('v2', bolts)
+  ImpacRoutesProvider.configureBolts('v2', bolts)
 )
 
 #======================================================================================
@@ -25,8 +25,7 @@ angular.module 'mnoEnterpriseAngular'
   options =
     # link to the marketplace
     dataNotFoundConfig:
-      linkUrl: '#!/marketplace'
-      linkTarget: '_self'
+      linkUrl: 'marketplace'
     # remove useless messages
     dhbErrorsConfig:
       firstTimeCreated:
