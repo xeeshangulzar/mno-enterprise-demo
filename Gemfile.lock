@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/manu-d/mno-enterprise
-  revision: 7e3a95de34ec4ca351423b6eda774b4cee63d3d1
+  revision: 6d22843c88734173ca8ed7957ff33dd3610f6010
   branch: feature/application-setup
   specs:
     mno-enterprise (4.0.0)
