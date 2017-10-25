@@ -1592,6 +1592,16 @@ dashboard-company-selectbox {
   }
 }
 
+
+dashboard-language-selectbox {
+  display: block;
+
+  .selector-line {
+    display: inline-block;
+    margin: 5px auto;
+  }
+}
+
 dashboard-menu {
   /*-----------------------------------------------------------------------*/
   /*                         Mobile menu                                   */
@@ -1792,16 +1802,6 @@ dashboard-menu {
   }
 }
 
-
-dashboard-language-selectbox {
-  display: block;
-
-  .selector-line {
-    display: inline-block;
-    margin: 5px auto;
-  }
-}
-
 impersonification-notification {
   .notifications {
     padding-top: 70px;
@@ -1825,6 +1825,22 @@ impersonification-notification {
   }
 }
 
+mno-app-onboarding-btn {
+  display: block;
+
+  .button-check {
+    color: @onboarding-app-connect-check;
+  }
+
+  .button-loader {
+    color: @onboarding-app-connect-loader;
+  }
+
+  .btn {
+    margin-top: 5px;
+  }
+}
+
 mno-audit-events-list {
   .table > thead > tr {
     color: @table-cell-header-text-color;
@@ -1839,22 +1855,6 @@ mno-audit-events-list {
     &:nth-of-type(odd) {
       background-color: @table-cell-row-odd-bg-color
     }
-  }
-}
-
-mno-app-onboarding-btn {
-  display: block;
-
-  .button-check {
-    color: @onboarding-app-connect-check;
-  }
-
-  .button-loader {
-    color: @onboarding-app-connect-loader;
-  }
-
-  .btn {
-    margin-top: 5px;
   }
 }
 
@@ -3597,6 +3597,10 @@ form.editable-wrap .editable-controls input {
   ul.breadcrumb {
     margin-bottom: 0px;
   }
+
+  toast {
+    z-index: 9999;
+  }
 }
 
 .app-deletion-modal {
@@ -3679,6 +3683,11 @@ form.editable-wrap .editable-controls input {
 
     .pagination {
       margin: 0 0;
+    }
+
+    .panel-group {
+      margin-top: 5px;
+      margin-bottom: 0px;
     }
   }
 }
