@@ -1,0 +1,6 @@
+impac:
+  protocol: https
+  host: api-impac-teapot.maestrano.io
+mno:
+  protocol: https
+  host: api-hub-teapot.maestrano.io
