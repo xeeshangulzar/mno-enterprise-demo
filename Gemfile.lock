@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/manu-d/mno-enterprise
-  revision: a0a5cc9ae95e79cddc22f30b555f728950231799
-  branch: feature/application-setup
+  revision: 5f65d88a16b108a7c624db5442292e457a343366
+  branch: feature/app-setup
   specs:
     mno-enterprise (4.0.0)
       mno-enterprise-api (= 4.0.0)
@@ -195,11 +195,9 @@ GEM
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.6.6)
-      mime-types (>= 1.16, < 4)
-    mime-types (3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
+    mini_mime (0.1.4)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     money (6.9.0)
@@ -338,7 +336,7 @@ GEM
     thread_safe (0.3.6)
     tilt (2.0.8)
     ttfunk (1.5.1)
-    tzinfo (1.2.3)
+    tzinfo (1.2.4)
       thread_safe (~> 0.1)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
