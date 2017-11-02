@@ -28,7 +28,6 @@ body {
 
   &.translate-cloak {
     opacity: 0;
-    display: none !important;
   }
 }
 
@@ -76,10 +75,6 @@ body {
 
 #toast-container {
   z-index: 99999;
-}
-
-.content-template-wrapper.ng-hide {
-  display: none !important;
 }
 
 /**
@@ -165,6 +160,7 @@ body {
 @public-page-header-bg-color:        @bg-inverse-color;
 @public-page-header-padding:         10px;
 
+@public-page-header-logo-img:        "mno_enterprise/main-logo.png";
 @public-page-header-logo:            { min-height: 61px; max-width: 160px; max-height: 130px; margin: 17px auto 5px auto; };
 
 /*-----------------------------------------------------------------------*/
@@ -181,7 +177,8 @@ body {
 
 @login-box-bg-color:                  @bg-inverse-color;
 @login-box-padding:                   20px;
-@login-box-brand-logo:                { max-width: 300px; max-height: 200px; margin: 16px auto 16px auto; };
+@login-box-brand-logo-img:            "mno_enterprise/main-logo.png";
+@login-box-brand-logo:                { min-height: 61px; max-width: 160px; max-height: 130px; margin: 17px auto 5px auto; };
 @login-box-btn-login:                 { width: 100%; };
 
 @login-box-sso-intuit-logo:           "mno_enterprise/logo-intuit.png";
@@ -196,7 +193,7 @@ body {
 /*-----------------------------------------------------------------------*/
 @public-main-bg-color:                                @bg-main-color;
 
-@landing-nav-logo:                                    { max-height: 55px; margin: 7px 20px };
+@landing-nav-logo:                                    { width: 35px; height: 35px; margin: 17px 10px 17px 5px; };
 @landing-nav-title:                                   { padding: 15px; height: 75px; line-height: 40px; margin-left: -15px; };
 @landing-nav-bg-color:                                @bg-inverse-color;
 @landing-nav-title-text-color:                        @bg-on-bg-inverse-color;
@@ -288,7 +285,7 @@ body {
 // Loaders
 //--------------------------------------
 @dashboard-loader-color:                        @text-strong-color;
-@dashboard-loader-icon:                         { .icon-fa(refresh); .fa-2x; .fa-spin; };
+@dashboard-loader-icon:                         { .icon-fa(refresh); .fa-2x; .fa-spin; }; //pass a ruleset
 
 // User without organisation
 //--------------------------------------
@@ -300,8 +297,9 @@ body {
 @dashboard-side-menu-padding:                   30px 0px 0px 14px;
 @dashboard-side-menu-bg-color:                  @bg-inverse-color;
 
-@dashboard-side-menu-brand-logo:                { max-width: 50px; max-height: 50px; margin: 0; transition: max-width .25s ease, max-height .25s ease; };
-@dashboard-side-menu-brand-logo-expanded:       { max-width: 200px; max-height: 130px; };
+@dashboard-side-menu-brand-logo-img:            "../images/main-logo.png";
+@dashboard-side-menu-brand-logo:                { background-size: 204px; width: 51px; margin-left: 5px; };
+@dashboard-side-menu-brand-logo-expanded:       { width: 201px; background-size: 100%; };
 
 @dashboard-side-menu-link-color:                @text-inverse-color;
 @dashboard-side-menu-link-bg-color:             @dashboard-side-menu-bg-color;
@@ -553,12 +551,6 @@ body {
 @dashboard-marketplace-show-product-price-tile-color:       @bg-on-bg-inverse-color;
 @dashboard-marketplace-show-product-price-icon-color:       @text-strong-color;
 @dashboard-marketplace-show-product-price-icon-color-hover: lighten(@text-strong-color, 10%);
-
-/*-----------------------------------------------------------------------*/
-/*                          Subscription                                 */
-/*-----------------------------------------------------------------------*/
-@subscription-txt-color: @text-strong-color;
-@subscription-box-color: white;
 
 /*-----------------------------------------------------------------------*/
 /*                          Reviews and comments                         */
@@ -1530,7 +1522,6 @@ dashboard-company-selectbox {
 
             &:hover {
               background-color: @dashboard-cpy-select-link-hover-bg-color;
-              color: @dashboard-cpy-select-link-hover-color;
               border-bottom-left-radius: 0;
             }
 
@@ -1626,14 +1617,14 @@ dashboard-menu {
       }
 
       ul.nav.navbar-nav {
-        padding: 0;
-        text-transform: uppercase;
+        padding:0px;
+        text-transform:uppercase;
         a {
-          font-size: @normal;
-          text-align: center;
-          background-color: #111c21;
+          font-size:@normal;
+          text-align:center;
+          background-color:#111c21;
           border-bottom: solid 1px @bg-inverse-color;
-          padding: 22px 0;
+          padding:22px 0px;
 
           &.active {
             color: @dashboard-side-menu-link-active-color;
@@ -1641,11 +1632,11 @@ dashboard-menu {
         }
 
         ul.dropdown-menu {
-          padding: 0;
+          padding:0px;
           a {
-            background-color: @bg-inverse-color;
+            background-color:@bg-inverse-color;
             border-bottom: solid 1px #111c21;
-            padding: 13px 0;
+            padding:13px 0px;
           }
         }
       }
@@ -1656,14 +1647,8 @@ dashboard-menu {
   /*                         Dashboard Left Navbar                         */
   /*-----------------------------------------------------------------------*/
   .menu {
-    background-color: @dashboard-side-menu-bg-color;
 
     a:hover { text-decoration: none; }
-
-    .menu-buttons-wrapper {
-      position: absolute;
-      top: 160px;
-    }
 
     // Dashboard Button > Active State
     .dashboard-button.active, .dashboard-button.active:hover {
@@ -1692,14 +1677,14 @@ dashboard-menu {
 
     // Vertical menu
     &.vertical {
-      z-index: 100;
-      position: fixed;
-      left: 0;
-      top: 0;
+      z-index:100;
+      position:fixed;
+      left:0px;
+      top:0px;
       padding: @dashboard-side-menu-padding;
-      width: 80px;
-      min-height: 100%;
-      height: 99%;
+      width:80px;
+      min-height:100%;
+      height:99%;
 
       // Dashboard Button > Normal State
       .dashboard-button {
@@ -1724,19 +1709,24 @@ dashboard-menu {
         display: block;
         white-space: nowrap;
         position: absolute;
-        margin: 8px 0 0 55px;
+        margin: 8px 0px 0px 55px;
         font-size: 15px;
       }
 
       // Side menu brand logo
       .brand-logo {
+        height: 90px;
+        background-repeat: no-repeat;
+        background-image: url(@dashboard-side-menu-brand-logo-img);
+        background-size: 100%;
         @dashboard-side-menu-brand-logo();
-
-        &.expanded {
-          @dashboard-side-menu-brand-logo-expanded();
-        }
+      }
+      .brand-logo.expanded {
+        @dashboard-side-menu-brand-logo-expanded();
       }
     }
+
+    background-color: @dashboard-side-menu-bg-color;
 
     hr {
       border-top: 2px dashed darken(@dashboard-side-menu-bg-color, 5%);
@@ -1860,7 +1850,7 @@ mno-audit-events-list {
 
 mno-impersonation-bar {
   #impersonate-bar {
-    color: @text-inverse-color;
+    color: @text-inverse-strong-color;
     background-color: @bg-inverse-color;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -2042,10 +2032,6 @@ theme-editor {
       padding-left: 15px;
       padding-right: 15px;
       overflow-y: auto;
-    }
-
-    .alert.alert-info {
-      display: inline-block;
     }
   }
 }
@@ -2347,98 +2333,6 @@ form.editable-wrap .editable-controls input {
   }
 }
 
-#dashboard-apps-list {
-  .app-dashboard {
-    min-height: 280px;
-    max-width: 225px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    background-color: @dashboard-apps-tile-bg-color;
-    text-align: center;
-    padding: 30px 0px;
-    padding-bottom: 0px;
-    margin-top: 15px;
-
-    .btn-change-plan {
-      margin-top:50px;
-    }
-
-    .title {
-      .font(14px,normal,@dashboard-apps-tile-text-color);
-      margin-top:10px;
-      margin-bottom:10px;
-    }
-
-    .app-line {
-      .font(12px,normal,@text-inverse-color);
-    }
-
-    img.app-logo {
-      border-radius: 5px;
-      .square(85px);
-      border: solid @dashboard-apps-tile-logo-border-size @dashboard-apps-tile-logo-border-color;
-    }
-
-    .connector-logo {
-      margin-top: 3px;
-      margin-bottom: 3px;
-      cursor: pointer;
-    }
-
-    .office365-connector-logo {
-      height: 32px;
-      padding: 2px;
-    }
-
-    .tutorial {
-      display:block;
-      margin-top: 7px;
-    }
-
-    // App Tile Settings (top right)
-    a.options {
-      line-height: 19px;
-      .square(20px);
-      border-radius: 20px;
-      color: @dashboard-apps-tile-settings-color;
-      background-color: @dashboard-apps-tile-settings-bg-color;
-      float:right;
-      margin: -25px 5px 0px 0px;
-    }
-
-    a.options:hover {
-      color: @dashboard-apps-tile-settings-hover-color;
-      background-color: @dashboard-apps-tile-settings-hover-bg-color;
-    }
-    a.options i {
-      margin-top: 3px;
-    }
-
-    .app-custom-info {
-      position: relative;
-      top: -10px;
-      z-index: 999;
-    }
-
-    // Add application tile (tile with + button)
-    &.add-app {
-      padding:15px 0px;
-      font-size:140px;
-      color: @dashboard-apps-tile-add-color;
-      background-color: @dashboard-apps-tile-add-bg-color;
-    }
-
-    &.add-app a {
-      color: @dashboard-bg-color;
-
-      &:hover {
-        color: @brand-warning;
-      }
-    }
-  }
-}
-
 .dashboard-organization {
 
   //-----------------------------------
@@ -2655,15 +2549,7 @@ form.editable-wrap .editable-controls input {
       margin-top: 0;
     }
 
-    ul.app-features {
-      img.feature-logo {
-        padding-right: 5px;
-        padding-left: 5px;
-        max-width: 26px;
-      }
-    }
-
-    img:not(.feature-logo) {
+    img {
       .img-responsive;
     }
 
@@ -3044,6 +2930,300 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#dashboard-apps-list {
+  .app-dashboard {
+    min-height: 280px;
+    max-width: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: @dashboard-apps-tile-bg-color;
+    text-align: center;
+    padding: 30px 0px;
+    padding-bottom: 0px;
+    margin-top: 15px;
+
+    .btn-change-plan {
+      margin-top:50px;
+    }
+
+    .title {
+      .font(14px,normal,@dashboard-apps-tile-text-color);
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+
+    .app-line {
+      .font(12px,normal,@text-inverse-color);
+    }
+
+    img.app-logo {
+      border-radius: 5px;
+      .square(85px);
+      border: solid @dashboard-apps-tile-logo-border-size @dashboard-apps-tile-logo-border-color;
+    }
+
+    .connector-logo {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      cursor: pointer;
+    }
+
+    .office365-connector-logo {
+      height: 32px;
+      padding: 2px;
+    }
+
+    .tutorial {
+      display:block;
+      margin-top: 7px;
+    }
+
+    // App Tile Settings (top right)
+    a.options {
+      line-height: 19px;
+      .square(20px);
+      border-radius: 20px;
+      color: @dashboard-apps-tile-settings-color;
+      background-color: @dashboard-apps-tile-settings-bg-color;
+      float:right;
+      margin: -25px 5px 0px 0px;
+    }
+
+    a.options:hover {
+      color: @dashboard-apps-tile-settings-hover-color;
+      background-color: @dashboard-apps-tile-settings-hover-bg-color;
+    }
+    a.options i {
+      margin-top: 3px;
+    }
+
+    .app-custom-info {
+      position: relative;
+      top: -10px;
+      z-index: 999;
+    }
+
+    // Add application tile (tile with + button)
+    &.add-app {
+      padding:15px 0px;
+      font-size:140px;
+      color: @dashboard-apps-tile-add-color;
+      background-color: @dashboard-apps-tile-add-bg-color;
+    }
+
+    &.add-app a {
+      color: @dashboard-bg-color;
+
+      &:hover {
+        color: @brand-warning;
+      }
+    }
+  }
+}
+
+#provisioning-confirm {
+
+}
+
+#provisioning-details {
+
+}
+
+#provisioning-layout {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    .top-buffer-5;
+
+    .breadcrumb-item {
+      // Deactivate the link
+      pointer-events: none;
+      color: @provisioning-breadcrumb-item-color;
+
+      .badge {
+        background-color: @provisioning-breadcrumb-item-badge-bg;
+      }
+
+      &.active {
+        color: @provisioning-breadcrumb-item-active-color;
+
+        .badge {
+          background-color: @provisioning-breadcrumb-item-active-badge-bg;
+        }
+      }
+    }
+  }
+
+  h1 {
+    .top-buffer-3;
+  }
+
+  .well {
+    .top-buffer-1;
+    background-color: @provisioning-well-bg-color;
+  }
+}
+
+#provisioning-order {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .radio-selector {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#provisioning-subscriptions {
+  .well {
+    background-color: @provisioning-well-bg-color;
+  }
+}
+
+#provisioning-summary {
+
+}
+
+#public {
+  background-color: @public-main-bg-color;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+
+  .navbar {
+    padding-left: 10px;
+    max-height: 75px;
+    min-width: 405px;
+    background-color: @landing-nav-bg-color;
+    position: relative;
+  }
+
+  .highlight-products {
+    padding: 0 50px;
+
+    .well.carousel {
+      min-height: 400px;
+    }
+  }
+
+  .carousel-image-container {
+    height: 360px;
+    text-align: center;
+    position: relative;
+
+    .carousel-image {
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      filter: blur(5px);
+    }
+
+    .carousel-logo {
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  .nav-logo {
+    background-image: url('images/main-logo.png');
+    background-size: cover;
+    @landing-nav-logo();
+  }
+
+  .navbar-brand {
+    @landing-nav-title();
+    color: @landing-nav-title-text-color;
+  }
+
+  .links {
+    overflow: hidden;
+    height: 55px;
+    padding-top: 20px;
+    padding-right: 20px;
+
+    a {
+      margin-left: 15px;
+      .z-depth(3);
+    }
+  }
+
+  .product-content {
+    padding: 50px 50px 0 50px;
+  }
+
+  .marketplace-nav {
+    input.form-control {
+      color: @landing-marketplace-search-text-color;
+      border: 1px solid @landing-marketplace-search-border-color;
+    }
+  }
+
+  .marketplace-app-card {
+    @landing-marketplace-app-card();
+    background-color: @landing-marketplace-tile-bg-color;
+
+    &:hover {
+      background-color: @landing-marketplace-tile-hover-bg-color;
+    }
+
+    .media {
+      .media-body {
+        color: @landing-marketplace-tile-text-color;
+
+        &:hover {
+          color: @landing-marketplace-tile-hover-text-color;
+        }
+      }
+      .media-heading {
+        color: @landing-marketplace-tile-name-color;
+
+        &:hover {
+          color: @landing-marketplace-tile-hover-name-color;
+        }
+      }
+
+      .arrow {
+        color: @landing-marketplace-tile-hover-arrow-color;
+      }
+
+      img.media-object {
+        border: 1px solid @landing-marketplace-tile-img-border-color;
+
+        &:hover {
+          border: 1px solid @landing-marketplace-tile-hover-img-border-color;
+        }
+      }
+    }
+  }
+
+  .product-content {
+    .media {
+      .media-body {
+        h2.media-heading {
+          color: @public-marketplace-show-header-text-color;
+        }
+      }
+    }
+
+    .show-content {
+      .well {
+        background-color: @public-marketplace-show-sections-bg-color;
+        color: @public-marketplace-show-sections-text-color;
+      }
+    }
+  }
+}
+
 
 #onboarding {
   header.header {
@@ -3332,366 +3512,6 @@ form.editable-wrap .editable-controls input {
   }
 }
 
-#provisioning-confirm {
-
-}
-
-#provisioning-details {
-
-}
-
-#provisioning-layout {
-  nav {
-    display: flex;
-    justify-content: space-around;
-    .top-buffer-5;
-
-    .breadcrumb-item {
-      // Deactivate the link
-      pointer-events: none;
-      color: @provisioning-breadcrumb-item-color;
-
-      .badge {
-        background-color: @provisioning-breadcrumb-item-badge-bg;
-      }
-
-      &.active {
-        color: @provisioning-breadcrumb-item-active-color;
-
-        .badge {
-          background-color: @provisioning-breadcrumb-item-active-badge-bg;
-        }
-      }
-    }
-  }
-
-  h1 {
-    .top-buffer-3;
-  }
-
-  .well {
-    .top-buffer-1;
-    background-color: @provisioning-well-bg-color;
-  }
-}
-
-#provisioning-order {
-  .row {
-    display: flex;
-    align-items: center;
-  }
-
-  .radio-selector {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-#subscription {
-  .well {
-    h3 {
-      margin-top: 0;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed @subscription-txt-color;
-    }
-
-    background-color: @subscription-box-color;
-  }
-
-  .text-color {
-    color: @subscription-txt-color;
-  }
-
-  form label.control-label {
-    color: @subscription-txt-color;
-  }
-
-  .form-control {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
-  }
-
-  .has-success .form-control-feedback {
-    color: transparent;
-  }
-
-  .hide-border {
-    border: transparent;
-  }
-
-  .has-success .form-control {
-    border-color: transparent;
-  }
-
-  .well.subscription-info {
-    .form-group {
-      display: flex;
-    }
-
-    div, ul {
-      width: 100%;
-      margin-left: 14px;
-    }
-
-    label {
-      width: 180px;
-      padding-top: 6px;
-    }
-  }
-}
-
-#provisioning-subscriptions {
-  .well {
-    background-color: @provisioning-well-bg-color;
-  }
-}
-
-#provisioning-summary {
-
-}
-
-#public {
-  background-color: @public-main-bg-color;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: relative;
-
-  .navbar {
-    position: relative;
-    height: 70px;
-    background-color: @landing-nav-bg-color;
-  }
-
-  .highlight-products {
-    padding: 0 50px;
-
-    .well.carousel {
-      min-height: 400px;
-    }
-  }
-
-  .carousel-image-container {
-    height: 360px;
-    text-align: center;
-    position: relative;
-
-    .carousel-image {
-      background-size: cover;
-      height: 100%;
-      width: 100%;
-      filter: blur(5px);
-    }
-
-    .carousel-logo {
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-    }
-  }
-
-  .nav-logo {
-    @landing-nav-logo();
-  }
-
-  .navbar-brand {
-    @landing-nav-title();
-    color: @landing-nav-title-text-color;
-  }
-
-  .links {
-    overflow: hidden;
-    margin: 18px 20px;
-
-    a {
-      margin-left: 15px;
-      .z-depth(3);
-    }
-  }
-
-  .product-content {
-    padding: 25px 50px 0 50px;
-  }
-
-  .marketplace-nav {
-    input.form-control {
-      color: @landing-marketplace-search-text-color;
-      border: 1px solid @landing-marketplace-search-border-color;
-    }
-  }
-
-  .marketplace-app-card {
-    @landing-marketplace-app-card();
-    background-color: @landing-marketplace-tile-bg-color;
-
-    &:hover {
-      background-color: @landing-marketplace-tile-hover-bg-color;
-    }
-
-    .media {
-      .media-body {
-        color: @landing-marketplace-tile-text-color;
-
-        &:hover {
-          color: @landing-marketplace-tile-hover-text-color;
-        }
-      }
-      .media-heading {
-        color: @landing-marketplace-tile-name-color;
-
-        &:hover {
-          color: @landing-marketplace-tile-hover-name-color;
-        }
-      }
-
-      .arrow {
-        color: @landing-marketplace-tile-hover-arrow-color;
-      }
-
-      img.media-object {
-        border: 1px solid @landing-marketplace-tile-img-border-color;
-
-        &:hover {
-          border: 1px solid @landing-marketplace-tile-hover-img-border-color;
-        }
-      }
-    }
-  }
-
-  .product-content {
-    .media {
-      .media-body {
-        h2.media-heading {
-          color: @public-marketplace-show-header-text-color;
-        }
-      }
-    }
-
-    .show-content {
-      .well {
-        background-color: @public-marketplace-show-sections-bg-color;
-        color: @public-marketplace-show-sections-text-color;
-      }
-    }
-  }
-}
-
-#app-connect-modal {
-
-  select {
-    display: block;
-    margin: auto;
-  }
-
-  button[type="submit"] {
-    display: block;
-    margin: auto;
-  }
-
-  ul.breadcrumb {
-    margin-bottom: 0px;
-  }
-
-  toast {
-    z-index: 9999;
-  }
-}
-
-.app-deletion-modal {
-  .deletion-sentence {
-    color: @brand-danger;
-  }
-}
-
-//=======================================
-// Settings Modals
-//=======================================
-#app-settings-modal {
-
-  .modal-body {
-    .container-fluid {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    padding: 5px;
-
-    div.app-name {
-      border: 0px;
-
-      .fa {
-        margin-left: 5px;
-      }
-    }
-
-    h4, .title {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .sentence-check {
-      width: 100%;
-    }
-
-    .buttons {
-      width: 100%;
-      text-align: right;
-      padding-top: 20px;
-    }
-
-    .label {
-      font-size: 100%;
-      text-transform: capitalize;
-      padding: 6px 12px;
-
-      &.updating, &.upgrading, &.provisioning {
-        background-color: @mno-dock-settings-app-upgrading;
-      }
-      &.running, &.starting, &.restarting {
-        background-color: @mno-dock-settings-app-running;
-      }
-      &.terminating, &.terminated {
-        background-color: @mno-dock-settings-app-terminating;
-      }
-      &.neutral {
-        background-color: @mno-dock-settings-app-neutral;
-      }
-    }
-
-    .centered-buttons {
-      display: flex;
-      align-content: center;
-      justify-content: space-around;
-    }
-
-    .app-deletion {
-      .deletion-sentence {
-        color: @deletion-sentence-color;
-      }
-    }
-
-    .nb-items-col {
-      display: none;
-    }
-
-    .pagination {
-      margin: 0 0;
-    }
-
-    .panel-group {
-      margin-top: 5px;
-      margin-bottom: 0px;
-    }
-  }
-}
-
 .dashboard-organization {
   // credit card icons display modes
   //---------------------------------
@@ -3851,6 +3671,112 @@ form.editable-wrap .editable-controls input {
   textarea.form-control {
     max-width: 100%;
     background-color: white;
+  }
+}
+
+#app-connect-modal {
+
+  select {
+    display: block;
+    margin: auto;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: auto;
+  }
+
+  ul.breadcrumb {
+    margin-bottom: 0px;
+  }
+
+  toast {
+    z-index: 9999;
+  }
+}
+
+.app-deletion-modal {
+  .deletion-sentence {
+    color: @brand-danger;
+  }
+}
+
+//=======================================
+// Settings Modals
+//=======================================
+#app-settings-modal {
+
+  .modal-body {
+    .container-fluid {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    padding: 5px;
+
+    div.app-name {
+      border: 0px;
+
+      .fa {
+        margin-left: 5px;
+      }
+    }
+
+    h4, .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .sentence-check {
+      width: 100%;
+    }
+
+    .buttons {
+      width: 100%;
+      text-align: right;
+      padding-top: 20px;
+    }
+
+    .label {
+      font-size: 100%;
+      text-transform: capitalize;
+      padding: 6px 12px;
+
+      &.updating, &.upgrading, &.provisioning {
+        background-color: @mno-dock-settings-app-upgrading;
+      }
+      &.running, &.starting, &.restarting {
+        background-color: @mno-dock-settings-app-running;
+      }
+      &.terminating, &.terminated {
+        background-color: @mno-dock-settings-app-terminating;
+      }
+      &.neutral {
+        background-color: @mno-dock-settings-app-neutral;
+      }
+    }
+
+    .centered-buttons {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+    }
+
+    .app-deletion {
+      .deletion-sentence {
+        color: @deletion-sentence-color;
+      }
+    }
+
+    .pagination {
+      margin: 0 0;
+    }
+
+    .panel-group {
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
   }
 }
 
