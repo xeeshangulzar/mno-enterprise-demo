@@ -1848,6 +1848,16 @@ mno-audit-events-list {
   }
 }
 
+mno-inline-message {
+  .mno-inline-checked {
+    color: @dashboard-account-inline-text-color-checked;
+  }
+
+  .mno-inline-unchecked {
+    color: @dashboard-account-inline-text-color-unchecked;
+  }
+}
+
 mno-impersonation-bar {
   #impersonate-bar {
     color: @text-inverse-strong-color;
@@ -1858,16 +1868,6 @@ mno-impersonation-bar {
     @media (max-width: @screen-xs-max) {
       padding-top: 40px;
     }
-  }
-}
-
-mno-inline-message {
-  .mno-inline-checked {
-    color: @dashboard-account-inline-text-color-checked;
-  }
-
-  .mno-inline-unchecked {
-    color: @dashboard-account-inline-text-color-unchecked;
   }
 }
 
@@ -2330,6 +2330,98 @@ form.editable-wrap .editable-controls input {
 #account {
   .row:not(:first-child) {
     margin-top: 15px;
+  }
+}
+
+#dashboard-apps-list {
+  .app-dashboard {
+    min-height: 280px;
+    max-width: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: @dashboard-apps-tile-bg-color;
+    text-align: center;
+    padding: 30px 0px;
+    padding-bottom: 0px;
+    margin-top: 15px;
+
+    .btn-change-plan {
+      margin-top:50px;
+    }
+
+    .title {
+      .font(14px,normal,@dashboard-apps-tile-text-color);
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+
+    .app-line {
+      .font(12px,normal,@text-inverse-color);
+    }
+
+    img.app-logo {
+      border-radius: 5px;
+      .square(85px);
+      border: solid @dashboard-apps-tile-logo-border-size @dashboard-apps-tile-logo-border-color;
+    }
+
+    .connector-logo {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      cursor: pointer;
+    }
+
+    .office365-connector-logo {
+      height: 32px;
+      padding: 2px;
+    }
+
+    .tutorial {
+      display:block;
+      margin-top: 7px;
+    }
+
+    // App Tile Settings (top right)
+    a.options {
+      line-height: 19px;
+      .square(20px);
+      border-radius: 20px;
+      color: @dashboard-apps-tile-settings-color;
+      background-color: @dashboard-apps-tile-settings-bg-color;
+      float:right;
+      margin: -25px 5px 0px 0px;
+    }
+
+    a.options:hover {
+      color: @dashboard-apps-tile-settings-hover-color;
+      background-color: @dashboard-apps-tile-settings-hover-bg-color;
+    }
+    a.options i {
+      margin-top: 3px;
+    }
+
+    .app-custom-info {
+      position: relative;
+      top: -10px;
+      z-index: 999;
+    }
+
+    // Add application tile (tile with + button)
+    &.add-app {
+      padding:15px 0px;
+      font-size:140px;
+      color: @dashboard-apps-tile-add-color;
+      background-color: @dashboard-apps-tile-add-bg-color;
+    }
+
+    &.add-app a {
+      color: @dashboard-bg-color;
+
+      &:hover {
+        color: @brand-warning;
+      }
+    }
   }
 }
 
@@ -2930,300 +3022,6 @@ form.editable-wrap .editable-controls input {
   }
 }
 
-#dashboard-apps-list {
-  .app-dashboard {
-    min-height: 280px;
-    max-width: 225px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    background-color: @dashboard-apps-tile-bg-color;
-    text-align: center;
-    padding: 30px 0px;
-    padding-bottom: 0px;
-    margin-top: 15px;
-
-    .btn-change-plan {
-      margin-top:50px;
-    }
-
-    .title {
-      .font(14px,normal,@dashboard-apps-tile-text-color);
-      margin-top:10px;
-      margin-bottom:10px;
-    }
-
-    .app-line {
-      .font(12px,normal,@text-inverse-color);
-    }
-
-    img.app-logo {
-      border-radius: 5px;
-      .square(85px);
-      border: solid @dashboard-apps-tile-logo-border-size @dashboard-apps-tile-logo-border-color;
-    }
-
-    .connector-logo {
-      margin-top: 3px;
-      margin-bottom: 3px;
-      cursor: pointer;
-    }
-
-    .office365-connector-logo {
-      height: 32px;
-      padding: 2px;
-    }
-
-    .tutorial {
-      display:block;
-      margin-top: 7px;
-    }
-
-    // App Tile Settings (top right)
-    a.options {
-      line-height: 19px;
-      .square(20px);
-      border-radius: 20px;
-      color: @dashboard-apps-tile-settings-color;
-      background-color: @dashboard-apps-tile-settings-bg-color;
-      float:right;
-      margin: -25px 5px 0px 0px;
-    }
-
-    a.options:hover {
-      color: @dashboard-apps-tile-settings-hover-color;
-      background-color: @dashboard-apps-tile-settings-hover-bg-color;
-    }
-    a.options i {
-      margin-top: 3px;
-    }
-
-    .app-custom-info {
-      position: relative;
-      top: -10px;
-      z-index: 999;
-    }
-
-    // Add application tile (tile with + button)
-    &.add-app {
-      padding:15px 0px;
-      font-size:140px;
-      color: @dashboard-apps-tile-add-color;
-      background-color: @dashboard-apps-tile-add-bg-color;
-    }
-
-    &.add-app a {
-      color: @dashboard-bg-color;
-
-      &:hover {
-        color: @brand-warning;
-      }
-    }
-  }
-}
-
-#provisioning-confirm {
-
-}
-
-#provisioning-details {
-
-}
-
-#provisioning-layout {
-  nav {
-    display: flex;
-    justify-content: space-around;
-    .top-buffer-5;
-
-    .breadcrumb-item {
-      // Deactivate the link
-      pointer-events: none;
-      color: @provisioning-breadcrumb-item-color;
-
-      .badge {
-        background-color: @provisioning-breadcrumb-item-badge-bg;
-      }
-
-      &.active {
-        color: @provisioning-breadcrumb-item-active-color;
-
-        .badge {
-          background-color: @provisioning-breadcrumb-item-active-badge-bg;
-        }
-      }
-    }
-  }
-
-  h1 {
-    .top-buffer-3;
-  }
-
-  .well {
-    .top-buffer-1;
-    background-color: @provisioning-well-bg-color;
-  }
-}
-
-#provisioning-order {
-  .row {
-    display: flex;
-    align-items: center;
-  }
-
-  .radio-selector {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-#provisioning-subscriptions {
-  .well {
-    background-color: @provisioning-well-bg-color;
-  }
-}
-
-#provisioning-summary {
-
-}
-
-#public {
-  background-color: @public-main-bg-color;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: relative;
-
-  .navbar {
-    padding-left: 10px;
-    max-height: 75px;
-    min-width: 405px;
-    background-color: @landing-nav-bg-color;
-    position: relative;
-  }
-
-  .highlight-products {
-    padding: 0 50px;
-
-    .well.carousel {
-      min-height: 400px;
-    }
-  }
-
-  .carousel-image-container {
-    height: 360px;
-    text-align: center;
-    position: relative;
-
-    .carousel-image {
-      background-size: cover;
-      height: 100%;
-      width: 100%;
-      filter: blur(5px);
-    }
-
-    .carousel-logo {
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-    }
-  }
-
-  .nav-logo {
-    background-image: url('images/main-logo.png');
-    background-size: cover;
-    @landing-nav-logo();
-  }
-
-  .navbar-brand {
-    @landing-nav-title();
-    color: @landing-nav-title-text-color;
-  }
-
-  .links {
-    overflow: hidden;
-    height: 55px;
-    padding-top: 20px;
-    padding-right: 20px;
-
-    a {
-      margin-left: 15px;
-      .z-depth(3);
-    }
-  }
-
-  .product-content {
-    padding: 50px 50px 0 50px;
-  }
-
-  .marketplace-nav {
-    input.form-control {
-      color: @landing-marketplace-search-text-color;
-      border: 1px solid @landing-marketplace-search-border-color;
-    }
-  }
-
-  .marketplace-app-card {
-    @landing-marketplace-app-card();
-    background-color: @landing-marketplace-tile-bg-color;
-
-    &:hover {
-      background-color: @landing-marketplace-tile-hover-bg-color;
-    }
-
-    .media {
-      .media-body {
-        color: @landing-marketplace-tile-text-color;
-
-        &:hover {
-          color: @landing-marketplace-tile-hover-text-color;
-        }
-      }
-      .media-heading {
-        color: @landing-marketplace-tile-name-color;
-
-        &:hover {
-          color: @landing-marketplace-tile-hover-name-color;
-        }
-      }
-
-      .arrow {
-        color: @landing-marketplace-tile-hover-arrow-color;
-      }
-
-      img.media-object {
-        border: 1px solid @landing-marketplace-tile-img-border-color;
-
-        &:hover {
-          border: 1px solid @landing-marketplace-tile-hover-img-border-color;
-        }
-      }
-    }
-  }
-
-  .product-content {
-    .media {
-      .media-body {
-        h2.media-heading {
-          color: @public-marketplace-show-header-text-color;
-        }
-      }
-    }
-
-    .show-content {
-      .well {
-        background-color: @public-marketplace-show-sections-bg-color;
-        color: @public-marketplace-show-sections-text-color;
-      }
-    }
-  }
-}
-
 
 #onboarding {
   header.header {
@@ -3512,6 +3310,314 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#provisioning-confirm {
+
+}
+
+#provisioning-details {
+
+}
+
+#provisioning-layout {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    .top-buffer-5;
+
+    .breadcrumb-item {
+      // Deactivate the link
+      pointer-events: none;
+      color: @provisioning-breadcrumb-item-color;
+
+      .badge {
+        background-color: @provisioning-breadcrumb-item-badge-bg;
+      }
+
+      &.active {
+        color: @provisioning-breadcrumb-item-active-color;
+
+        .badge {
+          background-color: @provisioning-breadcrumb-item-active-badge-bg;
+        }
+      }
+    }
+  }
+
+  h1 {
+    .top-buffer-3;
+  }
+
+  .well {
+    .top-buffer-1;
+    background-color: @provisioning-well-bg-color;
+  }
+}
+
+#provisioning-order {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .radio-selector {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#provisioning-subscriptions {
+  .well {
+    background-color: @provisioning-well-bg-color;
+  }
+}
+
+#provisioning-summary {
+
+}
+
+#public {
+  background-color: @public-main-bg-color;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+
+  .navbar {
+    padding-left: 10px;
+    max-height: 75px;
+    min-width: 405px;
+    background-color: @landing-nav-bg-color;
+    position: relative;
+  }
+
+  .highlight-products {
+    padding: 0 50px;
+
+    .well.carousel {
+      min-height: 400px;
+    }
+  }
+
+  .carousel-image-container {
+    height: 360px;
+    text-align: center;
+    position: relative;
+
+    .carousel-image {
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      filter: blur(5px);
+    }
+
+    .carousel-logo {
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  .nav-logo {
+    background-image: url('images/main-logo.png');
+    background-size: cover;
+    @landing-nav-logo();
+  }
+
+  .navbar-brand {
+    @landing-nav-title();
+    color: @landing-nav-title-text-color;
+  }
+
+  .links {
+    overflow: hidden;
+    height: 55px;
+    padding-top: 20px;
+    padding-right: 20px;
+
+    a {
+      margin-left: 15px;
+      .z-depth(3);
+    }
+  }
+
+  .product-content {
+    padding: 50px 50px 0 50px;
+  }
+
+  .marketplace-nav {
+    input.form-control {
+      color: @landing-marketplace-search-text-color;
+      border: 1px solid @landing-marketplace-search-border-color;
+    }
+  }
+
+  .marketplace-app-card {
+    @landing-marketplace-app-card();
+    background-color: @landing-marketplace-tile-bg-color;
+
+    &:hover {
+      background-color: @landing-marketplace-tile-hover-bg-color;
+    }
+
+    .media {
+      .media-body {
+        color: @landing-marketplace-tile-text-color;
+
+        &:hover {
+          color: @landing-marketplace-tile-hover-text-color;
+        }
+      }
+      .media-heading {
+        color: @landing-marketplace-tile-name-color;
+
+        &:hover {
+          color: @landing-marketplace-tile-hover-name-color;
+        }
+      }
+
+      .arrow {
+        color: @landing-marketplace-tile-hover-arrow-color;
+      }
+
+      img.media-object {
+        border: 1px solid @landing-marketplace-tile-img-border-color;
+
+        &:hover {
+          border: 1px solid @landing-marketplace-tile-hover-img-border-color;
+        }
+      }
+    }
+  }
+
+  .product-content {
+    .media {
+      .media-body {
+        h2.media-heading {
+          color: @public-marketplace-show-header-text-color;
+        }
+      }
+    }
+
+    .show-content {
+      .well {
+        background-color: @public-marketplace-show-sections-bg-color;
+        color: @public-marketplace-show-sections-text-color;
+      }
+    }
+  }
+}
+
+#app-connect-modal {
+
+  select {
+    display: block;
+    margin: auto;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: auto;
+  }
+
+  ul.breadcrumb {
+    margin-bottom: 0px;
+  }
+
+  toast {
+    z-index: 9999;
+  }
+}
+
+.app-deletion-modal {
+  .deletion-sentence {
+    color: @brand-danger;
+  }
+}
+
+//=======================================
+// Settings Modals
+//=======================================
+#app-settings-modal {
+
+  .modal-body {
+    .container-fluid {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    padding: 5px;
+
+    div.app-name {
+      border: 0px;
+
+      .fa {
+        margin-left: 5px;
+      }
+    }
+
+    h4, .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .sentence-check {
+      width: 100%;
+    }
+
+    .buttons {
+      width: 100%;
+      text-align: right;
+      padding-top: 20px;
+    }
+
+    .label {
+      font-size: 100%;
+      text-transform: capitalize;
+      padding: 6px 12px;
+
+      &.updating, &.upgrading, &.provisioning {
+        background-color: @mno-dock-settings-app-upgrading;
+      }
+      &.running, &.starting, &.restarting {
+        background-color: @mno-dock-settings-app-running;
+      }
+      &.terminating, &.terminated {
+        background-color: @mno-dock-settings-app-terminating;
+      }
+      &.neutral {
+        background-color: @mno-dock-settings-app-neutral;
+      }
+    }
+
+    .centered-buttons {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+    }
+
+    .app-deletion {
+      .deletion-sentence {
+        color: @deletion-sentence-color;
+      }
+    }
+
+    .pagination {
+      margin: 0 0;
+    }
+
+    .panel-group {
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
 .dashboard-organization {
   // credit card icons display modes
   //---------------------------------
@@ -3671,112 +3777,6 @@ form.editable-wrap .editable-controls input {
   textarea.form-control {
     max-width: 100%;
     background-color: white;
-  }
-}
-
-#app-connect-modal {
-
-  select {
-    display: block;
-    margin: auto;
-  }
-
-  button[type="submit"] {
-    display: block;
-    margin: auto;
-  }
-
-  ul.breadcrumb {
-    margin-bottom: 0px;
-  }
-
-  toast {
-    z-index: 9999;
-  }
-}
-
-.app-deletion-modal {
-  .deletion-sentence {
-    color: @brand-danger;
-  }
-}
-
-//=======================================
-// Settings Modals
-//=======================================
-#app-settings-modal {
-
-  .modal-body {
-    .container-fluid {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    padding: 5px;
-
-    div.app-name {
-      border: 0px;
-
-      .fa {
-        margin-left: 5px;
-      }
-    }
-
-    h4, .title {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .sentence-check {
-      width: 100%;
-    }
-
-    .buttons {
-      width: 100%;
-      text-align: right;
-      padding-top: 20px;
-    }
-
-    .label {
-      font-size: 100%;
-      text-transform: capitalize;
-      padding: 6px 12px;
-
-      &.updating, &.upgrading, &.provisioning {
-        background-color: @mno-dock-settings-app-upgrading;
-      }
-      &.running, &.starting, &.restarting {
-        background-color: @mno-dock-settings-app-running;
-      }
-      &.terminating, &.terminated {
-        background-color: @mno-dock-settings-app-terminating;
-      }
-      &.neutral {
-        background-color: @mno-dock-settings-app-neutral;
-      }
-    }
-
-    .centered-buttons {
-      display: flex;
-      align-content: center;
-      justify-content: space-around;
-    }
-
-    .app-deletion {
-      .deletion-sentence {
-        color: @deletion-sentence-color;
-      }
-    }
-
-    .pagination {
-      margin: 0 0;
-    }
-
-    .panel-group {
-      margin-top: 5px;
-      margin-bottom: 0px;
-    }
   }
 }
 
