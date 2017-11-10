@@ -197,6 +197,16 @@
 @kpi-settings-alert-config-background-hover:   @mblue;
 @kpi-negative-alert-label-background-color:    lighten(#ff0000, 30%);
 
+// Widgets pop-ups
+//--------------------------------------
+@impac-widget-popup-title-background-color:    #192831;
+@impac-widget-popup-message-background-color:  rgb(244, 248, 249);
+@impac-widget-popup-title-text-color:          white;
+@impac-widget-popup-message-text-color:        @impac-widget-text-color;
+
+// Demo data mode
+@impac-widget-demo-data-link-color:            @mgreen;
+
 .font(@size,@weight,@color) {
   font-weight:@weight;
   font-size:@size;
@@ -359,6 +369,44 @@
 .column-gutter(@gutter: @grid-gutter-width) {
   padding-left: @gutter;
   padding-right: @gutter;
+}
+
+.widget-popup() {
+  text-align: center;
+  font-size: 13px;
+  color: @impac-widget-popup-message-text-color;
+  
+  .overlay {
+    background-color: white;
+    position: absolute;
+    height: ~"calc(100% - 4px)";
+    width: ~"calc(100% - 4px)";
+    top: 2px;
+    left: 2px;
+    opacity: 0.6;
+    z-index: 5;
+  }
+
+  .message {
+    z-index: 6;
+    position: absolute;
+    min-height: 160px;
+    padding-bottom: 10px;
+    top: 45px;
+    left: 7%;
+    width: 86%;
+    background-color: @impac-widget-popup-message-background-color;
+    border-radius: 4px;
+    box-shadow: 0px 0px 25px 0px;
+
+    .title {
+      padding: 2px;
+      background-color: @impac-widget-popup-title-background-color;
+      color: @impac-widget-popup-title-text-color;
+      margin: -1px -1px 10px -1px;
+      text-transform: uppercase;
+    }
+  }
 }
 
 /* ************************************************************************ */
@@ -1247,6 +1295,10 @@ body {
 .expandable-filterable-widget() {
   h3.left {
     @media (min-width: @screen-md-min) { margin-top: 69px; }
+    text-align: center;
+  }
+  h3.reduced-left {
+    @media (min-width: @screen-md-min) { margin-top: 10px; }
     text-align: center;
   }
   h3.right {
@@ -2522,42 +2574,174 @@ dashboard-templates-selector {
 .analytics .widget-item .content .data-not-found,
 .analytics .kpi .data-not-found {
   text-align: center;
-  font-size: 18px;
-  color: @impac-widget-text-color;
-  img {
-    opacity: 0.8;
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-    // fix for mobile, prevents images from extended the width of the widget.
-    max-width: 100%;
+  font-size: 13px;
+  color: @impac-widget-popup-message-text-color;
+
+  .overlay {
+    background-color: white;
+    position: absolute;
+    height: ~"calc(100% - 4px)";
+    width: ~"calc(100% - 4px)";
+    top: 2px;
+    left: 2px;
+    opacity: 0.6;
+    z-index: 3;
   }
+
   .message {
     position: absolute;
-    top: 50%;
+    top: 125px;
     left: 50%;
+    padding-bottom: 10px;
     transform: translate(-50%, -50%);
-    width: 70%;
-    background-color: rgb(244, 248, 249);
-    padding: 10px 0px;
+    width: 85%;
+    background-color: @impac-widget-popup-message-background-color;
     border-radius: 4px;
-    border: solid 1px @impac-widget-borders-color;
+    box-shadow: 0px 0px 25px 0px;
+    z-index: 4;
+
+    .title {
+      padding: 2px;
+      background-color: @impac-widget-popup-title-background-color;
+      color: @impac-widget-popup-title-text-color;
+      margin: -1px -1px 10px -1px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .btn { margin-top: 5px; }
+  }
+
+  .example {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color: @impac-widget-popup-title-text-color;
+    background-color: @impac-widget-popup-title-background-color;
+    padding: 3px;
+    z-index: 6;
+
     a {
-      color: @impac-widget-link-color;
-      display: block;
-      font-size: 16px;
       font-weight: normal;
+      color: @impac-widget-demo-data-link-color;
     }
   }
 }
 
 .analytics .kpi .data-not-found {
   .message {
-    width: 100%;
-    font-size: 16px;
-    a { font-size: 14px; }
+    width: 90%;
+    padding-bottom: 0px;
+    border: solid 1px silver;
+    box-shadow: none;
+    p { margin: 5px; }
+  }
+  .overlay, .title, .btn, .example { display: none; }
+}
+
+.analytics common-delete-widget {
+  .widget-popup();
+  .message {
+    .loader i.fa.fa-spinner {
+      font-size: 26px;
+    }
+    p { padding: 0px 10px; }
+    button.btn { margin-top: 20px; }
+  }
+}
+
+#transactions-add {
+  .widget-popup();
+  .message {
+    top: 30px;
+    left: 35%;
+    width: 30%;
+    .form {
+      padding: 0px 10px;
+      > label, .coming-soon > label {
+        padding-top: 10px;
+        font-weight: normal;
+        margin-bottom: 3px;
+      }
+      input.form-control {
+        width: 90%;
+        border-radius: 2px;
+        height: 28px;
+        font-size: 13px;
+      }
+      .btn-group {
+        display: block;
+        min-height: 22px;
+        select {
+          border-radius: 2px;
+          height: 28px;
+          margin-top: 0px;
+        }
+      }
+      .coming-soon {
+        margin-top: 15px;
+        padding: 5px;
+        border: solid 1px silver;
+        background-color: white;
+        color: #888888;
+        font-style: italic;
+        .badge {
+          font-weight: normal;
+          background-color: #888888;
+        }
+        .btn-group {
+          margin-left: 10px;
+          input[type="radio"] { margin-top: 5px; }
+          select { height: 22px; }
+          .btn {
+            float: none;
+            border-color: #888888;
+          }
+        }
+      }
+    }
+    .bottom {
+      margin-top: 20px;
+    }
+  }
+}
+
+#transactions-list {
+  .top {
+    height: 40px;
+    a.back-link { font-weight: normal; }
+    .pagination { margin: 0px; }
+  }
+
+  .table-container {
+    max-height: ~"calc(@{impac-big-widget-size} - 60px)";
+    overflow: auto;
+    
+    div[uib-datepicker-popup-wrap] {
+      display: inline-block;
+    }
+
+    input.btn.btn-xs { margin-top: -2px; }
+    button.btn.reset-date { margin-top: -2px; }
+    .fa.fa-times {
+      color: @brand-danger;
+      cursor: pointer;
+    }
+
+    tr.total {
+      font-weight: bold;
+      &.invoices {
+        background-color: lighten(#8eab71, 20%);
+      }
+      &.bills {
+        background-color: lighten(#c76379, 20%);
+      }
+    }
   }
 }
 
@@ -2566,9 +2750,6 @@ dashboard-templates-selector {
   select {
     margin-top: 4px;
   }
-}
-
-.analytics .dashboard-settings.pdf-mode {
 }
 
 .analytics .dashboard-settings.sync-apps {
@@ -2677,9 +2858,24 @@ dashboard-templates-selector {
   .fa.success { color: @flurogreen; }
 }
 
+.analytics .dashboard-settings.pdf-mode {
+}
+
 .analytics .widget-item .content.accounts-accounting-values {
   // Nothing particular yet for this template...
 }
+.analytics .widget-item .content.accounts-assets-summary {
+  .legend {
+    text-align: left;
+    max-height: 115px;
+
+    .title {
+      text-align: center;
+      border-bottom: dashed 1px @impac-widget-borders-color;
+    }
+  }
+}
+
 .analytics .widget-item .content.accounts-assets-liability-summary {
   .param-selector {
     text-align: center;
@@ -2687,21 +2883,6 @@ dashboard-templates-selector {
   .legend {
     text-align: left;
     max-height: 90px;
-
-    .title {
-      text-align: center;
-      border-bottom: dashed 1px @impac-widget-borders-color;
-    }
-  }
-  p {
-    font-weight: bold;
-  }
-}
-
-.analytics .widget-item .content.accounts-assets-summary {
-  .legend {
-    text-align: left;
-    max-height: 115px;
 
     .title {
       text-align: center;
@@ -2754,14 +2935,13 @@ dashboard-templates-selector {
   .tall-widget();
 
   .data-container {
-    height: ~"calc(@{impac-big-widget-size} - 20px)";
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
     width: 100%;
-    display: flex;
   }
 
   .left-panel {
-    flex: 0;
-    min-width: 180px;
+    width: 180px;
+    display: inline-block;
     overflow: auto;
   }
 
@@ -2789,62 +2969,59 @@ dashboard-templates-selector {
     }
   }
 
-  .right-panel {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
+  .legend-item-icon {
+    width: 16px;
+    height: 16px;
+  }
 
-    .top-bar {
-      flex: 0;
-      min-height: 50px;
-    }
+  .right-panel {
+    width: ~"calc(100% - 180px)";
+    float: right;
 
     // Highchart container
     .cash-balance-chart {
-      flex: 1;
+      height: ~"calc(@{impac-big-widget-size} - 50px)";
     }
+  }
+
+  .dates-picker {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
   }
 }
 
 .analytics .widget-item .content.accounts-cash-projection {
   .tall-widget();
 
-  .cash-projection-chart { 
-    height: ~"calc(@{impac-big-widget-size} - 50px)"; 
+  .cash-projection-chart {
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
   }
 
-  .offset-box {
-    position: absolute;
-    background-color: white;
-    opacity: 0.9;
-    width: 350px;
-    height: 300px;
-    margin-top: -310px;
-    padding: 20px;
-    border-radius: 4px;
-    border: solid 1px @impac-dashboard-borders-color;
-    overflow-y: auto;
+  .highcharts-legend-item {
+    rect.highcharts-point {
+      display: none;
+    }
 
-    h3 {
+    span {
+      width: 110px;
       text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-bottom: 10px;
+      img {
+        text-align: center;
+        width: 55px;
+        height: 25px;
+      }
     }
+  }
 
-    h4 {
-      text-align: right;
-      font-size: 14px;
-      border-top: solid 1px #b3cacb;
-      padding-top: 5px;
-    }
+  .dates-picker {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+  }
 
-    .price {
-      text-align: right;
-      font-size: 20px;
-      margin-top: 0px;
-    }
+  transactions-list {
+    font-size: 12px;
   }
 }
 
@@ -2867,35 +3044,6 @@ dashboard-templates-selector {
   .widget-lines-container {
     max-height: 94px;
     color: #626d6d;
-  }
-}
-
-.analytics .widget-item .content.accounts-custom-calculation {
-  h3 {
-    margin-top: 85px;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .price {
-    .center-bold(75px);
-  }
-
-  .legend {
-    max-height: 125px;
-  }
-}
-
-.analytics.modal-custom-calculation {
-  margin: 0px;
-  padding: 0px;
-}
-
-.analytics.modal-custom-calculation .modal-body {
-  .edit {
-    .edit-panel-style();
-    padding: 5px;
-    overflow: visible;
   }
 }
 
@@ -2961,6 +3109,35 @@ dashboard-templates-selector {
   .comparable-error h5 {
     margin-left: 13px;
     color: @impac-negative;
+  }
+}
+
+.analytics .widget-item .content.accounts-custom-calculation {
+  h3 {
+    margin-top: 85px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .price {
+    .center-bold(75px);
+  }
+
+  .legend {
+    max-height: 125px;
+  }
+}
+
+.analytics.modal-custom-calculation {
+  margin: 0px;
+  padding: 0px;
+}
+
+.analytics.modal-custom-calculation .modal-body {
+  .edit {
+    .edit-panel-style();
+    padding: 5px;
+    overflow: visible;
   }
 }
 
@@ -3151,9 +3328,12 @@ dashboard-templates-selector {
 .analytics .widget-item .content.hr-payroll-taxes {
   // Nothing special yet for this template
 }
-.analytics .widget-item .content.hr-salaries-summary {
-  .expandable-filterable-widget();
+.analytics .widget-item {
+  .content.hr-salaries-summary {
+    .expandable-filterable-widget();
+  }
 }
+
 .analytics .widget-item .content.hr-superannuation-accruals {
   h3 {
     margin-top: 63px;
@@ -3177,8 +3357,10 @@ dashboard-templates-selector {
     max-height: 210px;
   }
 }
-.analytics .widget-item .content.hr-workforce-summary {
-  .expandable-filterable-widget();
+.analytics .widget-item  {
+  .content.hr-workforce-summary {
+    .expandable-filterable-widget();
+  }
 }
 
 .analytics .widget-item .content.invoices-aged-payables-receivables {
@@ -3305,7 +3487,7 @@ dashboard-templates-selector {
       margin-bottom: 5px;
     }
   }
-  .title {
+  .row.title {
     text-align: center;
     margin-bottom: 10px;
     font-size: 14px;
@@ -3323,7 +3505,7 @@ dashboard-templates-selector {
 .analytics .widget-item .content.sales-forecast {
   .tall-widget();
   .widget-lines-container {
-    max-height: 340px;
+    max-height: 275px;
     .widget-line.main {
       .selectable();
     }
@@ -3616,10 +3798,9 @@ chart-threshold {
     button {
       padding: 3px 6px;
       display: inline-block;
-    }
-
-    & > .btn.has-spinner {
-      i { padding: 0 15px; }
+      &.loading {
+        padding: 3px 20px;
+      }
     }
   }
 }
@@ -3787,33 +3968,6 @@ chart-threshold {
       }
     }
   }
-
-  .confirm-delete-popover {
-    position: absolute;
-    top: 90px;
-    left: 15%;
-    width: 70%;
-    background-color: #17262d;
-    padding: 10px;
-    border-radius: 4px;
-    z-index: 50;
-    color: white;
-    text-align: center;
-    cursor: default;
-    .box-shadow(0px 0px 25px 4px black);
-    border: solid 1px @impac-widget-background-color;
-    white-space: normal;
-
-    h4 {
-      color: @impac-widget-top-buttons-color;
-      font-weight: bold;
-    }
-
-    .loader i.fa.fa-spinner {
-      font-size: 26px;
-    }
-  }
-
 }
 
 .analytics .widget-item .content .settings.select-account {
@@ -3944,9 +4098,11 @@ chart-threshold {
     outline: none;
   }
   input[type="range"] {
-    height: 20px;
+    height: auto;
+    width: 100%;
   }
 }
+
 .analytics .settings.dates-picker {
   h5 { display: none; }
 
