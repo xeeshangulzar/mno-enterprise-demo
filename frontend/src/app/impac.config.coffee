@@ -14,7 +14,7 @@ angular.module 'mnoEnterpriseAngular'
 
   bolts = [
     { provider: 'maestrano', name: 'finance', category: 'accounts' },
-    { provider: 'maestrano', name: 'lmi', category: 'reporting' }
+    { provider: 'maestrano', name: 'lmi-insights', category: 'sales' }
   ]
 
   ImpacRoutesProvider.configureRoutes(data)
