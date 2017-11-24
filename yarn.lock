@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"impac-angular@git+https://git@github.com/maestrano/impac-angular.git#v1.6.x":
+"impac-angular@git+https://git@github.com/marcobgn/impac-angular.git#feature/lmi-bolt":
   version "1.6.5"
-  resolved "git+https://git@github.com/maestrano/impac-angular.git#e6dd52d2e9973b09eabfff6b920e7b4aab0670fe"
+  resolved "git+https://git@github.com/marcobgn/impac-angular.git#3c4ba4553567eba8fe7a213d2c65652240eb9ef6"
 
-"mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#2.0":
+"mno-enterprise-angular@git+https://git@github.com/marcobgn/mno-enterprise-angular.git#feature/lmi-bolt":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#b7bdcec3940c92539631f821b338916dc46ec8c5"
+  resolved "git+https://git@github.com/marcobgn/mno-enterprise-angular.git#8ca2ff2d25eecc3aad755725c4cc144e7d5e236b"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#91ea5b49345b05fd762dd411746807f2c4bbc9a9"
+  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#f9a55d3244eed94eecaf729697caaead33cfb25d"
