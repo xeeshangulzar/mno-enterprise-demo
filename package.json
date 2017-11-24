@@ -2,8 +2,8 @@
   "name": "mno-enterprise-demo",
   "private": true,
   "dependencies": {
-    "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#v1.6.x",
-    "mno-enterprise-angular": "git+https://git@github.com/maestrano/mno-enterprise-angular.git#2.0",
+    "impac-angular": "git+https://git@github.com/marcobgn/impac-angular.git#feature/lmi-bolt",
+    "mno-enterprise-angular": "git+https://git@github.com/marcobgn/mno-enterprise-angular.git#feature/lmi-bolt",
     "mnoe-admin-panel": "git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0"
   },
   "engines": {
