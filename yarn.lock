@@ -8,7 +8,7 @@
 
 "mno-enterprise-angular@git+https://git@github.com/manu-d/mno-enterprise-angular.git#feature/application-setup":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/manu-d/mno-enterprise-angular.git#d13dc102067bf7ad46b13783ead2609db76a1c47"
+  resolved "git+https://git@github.com/manu-d/mno-enterprise-angular.git#612dec4a823bc7151df0e6e94144bdb770f80d6e"
 
 "mnoe-admin-panel@git+https://git@github.com/x4d3/mnoe-admin-panel.git#feature/access_request":
   version "2.0.0-dev"
