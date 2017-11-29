@@ -4,7 +4,7 @@
 
 "impac-angular@git+https://git@github.com/marcobgn/impac-angular.git#feature/lmi-bolt":
   version "1.6.5"
-  resolved "git+https://git@github.com/marcobgn/impac-angular.git#3c4ba4553567eba8fe7a213d2c65652240eb9ef6"
+  resolved "git+https://git@github.com/marcobgn/impac-angular.git#490eddb8e33a035045c456f9c1a221604790afc8"
 
 "mno-enterprise-angular@git+https://git@github.com/marcobgn/mno-enterprise-angular.git#feature/lmi-bolt":
   version "2.0.0-dev"
