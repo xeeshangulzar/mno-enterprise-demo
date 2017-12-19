@@ -3137,7 +3137,11 @@ let AuthLoginModalComponent = class AuthLoginModalComponent {
     }
     onSubmit(user) {
         this.isLoading = true;
-        this._http.post('/mnoe/auth/users/sign_in.json', user).subscribe((result) => {
+        let headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpHeaders */]({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json; charset=utf-8'
+        });
+        this._http.post('/mnoe/auth/users/sign_in', user, { headers: headers }).subscribe((result) => {
             __WEBPACK_IMPORTED_MODULE_5__jsonapi_services_models_user_model__["a" /* User */].find(result.id, { include: 'organizations' }).subscribe((user) => {
                 this._authService.login(user);
                 this._impacConfig.ssoSession = user.sso_session;
