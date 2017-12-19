@@ -2644,6 +2644,17 @@ dashboard-templates-selector {
   .overlay, .title, .btn, .example { display: none; }
 }
 
+.analytics common-delete-widget {
+  .widget-popup();
+  .message {
+    .loader i.fa.fa-spinner {
+      font-size: 26px;
+    }
+    p { padding: 0px 10px; }
+    button.btn { margin-top: 20px; }
+  }
+}
+
 #transactions-add {
   .widget-popup();
   .message {
@@ -2700,17 +2711,6 @@ dashboard-templates-selector {
   }
 }
 
-.analytics common-delete-widget {
-  .widget-popup();
-  .message {
-    .loader i.fa.fa-spinner {
-      font-size: 26px;
-    }
-    p { padding: 0px 10px; }
-    button.btn { margin-top: 20px; }
-  }
-}
-
 #transactions-list {
   .top {
     height: 40px;
@@ -2742,13 +2742,6 @@ dashboard-templates-selector {
         background-color: lighten(#c76379, 20%);
       }
     }
-  }
-}
-
-.analytics .dashboard-settings.currency {
-  text-align: right;
-  select {
-    margin-top: 4px;
   }
 }
 
@@ -2859,6 +2852,13 @@ dashboard-templates-selector {
   .fa.error { color: @red; }
   .fa.warn { color: @fluroorange; }
   .fa.success { color: @flurogreen; }
+}
+
+.analytics .dashboard-settings.currency {
+  text-align: right;
+  select {
+    margin-top: 4px;
+  }
 }
 
 .analytics .widget-item .content.accounts-accounting-values {
@@ -3037,6 +3037,16 @@ dashboard-templates-selector {
   }
 }
 
+.analytics .widget-item .content.accounts-class-comparison {
+  .param-selector {
+    text-align: center;
+  }
+  .widget-lines-container {
+    max-height: 94px;
+    color: #626d6d;
+  }
+}
+
 .analytics .widget-item .content.accounts-comparison {
   .tall-widget();
 
@@ -3102,13 +3112,25 @@ dashboard-templates-selector {
   }
 }
 
-.analytics .widget-item .content.accounts-class-comparison {
-  .param-selector {
+.analytics .widget-item .content.accounts-custom-calculation {
+  h3 {
+    margin-top: 85px;
     text-align: center;
+    font-weight: bold;
   }
-  .widget-lines-container {
-    max-height: 94px;
-    color: #626d6d;
+  .legend { max-height: 125px; }
+}
+
+.analytics.modal-custom-calculation {
+  margin: 0px;
+  padding: 0px;
+}
+
+.analytics.modal-custom-calculation .modal-body {
+  .edit {
+    .edit-panel-style();
+    padding: 5px;
+    overflow: visible;
   }
 }
 
@@ -3143,28 +3165,6 @@ dashboard-templates-selector {
     .title {
       text-align: center;
     }
-  }
-}
-
-.analytics .widget-item .content.accounts-custom-calculation {
-  h3 {
-    margin-top: 85px;
-    text-align: center;
-    font-weight: bold;
-  }
-  .legend { max-height: 125px; }
-}
-
-.analytics.modal-custom-calculation {
-  margin: 0px;
-  padding: 0px;
-}
-
-.analytics.modal-custom-calculation .modal-body {
-  .edit {
-    .edit-panel-style();
-    padding: 5px;
-    overflow: visible;
   }
 }
 
