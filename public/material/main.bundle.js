@@ -1217,7 +1217,8 @@ let DashboardEffects = class DashboardEffects {
         this.init$ = this._actions$.ofType(__WEBPACK_IMPORTED_MODULE_10__dashboard_actions__["j" /* INIT */])
             .mergeMap(() => {
             // Fetch the list of dashboards in the backend
-            return this._mnohubService.findAll(__WEBPACK_IMPORTED_MODULE_11__models_dashboard_model__["a" /* Dashboard */], { include: 'widgets', 'filter[organization_ids]': '4' })
+            //TODO: Add filter on organisation: 'filter[organization_ids]': '4'
+            return this._mnohubService.findAll(__WEBPACK_IMPORTED_MODULE_11__models_dashboard_model__["a" /* Dashboard */], { include: 'widgets' })
                 .map((res) => ({ type: __WEBPACK_IMPORTED_MODULE_10__dashboard_actions__["l" /* INIT_SUCCESS */], payload: res }))
                 .catch((error) => Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({ type: __WEBPACK_IMPORTED_MODULE_10__dashboard_actions__["k" /* INIT_ERROR */], payload: error }));
         });
@@ -1785,7 +1786,7 @@ var _a, _b;
 /***/ "../../../../../../impac-material/src/lib/src/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"(dashboard$ | async) as dashboard\" class=\"dashboard-container\">\n  <div class=\"widget-toolbar\">\n    <button class=\"btn btn-raised btn-primary m-2\" (click)=\"openWidgetSelector()\">Add a widget</button>\n  </div>\n  <div class=\"widgets-grid-container\">\n    <gridster [options]=\"options\">\n      <gridster-item [item]=\"widget\" *ngFor=\"let widget of dashboard.widgets; trackBy: trackByFn\">\n        <impac-widget-base [widget]=\"widget\"></impac-widget-base>\n      </gridster-item>\n    </gridster>\n  </div>\n</div>\n"
+module.exports = "\n<div *ngIf=\"(dashboard$ | async) as dashboard\" class=\"dashboard-container\">\n  <div class=\"widget-toolbar mt-3\">\n    <button class=\"btn btn-raised btn-primary m-2\" (click)=\"openWidgetSelector()\">Add a widget</button>\n  </div>\n  <div class=\"widgets-grid-container\">\n    <gridster [options]=\"options\">\n      <gridster-item [item]=\"widget\" *ngFor=\"let widget of dashboard.widgets; trackBy: trackByFn\">\n        <impac-widget-base [widget]=\"widget\"></impac-widget-base>\n      </gridster-item>\n    </gridster>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -3149,6 +3150,9 @@ let AuthLoginModalComponent = class AuthLoginModalComponent {
                 this.bsModalRef.hide();
                 this.isLoading = false;
             });
+        }, (error) => {
+            console.error('### Error', error);
+            this.isLoading = false;
         });
     }
 };
