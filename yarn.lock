@@ -8,7 +8,7 @@
 
 "mno-enterprise-angular@git+https://git@github.com/marcobgn/mno-enterprise-angular.git#feature/banking-bolt":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/marcobgn/mno-enterprise-angular.git#a70c91c908e20a37a33de76768504755e7fed444"
+  resolved "git+https://git@github.com/marcobgn/mno-enterprise-angular.git#12e97b9c1f7b546373106cdffa02ebd23f295ae2"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
   version "2.0.0-dev"
