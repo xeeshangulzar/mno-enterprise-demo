@@ -4,7 +4,7 @@
 
 "impac-angular@git+https://git@github.com/marcobgn/impac-angular.git#feature/banking-bolt":
   version "1.6.5"
-  resolved "git+https://git@github.com/marcobgn/impac-angular.git#6bf2b9a2d9604944aa93bfaa59301302cad61d58"
+  resolved "git+https://git@github.com/marcobgn/impac-angular.git#6ec1c5c36aa97ff55bd0f646669ae4e40d5ea238"
 
 "mno-enterprise-angular@git+https://git@github.com/marcobgn/mno-enterprise-angular.git#feature/banking-bolt":
   version "2.0.0-dev"
