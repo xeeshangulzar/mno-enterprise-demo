@@ -1801,6 +1801,45 @@ dashboard-menu {
   }
 }
 
+impersonification-notification {
+  .notifications {
+    padding-top: 70px;
+  }
+}
+
+#app-features {
+  border: @onboarding-app-features-border;
+  color: @onboarding-app-features-color;
+
+  .center-element {
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
+
+  .fa-check-square-o {
+    color: @onboarding-app-features-checked;
+  }
+  .fa-square-o {
+    color: @onboarding-app-features-unchecked;
+  }
+}
+
+mno-app-onboarding-btn {
+  display: block;
+
+  .button-check {
+    color: @onboarding-app-connect-check;
+  }
+
+  .button-loader {
+    color: @onboarding-app-connect-loader;
+  }
+
+  .btn {
+    margin-top: 5px;
+  }
+}
+
 mno-audit-events-list {
   .table > thead > tr {
     color: @table-cell-header-text-color;
@@ -3577,45 +3616,6 @@ form.editable-wrap .editable-controls input {
   }
 }
 
-#app-features {
-  border: @onboarding-app-features-border;
-  color: @onboarding-app-features-color;
-
-  .center-element {
-    margin-left: 10px;
-    margin-bottom: 12px;
-  }
-
-  .fa-check-square-o {
-    color: @onboarding-app-features-checked;
-  }
-  .fa-square-o {
-    color: @onboarding-app-features-unchecked;
-  }
-}
-
-impersonification-notification {
-  .notifications {
-    padding-top: 70px;
-  }
-}
-
-mno-app-onboarding-btn {
-  display: block;
-
-  .button-check {
-    color: @onboarding-app-connect-check;
-  }
-
-  .button-loader {
-    color: @onboarding-app-connect-loader;
-  }
-
-  .btn {
-    margin-top: 5px;
-  }
-}
-
 #app-connect-modal {
 
   select {
@@ -3855,6 +3855,13 @@ mno-app-onboarding-btn {
   }
 }
 
+.create-review-modal {
+  textarea.form-control {
+    max-width: 100%;
+    background-color: white;
+  }
+}
+
 #app-info {
   ul {
     margin: 0;
@@ -3871,13 +3878,6 @@ mno-app-onboarding-btn {
   mno-app-features {
     float: right;
     width: 250px;
-  }
-}
-
-.create-review-modal {
-  textarea.form-control {
-    max-width: 100%;
-    background-color: white;
   }
 }
 
