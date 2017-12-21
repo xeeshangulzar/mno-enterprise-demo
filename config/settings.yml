@@ -31,4 +31,4 @@ marketplace:
     enabled: true
 admin_panel:
   intercom:
-    enabled: false
+    enabled: true
