@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/maestrano/mno-enterprise
-  revision: 83a4d8ce92049982f440fd1646e137734fbb712f
+  revision: 8daa647dc34f0619a48596b40c42030aca464815
   branch: 3.3
   specs:
     mno-enterprise (3.3.2)
@@ -206,7 +206,7 @@ GEM
       json (>= 1.7.7, < 2.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.10.3)
+    minitest (5.11.1)
     money (6.10.1)
       i18n (>= 0.6.4, < 1.0)
     multi_json (1.12.2)
