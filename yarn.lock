@@ -12,4 +12,4 @@
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#1.0":
   version "1.0.6"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#91247be50bef05dd222949247a903fea32af67ca"
+  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#2c608f6d2c1ebbb6c790a59b4a83c7a7f9691a24"
