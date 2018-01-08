@@ -2644,17 +2644,6 @@ dashboard-templates-selector {
   .overlay, .title, .btn, .example { display: none; }
 }
 
-.analytics common-delete-widget {
-  .widget-popup();
-  .message {
-    .loader i.fa.fa-spinner {
-      font-size: 26px;
-    }
-    p { padding: 0px 10px; }
-    button.btn { margin-top: 20px; }
-  }
-}
-
 #transactions-add {
   .widget-popup();
   .message {
@@ -2708,6 +2697,17 @@ dashboard-templates-selector {
     .bottom {
       margin-top: 20px;
     }
+  }
+}
+
+.analytics common-delete-widget {
+  .widget-popup();
+  .message {
+    .loader i.fa.fa-spinner {
+      font-size: 26px;
+    }
+    p { padding: 0px 10px; }
+    button.btn { margin-top: 20px; }
   }
 }
 
@@ -2859,217 +2859,6 @@ dashboard-templates-selector {
   .fa.error { color: @red; }
   .fa.warn { color: @fluroorange; }
   .fa.success { color: @flurogreen; }
-}
-
-chart-threshold {
-
-  .attach-panel {
-    padding: 5px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(20, 132, 228, 0.16);
-
-    > .attach-panel-text {
-      display: inline-block;
-      & > * {
-        display: inline-block;
-      }
-    }
-
-    .panel-text-label {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: @impac-widget-text-color;
-      font-size: 13px;
-    }
-    .panel-text-input {
-      border-radius: 3px;
-      border: 1px white;
-      padding: 3px;
-    }
-    .panel-text-currency {
-      font-weight: bold;
-      color: #000;
-    }
-  }
-
-  .action-buttons {
-    display: inline-block;
-    padding: 0 10px;
-    button {
-      padding: 3px 6px;
-      display: inline-block;
-      &.loading {
-        padding: 3px 20px;
-      }
-    }
-  }
-}
-
-.currency-conversions {
-  img {
-    width: 15px;
-    cursor: pointer;
-  }
-
-  &.popover .popover-title {
-    background-color: black;
-    color: white;
-  }
-}
-
-.analytics .widget-item .editable-title {
-  width: 100%;
-  flex: 1;
-  overflow: hidden;
-  height: 22px;
-
-  .title {
-    text-transform: @impac-widget-title-text-transform;
-    .font(@impac-widget-title-text-size,600,@impac-widget-title-text-color);
-    cursor: text;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    line-height: 1.9;
-  }
-
-  .editable-wrap {
-    position: relative;
-    height: 20px;
-    min-width: 100%;
-    // otherwise, white-space is overriden in mno-enterprise
-    white-space: nowrap;
-
-    .editable-controls {
-      min-width: 100%;
-
-      .editable-input {
-        height: 20px;
-        font-size: 12px;
-        text-transform: @impac-widget-title-text-transform;
-        // 65px is .editable-buttons width
-        width: ~"calc(100% - 65px)";
-        padding: 0px 3px;
-      }
-
-      .editable-buttons {
-        background-color: @impac-widget-title-bg;
-        button {
-          margin: 0px 0px 0px 5px;
-          height: 20px;
-          padding: 0px 5px;
-        }
-      }
-    }
-  }
-}
-
-.analytics .widget-item .info-panel {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: ~"calc(100% - 30px)";
-  max-height: ~"calc(100% - 30px)";
-  height: 100%;
-  z-index: 100;
-
-  background-color: white;
-  border: dotted 1px #B7CDCE;
-
-  display: flex;
-  flex-direction: column;
-  font-family: "Lato Semibold", "Lato";
-
-  z-index: 4;
-
-  &:hover { opacity: 1; }
-
-  .i-header {
-    .fa { font-size: 18px; }
-    .fa-info-circle { float: left; }
-    .fa-times-circle { cursor: pointer; float: right; }
-
-    background-color: #FFC928;
-    color: @impac-widget-reverse-color;
-    padding: 8px;
-    text-transform: uppercase;
-    font-family: "Lato Medium", "Lato";
-    font-size: 12px;
-  }
-
-  .i-content {
-    .scrollable();
-    padding: 5px;
-    text-align: justify;
-    flex: 1;
-
-    .row {
-      margin-bottom: 6px;
-      padding-bottom: 6px;
-      border-bottom: solid 1px @impac-dashboard-borders-color;
-
-      &:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-      }
-
-      .key {
-        @media (max-width: @screen-sm-max) { text-align: center; }
-        text-align: right;
-        font-variant: small-caps;
-      }
-
-      .value { text-align: justify; }
-    }
-  }
-}
-
-.analytics .time-period-info {
-  font-size: 11px;
-  color: #ABC4C6;
-  text-transform: uppercase;
-}
-
-.analytics .widget-item .top-line .top-buttons {
-  text-align: right;
-  margin-top: -1px;
-  white-space: nowrap;
-  padding-left: 10px;
-
-  .top-buttons-wrapper {
-    .top-button {
-      background: transparent;
-      border: none;
-      color: @impac-widget-top-buttons-color;
-      padding: 0;
-      outline: none;
-      width: 17px;
-
-      &:active, &:focus { box-shadow: none; }
-
-      &.btn-info {
-        font-size: 17px;
-        margin-top: 1px;
-        &:hover { color: #FFC928; }
-      }
-      &.btn-refresh {
-        font-size: 17px;
-        margin-top: 1px;
-        &:hover { color: @mblue; }
-      }
-      &.btn-edit {
-        font-size: 13px;
-        &:hover, &.edit-mode { color: darken(@mgreen,10%); }
-      }
-      &.btn-close {
-        font-size: 13px;
-        &:hover { color: @pink; }
-      }
-    }
-  }
 }
 
 .analytics .widget-item .content.accounts-accounting-values {
@@ -3248,16 +3037,6 @@ chart-threshold {
   }
 }
 
-.analytics .widget-item .content.accounts-class-comparison {
-  .param-selector {
-    text-align: center;
-  }
-  .widget-lines-container {
-    max-height: 94px;
-    color: #626d6d;
-  }
-}
-
 .analytics .widget-item .content.accounts-comparison {
   .tall-widget();
 
@@ -3323,32 +3102,13 @@ chart-threshold {
   }
 }
 
-.analytics .widget-item .content.accounts-custom-calculation {
-  h3 {
-    margin-top: 85px;
+.analytics .widget-item .content.accounts-class-comparison {
+  .param-selector {
     text-align: center;
-    font-weight: bold;
   }
-
-  .price {
-    .center-bold(75px);
-  }
-
-  .legend {
-    max-height: 125px;
-  }
-}
-
-.analytics.modal-custom-calculation {
-  margin: 0px;
-  padding: 0px;
-}
-
-.analytics.modal-custom-calculation .modal-body {
-  .edit {
-    .edit-panel-style();
-    padding: 5px;
-    overflow: visible;
+  .widget-lines-container {
+    max-height: 94px;
+    color: #626d6d;
   }
 }
 
@@ -3386,6 +3146,28 @@ chart-threshold {
   }
 }
 
+.analytics .widget-item .content.accounts-custom-calculation {
+  h3 {
+    margin-top: 85px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .legend { max-height: 125px; }
+}
+
+.analytics.modal-custom-calculation {
+  margin: 0px;
+  padding: 0px;
+}
+
+.analytics.modal-custom-calculation .modal-body {
+  .edit {
+    .edit-panel-style();
+    padding: 5px;
+    overflow: visible;
+  }
+}
+
 .analytics .widget-item .content.accounts-expenses-revenue {
   .legend {
     font-weight: bold;
@@ -3395,28 +3177,6 @@ chart-threshold {
     font-size: 12px;
     margin-left: 0px;
     text-align: center;
-  }
-}
-
-.analytics .widget-item .content.accounts-live-balance {
-  h3 {
-    .center-bold(0px);
-    font-size: 18px;
-    text-align: center;
-    text-shadow: 1px;
-  }
-
-  .currency-centered {
-    .center-small()
-  }
-
-  .headers {
-    text-align: center;
-    box-shadow: 1px 1px;
-  }
-
-  .price {
-    .center-bold(0px);
   }
 }
 
@@ -3644,53 +3404,6 @@ chart-threshold {
   }
 }
 
-.analytics .widget-item .content.sales-average-purchase-size {
-  .tall-widget();
-
-  .average-purchase-size-chart {
-    height: ~"calc(@{impac-big-widget-size} - 50px)";
-  }
-
-  .average-purchase-size-insight {
-    height: ~"calc(@{impac-big-widget-size} - 100px)";
-    padding: 150px;
-  }
-
-  .highcharts-y-primary {
-    fill: 'rgb(68, 208, 218)'
-  }
-
-  .highcharts-y-secondary {
-    fill: 'rgb(208, 68, 218)'
-  }
-
-  .display-metrics {
-    border: 1px solid;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 200;
-    left: 50;
-    zIndex: 10;
-  }
-}
-
-.analytics .widget-item .content.sales-average-visit {
-  .tall-widget();
-
-  .average-visit-chart {
-    height: ~"calc(@{impac-big-widget-size} - 50px)";
-  }
-
-  .highcharts-y-primary {
-    fill: 'rgb(68, 208, 218)'
-  }
-
-  .highcharts-y-secondary {
-    fill: 'rgb(208, 68, 218)'
-  }
-}
-
 .analytics .widget-item .content.sales-break-even {
   .price {
     .center-bold(0px);
@@ -3777,15 +3490,6 @@ chart-threshold {
     float: left;
     margin-right: 3px;
   }
-}
-
-.analytics .widget-item .content.sales-customers-engagement {
-  .tall-widget();
-
-  .customers-engagement-chart {
-    height: ~"calc(@{impac-big-widget-size} - 50px)";
-  }
-
 }
 
 .analytics .widget-item .content.sales-cycle {
@@ -4048,6 +3752,217 @@ chart-threshold {
     }
   }
 }
+chart-threshold {
+
+  .attach-panel {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 132, 228, 0.16);
+
+    > .attach-panel-text {
+      display: inline-block;
+      & > * {
+        display: inline-block;
+      }
+    }
+
+    .panel-text-label {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: @impac-widget-text-color;
+      font-size: 13px;
+    }
+    .panel-text-input {
+      border-radius: 3px;
+      border: 1px white;
+      padding: 3px;
+    }
+    .panel-text-currency {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  .action-buttons {
+    display: inline-block;
+    padding: 0 10px;
+    button {
+      padding: 3px 6px;
+      display: inline-block;
+      &.loading {
+        padding: 3px 20px;
+      }
+    }
+  }
+}
+
+.currency-conversions {
+  img {
+    width: 15px;
+    cursor: pointer;
+  }
+
+  &.popover .popover-title {
+    background-color: black;
+    color: white;
+  }
+}
+
+.analytics .widget-item .editable-title {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  height: 22px;
+
+  .title {
+    text-transform: @impac-widget-title-text-transform;
+    .font(@impac-widget-title-text-size,600,@impac-widget-title-text-color);
+    cursor: text;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.9;
+  }
+
+  .editable-wrap {
+    position: relative;
+    height: 20px;
+    min-width: 100%;
+    // otherwise, white-space is overriden in mno-enterprise
+    white-space: nowrap;
+
+    .editable-controls {
+      min-width: 100%;
+
+      .editable-input {
+        height: 20px;
+        font-size: 12px;
+        text-transform: @impac-widget-title-text-transform;
+        // 65px is .editable-buttons width
+        width: ~"calc(100% - 65px)";
+        padding: 0px 3px;
+      }
+
+      .editable-buttons {
+        background-color: @impac-widget-title-bg;
+        button {
+          margin: 0px 0px 0px 5px;
+          height: 20px;
+          padding: 0px 5px;
+        }
+      }
+    }
+  }
+}
+
+.analytics .widget-item .info-panel {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: ~"calc(100% - 30px)";
+  max-height: ~"calc(100% - 30px)";
+  height: 100%;
+  z-index: 100;
+
+  background-color: white;
+  border: dotted 1px #B7CDCE;
+
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato Semibold", "Lato";
+
+  z-index: 4;
+
+  &:hover { opacity: 1; }
+
+  .i-header {
+    .fa { font-size: 18px; }
+    .fa-info-circle { float: left; }
+    .fa-times-circle { cursor: pointer; float: right; }
+
+    background-color: #FFC928;
+    color: @impac-widget-reverse-color;
+    padding: 8px;
+    text-transform: uppercase;
+    font-family: "Lato Medium", "Lato";
+    font-size: 12px;
+  }
+
+  .i-content {
+    .scrollable();
+    padding: 5px;
+    text-align: justify;
+    flex: 1;
+
+    .row {
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: solid 1px @impac-dashboard-borders-color;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .key {
+        @media (max-width: @screen-sm-max) { text-align: center; }
+        text-align: right;
+        font-variant: small-caps;
+      }
+
+      .value { text-align: justify; }
+    }
+  }
+}
+
+.analytics .time-period-info {
+  font-size: 11px;
+  color: #ABC4C6;
+  text-transform: uppercase;
+}
+
+.analytics .widget-item .top-line .top-buttons {
+  text-align: right;
+  margin-top: -1px;
+  white-space: nowrap;
+  padding-left: 10px;
+
+  .top-buttons-wrapper {
+    .top-button {
+      background: transparent;
+      border: none;
+      color: @impac-widget-top-buttons-color;
+      padding: 0;
+      outline: none;
+      width: 17px;
+
+      &:active, &:focus { box-shadow: none; }
+
+      &.btn-info {
+        font-size: 17px;
+        margin-top: 1px;
+        &:hover { color: #FFC928; }
+      }
+      &.btn-refresh {
+        font-size: 17px;
+        margin-top: 1px;
+        &:hover { color: @mblue; }
+      }
+      &.btn-edit {
+        font-size: 13px;
+        &:hover, &.edit-mode { color: darken(@mgreen,10%); }
+      }
+      &.btn-close {
+        font-size: 13px;
+        &:hover { color: @pink; }
+      }
+    }
+  }
+}
+
 .analytics .widget-item .content .settings.select-account {
   padding: 0px 5px;
 }
@@ -4160,9 +4075,6 @@ chart-threshold {
   }
 }
 
-.analytics .widget-item .content .settings.select-account {
-  padding: 0px 5px;
-}
 .analytics .widget-item .content .settings.chart-filters {
   .row {
     margin: 0px;

@@ -2,7 +2,7 @@
 <html ng-app="mnoEnterpriseAngular" ng-strict-di="true">
   <head>
     <meta charset="utf-8">
-    <title state-title="Dashboard" pattern="{{::app_name}} - Dashboard - %s"></title>
+    <title ng-bind="app_name + ' - ' + ('mno_enterprise.templates.components.layout.title' | translate) + ' - ' + pageTitle"></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="styles/vendor-8f1636f7fa.css">
 
-    <link rel="stylesheet" href="styles/app-de358215aa.css">
+    <link rel="stylesheet" href="styles/app-a26a0b415b.css">
   </head>
   <body translate-cloak>
     <!--[if lt IE 10]>
@@ -38,9 +38,9 @@
 
     <div ui-view class="myspace"></div>
 
-    <script src="scripts/vendor-d55802d16a.js"></script>
+    <script src="scripts/vendor-db83126ae8.js"></script>
 
-    <script src="scripts/app-1d8074d8cb.js"></script>
+    <script src="scripts/app-b557d24953.js"></script>
 
     <script src="/mnoe/config.js"></script>
 

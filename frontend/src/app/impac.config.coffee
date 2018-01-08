@@ -12,7 +12,9 @@ angular.module 'mnoEnterpriseAngular'
     kpis:
       index: "#{mnoHub}/impac/kpis"
 
-  bolts = [{ provider: 'kpmg', name: 'banking', category: 'accounts' }]
+  bolts = [
+    { provider: 'kpmg', name: 'banking', category: 'accounts' }
+  ]
 
   ImpacRoutesProvider.configureRoutes(data)
   ImpacRoutesProvider.configureBolts('v2', bolts)
@@ -36,10 +38,10 @@ angular.module 'mnoEnterpriseAngular'
       pdfModeEnabled: true
     # kpis options
     dhbKpisConfig:
-      enableKpis: true
+      enableKpis: false
     # alert notifications options
     alertsConfig:
-      enableAlerts: true
+      enableAlerts: false
 
   ImpacThemingProvider.configure(options)
 )
@@ -50,6 +52,7 @@ angular.module 'mnoEnterpriseAngular'
 .config((ImpacAssetsProvider) ->
   options =
     defaultImagesPath: '/dashboard/images'
+    dataNotFound: '/dashboard/images/data_not_found'
 
   ImpacAssetsProvider.configure(options)
 )
