@@ -26,6 +26,9 @@ Style/Documentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 #Metrics/AbcSize:
 #  Max: 16
 #
