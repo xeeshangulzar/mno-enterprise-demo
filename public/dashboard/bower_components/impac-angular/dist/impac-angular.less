@@ -2644,6 +2644,51 @@ dashboard-templates-selector {
   .overlay, .title, .btn, .example { display: none; }
 }
 
+.analytics common-delete-widget {
+  .widget-popup();
+  .message {
+    .loader i.fa.fa-spinner {
+      font-size: 26px;
+    }
+    p { padding: 0px 10px; }
+    button.btn { margin-top: 20px; }
+  }
+}
+
+#transactions-list {
+  .top {
+    height: 40px;
+    a.back-link { font-weight: normal; }
+    .pagination { margin: 0px; }
+  }
+
+  .table-container {
+    max-height: ~"calc(@{impac-big-widget-size} - 60px)";
+    overflow: auto;
+    
+    div[uib-datepicker-popup-wrap] {
+      display: inline-block;
+    }
+
+    input.btn.btn-xs { margin-top: -2px; }
+    button.btn.reset-date { margin-top: -2px; }
+    .fa.fa-times {
+      color: @brand-danger;
+      cursor: pointer;
+    }
+
+    tr.total {
+      font-weight: bold;
+      &.invoices {
+        background-color: lighten(#8eab71, 20%);
+      }
+      &.bills {
+        background-color: lighten(#c76379, 20%);
+      }
+    }
+  }
+}
+
 #transactions-add {
   .widget-popup();
   .message {
@@ -2696,51 +2741,6 @@ dashboard-templates-selector {
     }
     .bottom {
       margin-top: 20px;
-    }
-  }
-}
-
-.analytics common-delete-widget {
-  .widget-popup();
-  .message {
-    .loader i.fa.fa-spinner {
-      font-size: 26px;
-    }
-    p { padding: 0px 10px; }
-    button.btn { margin-top: 20px; }
-  }
-}
-
-#transactions-list {
-  .top {
-    height: 40px;
-    a.back-link { font-weight: normal; }
-    .pagination { margin: 0px; }
-  }
-
-  .table-container {
-    max-height: ~"calc(@{impac-big-widget-size} - 60px)";
-    overflow: auto;
-    
-    div[uib-datepicker-popup-wrap] {
-      display: inline-block;
-    }
-
-    input.btn.btn-xs { margin-top: -2px; }
-    button.btn.reset-date { margin-top: -2px; }
-    .fa.fa-times {
-      color: @brand-danger;
-      cursor: pointer;
-    }
-
-    tr.total {
-      font-weight: bold;
-      &.invoices {
-        background-color: lighten(#8eab71, 20%);
-      }
-      &.bills {
-        background-color: lighten(#c76379, 20%);
-      }
     }
   }
 }
@@ -3037,6 +3037,16 @@ dashboard-templates-selector {
   }
 }
 
+.analytics .widget-item .content.accounts-class-comparison {
+  .param-selector {
+    text-align: center;
+  }
+  .widget-lines-container {
+    max-height: 94px;
+    color: #626d6d;
+  }
+}
+
 .analytics .widget-item .content.accounts-comparison {
   .tall-widget();
 
@@ -3102,13 +3112,32 @@ dashboard-templates-selector {
   }
 }
 
-.analytics .widget-item .content.accounts-class-comparison {
-  .param-selector {
+.analytics .widget-item .content.accounts-custom-calculation {
+  h3 {
+    margin-top: 85px;
     text-align: center;
+    font-weight: bold;
   }
-  .widget-lines-container {
-    max-height: 94px;
-    color: #626d6d;
+
+  .price {
+    .center-bold(75px);
+  }
+
+  .legend {
+    max-height: 125px;
+  }
+}
+
+.analytics.modal-custom-calculation {
+  margin: 0px;
+  padding: 0px;
+}
+
+.analytics.modal-custom-calculation .modal-body {
+  .edit {
+    .edit-panel-style();
+    padding: 5px;
+    overflow: visible;
   }
 }
 
@@ -3146,28 +3175,6 @@ dashboard-templates-selector {
   }
 }
 
-.analytics .widget-item .content.accounts-custom-calculation {
-  h3 {
-    margin-top: 85px;
-    text-align: center;
-    font-weight: bold;
-  }
-  .legend { max-height: 125px; }
-}
-
-.analytics.modal-custom-calculation {
-  margin: 0px;
-  padding: 0px;
-}
-
-.analytics.modal-custom-calculation .modal-body {
-  .edit {
-    .edit-panel-style();
-    padding: 5px;
-    overflow: visible;
-  }
-}
-
 .analytics .widget-item .content.accounts-expenses-revenue {
   .legend {
     font-weight: bold;
@@ -3177,6 +3184,44 @@ dashboard-templates-selector {
     font-size: 12px;
     margin-left: 0px;
     text-align: center;
+  }
+}
+
+.analytics .widget-item .content.accounts-live-balance {
+  h3 {
+    .center-bold(0px);
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 1px;
+  }
+
+  .statement-title {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .balance-title {
+    font-size: 12px;
+  }
+
+  .currency-centered {
+    .center-small()
+  }
+
+  .headers {
+    text-align: center;
+  }
+
+  .spacer {
+    min-height: 30px;
+  }
+
+  .price {
+    .center-bold(0px);
+  }
+
+  .negative2 {
+    font-size: 14px;
   }
 }
 
@@ -3404,6 +3449,53 @@ dashboard-templates-selector {
   }
 }
 
+.analytics .widget-item .content.sales-average-purchase-size {
+  .tall-widget();
+
+  .average-purchase-size-chart {
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
+  }
+
+  .average-purchase-size-insight {
+    height: ~"calc(@{impac-big-widget-size} - 100px)";
+    padding: 150px;
+  }
+
+  .highcharts-y-primary {
+    fill: 'rgb(68, 208, 218)'
+  }
+
+  .highcharts-y-secondary {
+    fill: 'rgb(208, 68, 218)'
+  }
+
+  .display-metrics {
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200;
+    left: 50;
+    zIndex: 10;
+  }
+}
+
+.analytics .widget-item .content.sales-average-visit {
+  .tall-widget();
+
+  .average-visit-chart {
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
+  }
+
+  .highcharts-y-primary {
+    fill: 'rgb(68, 208, 218)'
+  }
+
+  .highcharts-y-secondary {
+    fill: 'rgb(208, 68, 218)'
+  }
+}
+
 .analytics .widget-item .content.sales-break-even {
   .price {
     .center-bold(0px);
@@ -3490,6 +3582,15 @@ dashboard-templates-selector {
     float: left;
     margin-right: 3px;
   }
+}
+
+.analytics .widget-item .content.sales-customers-engagement {
+  .tall-widget();
+
+  .customers-engagement-chart {
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
+  }
+
 }
 
 .analytics .widget-item .content.sales-cycle {
@@ -4075,6 +4176,9 @@ chart-threshold {
   }
 }
 
+.analytics .widget-item .content .settings.select-account {
+  padding: 0px 5px;
+}
 .analytics .widget-item .content .settings.chart-filters {
   .row {
     margin: 0px;

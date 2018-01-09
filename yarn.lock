@@ -4,12 +4,12 @@
 
 "impac-angular@git+https://git@github.com/marcobgn/impac-angular.git#feature/banking-bolt":
   version "1.6.5"
-  resolved "git+https://git@github.com/marcobgn/impac-angular.git#6ec1c5c36aa97ff55bd0f646669ae4e40d5ea238"
+  resolved "git+https://git@github.com/marcobgn/impac-angular.git#6be0cb63104730a1ec6bb4716b46a1a4bcb71a6e"
 
-"mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#2.0":
+"mno-enterprise-angular@git+https://git@github.com/marcobgn/mno-enterprise-angular.git#feature/banking-bolt":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#323ac0d46bf4f86de781680bcff3f9f6144bce50"
+  resolved "git+https://git@github.com/marcobgn/mno-enterprise-angular.git#e365764227d79dacf1f454fbc5d944e79c19295e"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#90065a20d066a91f0be83bbdbe8c04b79122ce7c"
+  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#df2f0da71625fef2aef35f0d44818161c2e2a3b6"
