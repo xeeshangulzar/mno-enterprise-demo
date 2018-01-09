@@ -14,7 +14,6 @@ gem 'intercom', '~> 3.5.4'
 # Use puma as the app server
 gem 'puma'
 
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,7 +33,7 @@ group :development do
   gem 'bundler-audit', require: false
 
   # Style check
-  gem 'rubocop', '~> 0.39.0', require: false
+  gem 'rubocop', '~> 0.52.0', require: false
   gem 'rubocop-rspec', require: false
 end
 

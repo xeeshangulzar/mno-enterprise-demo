@@ -40,5 +40,5 @@ Style/CollectionMethods:
   Enabled: true
 
 # Do not enforce Hash Style for now
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Enabled: false
