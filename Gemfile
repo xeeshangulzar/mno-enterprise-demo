@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.6'
@@ -34,7 +36,7 @@ group :development do
   gem 'bundler-audit', require: false
 
   # Style check
-  gem 'rubocop', '~> 0.39', require: false
+  gem 'rubocop', '~> 0.49.0', require: false
   gem 'rubocop-rspec', require: false
 end
 

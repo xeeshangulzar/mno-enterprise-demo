@@ -10,6 +10,7 @@ AllCops:
     - 'bin/**/*'
     - 'node_modules/**/*'
     - 'Guardfile'
+    - 'tmp/**/*'
 
 Rails:
   Enabled: true
@@ -23,6 +24,9 @@ Style/Documentation:
 
 # Prevent "Use nested module/class definitions instead of compact style."
 Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
   Enabled: false
 
 #Metrics/AbcSize:
@@ -39,5 +43,5 @@ Style/CollectionMethods:
   Enabled: true
 
 # Do not enforce Hash Style for now
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Enabled: false
