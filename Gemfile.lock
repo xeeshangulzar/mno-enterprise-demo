@@ -23,6 +23,7 @@ GIT
       countries (~> 1.2.5)
       deepstruct (~> 0.0.7)
       devise (~> 3.0)
+      fastimage
       httparty (~> 0.11)
       json-schema
       json_api_client (~> 1.5.3)
@@ -137,6 +138,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
+    fastimage (2.1.1)
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
