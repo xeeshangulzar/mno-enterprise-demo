@@ -44,6 +44,21 @@ angular.module 'mnoEnterpriseAngular'
     widgetSettings:
       tagging:
         enabled: true
+    widgetSelectorConfig:
+      blacklist: [
+        'maestrano/finance/account_balance'
+        'maestrano/finance/assets_summary'
+        'maestrano/finance/balance_sheet'
+        'maestrano/finance/classifications_summary'
+        'maestrano/finance/current_ratio'
+        'maestrano/finance/debt_service_ratio'
+        'maestrano/finance/detailed_classifications'
+        'maestrano/finance/ebitda'
+        'maestrano/finance/expense_weight'
+        'maestrano/finance/expenses_revenue'
+        'maestrano/finance/overall_turnover'
+        'maestrano/finance/profit_and_loss'
+      ]
 
   ImpacThemingProvider.configure(options)
 )

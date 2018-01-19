@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/maestrano/mno-enterprise
-  revision: 8daa647dc34f0619a48596b40c42030aca464815
+  revision: 705868719d269d433f6ebd04e255e50411614f05
   branch: 3.3
   specs:
     mno-enterprise (3.3.2)
@@ -209,7 +209,7 @@ GEM
     minitest (5.11.1)
     money (6.10.1)
       i18n (>= 0.6.4, < 1.0)
-    multi_json (1.12.2)
+    multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     newrelic_rpm (4.7.0.339)
