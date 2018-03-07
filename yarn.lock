@@ -4,7 +4,7 @@
 
 "impac-angular@git+https://git@github.com/manu-d/impac-angular.git#lmi":
   version "1.6.5"
-  resolved "git+https://git@github.com/manu-d/impac-angular.git#3ab4537c58ab2f0ce695273fbc2a058db2c80fa8"
+  resolved "git+https://git@github.com/manu-d/impac-angular.git#fa4d5a444be84d35bce61145edb30636efa1a4a2"
 
 "mno-enterprise-angular@git+https://git@github.com/manu-d/mno-enterprise-angular.git#lmi":
   version "2.0.0-dev"
