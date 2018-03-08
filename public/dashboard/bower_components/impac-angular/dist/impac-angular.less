@@ -1432,200 +1432,6 @@ body {
   }
 }
 
-#module__dashboard-selector {
-  a {
-    font-weight: normal;
-  }
-  // dashboard selector template wrapper div
-  & > div:first-child {
-    border-bottom: @impac-dashboard-selector-border;
-  }
-
-  .buttons-bar-row {
-    margin-top: 54px;
-    &.pdf-mode { margin-top: 0px; }
-  }
-
-  // container for dashboard selector 'dropdown' template
-  .buttons-bar {
-    padding: 0;
-    position: relative;
-
-    .btn {
-      float: right;
-      margin: 3px;
-      border-radius: @impac-dashboard-buttons-border-radius;
-    }
-
-    .title-container {
-      h1 {
-        margin: 0px;
-        color: black;
-        cursor: auto;
-      }
-    }
-
-    .dropdown-container {
-      .dashboard-title {
-        color: @impac-dashboard-title-color;
-        display: inline;
-        cursor: pointer;
-        &:hover {
-          color: darken(@impac-dashboard-title-color,10%);
-        }
-        i.fa.fa-pencil {
-          margin-left: 20px;
-          font-size: 14px;
-          &:hover {
-            color: @mgreen;
-          }
-        }
-      }
-      .dashboard-select {
-        margin: 5px 0px 10px 30px;
-        height: auto;
-        border-left: 1px solid @impac-dashboard-title-color;
-        border-bottom: 1px solid @impac-dashboard-title-color;
-        width: 300px;
-        background-color: @lightgray;
-        cursor: pointer;
-        .option {
-          color: @impac-dashboard-title-label-color;
-          white-space: nowrap;
-          &:hover {
-            background-color: @impac-widget-background-color;
-          }
-          &.create {
-            background-color: @impac-dashboard-title-color;
-            color: @impac-dashboard-title-label-create-color;
-            height: 30px;
-            padding: 5px 10px 5px 10px;
-            &:hover {
-              background-color: darken(@impac-dashboard-title-color,10%);
-            }
-          }
-          i.fa.fa-pencil {
-            float: right;
-            padding-top: 7px;
-            text-align: center;
-            width: 15%;
-            height: 30px;
-            &:hover {
-              color: darken(@impac-dashboard-title-color,10%);
-            }
-          }
-          span.name {
-            width: 85%;
-            height: 30px;
-            display: inline-block;
-            padding: 5px 10px 5px 10px;
-          }
-        }
-      }
-      .change-name {
-        position: absolute;
-        top: 30px;
-        left: 20px;
-        width: 60%;
-        background-color: rgb(23, 38, 45);
-        color: white;
-        padding: 10px;
-        border-radius: 4px;
-        text-align: center;
-        .box-shadow(0px 0px 25px 4px black);
-        z-index: 50;
-        border: solid 1px @impac-widget-background-color;
-
-        .form-control {
-          height: 25px;
-          margin-bottom: 10px;
-        }
-      }
-      .data-source-label {
-        color: @impac-dashboard-source-color;
-        padding-left: 3px;
-        margin: 0px;
-      }
-    }
-
-    .loader-container {
-      padding-left: 10px;
-      .loading-spinner {
-        .loader-style();
-        font-size: 40px;
-      }
-    }
-  }
-
-  // angular bootstrap tabs & pills
-  .nav-tabs {
-    border-bottom: 0;
-  }
-  .nav.nav-tabs,
-  .nav.nav-pills {
-
-    // add new tab
-    li:last-child > a {
-      padding-right: 15px;
-      tab-heading a {
-        position: static;
-      }
-    }
-  }
-
-  // TABS
-  .nav.nav-tabs {
-    // tab
-    li > a {
-      padding: @impac-dashboard-selector-tabs-padding;
-      margin: @impac-dashboard-selector-tabs-margin;
-      background-color: @impac-dashboard-selector-tabs-background-color;
-      border: @impac-dashboard-selector-border;
-      color: @impac-dashboard-selector-tabs-color;
-    }
-    // active tab
-    li.active > a {
-      background-color: @impac-dashboard-selector-tabs-active-background-color;
-      color: @impac-dashboard-selector-tabs-active-color;
-    }
-    // add new tab
-    li:last-child > a {
-      // padding-left: 5px;
-    }
-    li:last-child.active > a {
-      background-color: @impac-dashboard-selector-tabs-background-color;
-    }
-  }
-
-  // PILLS
-  // TODO: Add less variables for customisation.
-  .nav.nav-pills {
-    // tab
-    li > a {
-      min-width: 0px;
-      padding-right: 8px;
-    }
-    // add a new tab
-    li:last-child tab-heading a {
-      margin-left: 2px;
-    }
-    // add a new tab
-    li:last-child.active > a {
-      background-color: #f4f4f4;
-    }
-  }
-  // tab icons
-  tab-heading a.close-link {
-    border-bottom: 0px solid;
-    margin-left: 12px;
-    position: relative;
-    top: -9px;
-    right: 1px;
-    color: @impac-dashboard-selector-tabs-color;
-  }
-  ////////
-}
-
 .analytics {
   padding-top: @impac-dashboard-padding-top;
   margin-left: @impac-dashboard-margin-left;
@@ -2002,42 +1808,198 @@ body {
 }
 
 
-dashboard-templates-selector {
-  .templates-header {
-    display: flex;
-    .templates-toggle {
-      display: flex;
-      flex-grow: 1;
-      justify-content: flex-end;
-      font-size: 20px;
-      i.fa {
+#module__dashboard-selector {
+  a {
+    font-weight: normal;
+  }
+  // dashboard selector template wrapper div
+  & > div:first-child {
+    border-bottom: @impac-dashboard-selector-border;
+  }
+
+  .buttons-bar-row {
+    margin-top: 54px;
+    &.pdf-mode { margin-top: 0px; }
+  }
+
+  // container for dashboard selector 'dropdown' template
+  .buttons-bar {
+    padding: 0;
+    position: relative;
+
+    .btn {
+      float: right;
+      margin: 3px;
+      border-radius: @impac-dashboard-buttons-border-radius;
+    }
+
+    .title-container {
+      h1 {
+        margin: 0px;
+        color: black;
+        cursor: auto;
+      }
+    }
+
+    .dropdown-container {
+      .dashboard-title {
+        color: @impac-dashboard-title-color;
+        display: inline;
         cursor: pointer;
-        &.fa-toggle-on {
-          color: @impac-widget-link-color;
+        &:hover {
+          color: darken(@impac-dashboard-title-color,10%);
+        }
+        i.fa.fa-pencil {
+          margin-left: 20px;
+          font-size: 14px;
+          &:hover {
+            color: @mgreen;
+          }
         }
       }
-    }
-  }
-  .templates {
-    border: 1px solid #ccc;
-    box-shadow: inset 0px 0px 1px 0px #ccc;
-    height: 130px;
-    overflow: auto;
-    border-radius: 2px;
-
-    .template {
-      padding: 5px 10px;
-      color: @impac-widget-text-color;
-      border-bottom: 1px solid #ececec;
-      &:hover {
+      .dashboard-select {
+        margin: 5px 0px 10px 30px;
+        height: auto;
+        border-left: 1px solid @impac-dashboard-title-color;
+        border-bottom: 1px solid @impac-dashboard-title-color;
+        width: 300px;
+        background-color: @lightgray;
         cursor: pointer;
-        background-color: lighten(@impac-dashboard-templates-selected-background-color, 20%);
+        .option {
+          color: @impac-dashboard-title-label-color;
+          white-space: nowrap;
+          &:hover {
+            background-color: @impac-widget-background-color;
+          }
+          &.create {
+            background-color: @impac-dashboard-title-color;
+            color: @impac-dashboard-title-label-create-color;
+            height: 30px;
+            padding: 5px 10px 5px 10px;
+            &:hover {
+              background-color: darken(@impac-dashboard-title-color,10%);
+            }
+          }
+          i.fa.fa-pencil {
+            float: right;
+            padding-top: 7px;
+            text-align: center;
+            width: 15%;
+            height: 30px;
+            &:hover {
+              color: darken(@impac-dashboard-title-color,10%);
+            }
+          }
+          span.name {
+            width: 85%;
+            height: 30px;
+            display: inline-block;
+            padding: 5px 10px 5px 10px;
+          }
+        }
       }
-      &.selected {
-        background-color: @impac-dashboard-templates-selected-background-color;
+      .change-name {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: 60%;
+        background-color: rgb(23, 38, 45);
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        .box-shadow(0px 0px 25px 4px black);
+        z-index: 50;
+        border: solid 1px @impac-widget-background-color;
+
+        .form-control {
+          height: 25px;
+          margin-bottom: 10px;
+        }
+      }
+      .data-source-label {
+        color: @impac-dashboard-source-color;
+        padding-left: 3px;
+        margin: 0px;
+      }
+    }
+
+    .loader-container {
+      padding-left: 10px;
+      .loading-spinner {
+        .loader-style();
+        font-size: 40px;
       }
     }
   }
+
+  // angular bootstrap tabs & pills
+  .nav-tabs {
+    border-bottom: 0;
+  }
+  .nav.nav-tabs,
+  .nav.nav-pills {
+
+    // add new tab
+    li:last-child > a {
+      padding-right: 15px;
+      tab-heading a {
+        position: static;
+      }
+    }
+  }
+
+  // TABS
+  .nav.nav-tabs {
+    // tab
+    li > a {
+      padding: @impac-dashboard-selector-tabs-padding;
+      margin: @impac-dashboard-selector-tabs-margin;
+      background-color: @impac-dashboard-selector-tabs-background-color;
+      border: @impac-dashboard-selector-border;
+      color: @impac-dashboard-selector-tabs-color;
+    }
+    // active tab
+    li.active > a {
+      background-color: @impac-dashboard-selector-tabs-active-background-color;
+      color: @impac-dashboard-selector-tabs-active-color;
+    }
+    // add new tab
+    li:last-child > a {
+      // padding-left: 5px;
+    }
+    li:last-child.active > a {
+      background-color: @impac-dashboard-selector-tabs-background-color;
+    }
+  }
+
+  // PILLS
+  // TODO: Add less variables for customisation.
+  .nav.nav-pills {
+    // tab
+    li > a {
+      min-width: 0px;
+      padding-right: 8px;
+    }
+    // add a new tab
+    li:last-child tab-heading a {
+      margin-left: 2px;
+    }
+    // add a new tab
+    li:last-child.active > a {
+      background-color: #f4f4f4;
+    }
+  }
+  // tab icons
+  tab-heading a.close-link {
+    border-bottom: 0px solid;
+    margin-left: 12px;
+    position: relative;
+    top: -9px;
+    right: 1px;
+    color: @impac-dashboard-selector-tabs-color;
+  }
+  ////////
 }
 
 .analytics .impac-kpi .kpi {
@@ -2276,6 +2238,44 @@ dashboard-templates-selector {
 
 .analytics kpis-bar > .key-stats .kpi {
   min-height: 80px;
+}
+
+dashboard-templates-selector {
+  .templates-header {
+    display: flex;
+    .templates-toggle {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      font-size: 20px;
+      i.fa {
+        cursor: pointer;
+        &.fa-toggle-on {
+          color: @impac-widget-link-color;
+        }
+      }
+    }
+  }
+  .templates {
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 0px 1px 0px #ccc;
+    height: 130px;
+    overflow: auto;
+    border-radius: 2px;
+
+    .template {
+      padding: 5px 10px;
+      color: @impac-widget-text-color;
+      border-bottom: 1px solid #ececec;
+      &:hover {
+        cursor: pointer;
+        background-color: lighten(@impac-dashboard-templates-selected-background-color, 20%);
+      }
+      &.selected {
+        background-color: @impac-dashboard-templates-selected-background-color;
+      }
+    }
+  }
 }
 
 .analytics kpis-bar > .kpis {
@@ -2861,16 +2861,6 @@ dashboard-templates-selector {
   .fa.success { color: @flurogreen; }
 }
 
-.analytics .layouts.figure {
-  h3 {
-    text-align: center;
-  }
-
-  .value {
-    .center-bold(0px);
-    margin-bottom: 10px;
-  }
-}
 chart-threshold {
 
   .attach-panel {
@@ -3082,6 +3072,16 @@ chart-threshold {
   }
 }
 
+.analytics .layouts.figure {
+  h3 {
+    text-align: center;
+  }
+
+  .value {
+    .center-bold(0px);
+    margin-bottom: 3px;
+  }
+}
 .analytics .widget-item .content .settings.select-account {
   padding: 0px 5px;
 }
@@ -3520,9 +3520,6 @@ chart-threshold {
     }
   }
 }
-.analytics .widget-item .content.accounts-accounting-values {
-  // Nothing particular yet for this template...
-}
 .analytics .widget-item .content.accounts-assets-liability-summary {
   .param-selector {
     text-align: center;
@@ -3538,6 +3535,9 @@ chart-threshold {
   }
 }
 
+.analytics .widget-item .content.accounts-accounting-values {
+  // Nothing particular yet for this template...
+}
 .analytics .widget-item .content.accounts-assets-summary {
   .legend {
     text-align: left;
@@ -4211,25 +4211,18 @@ chart-threshold {
   }
 }
 
-.analytics .widget-item .content.sales-customers-engagement {
-  .tall-widget();
-
-  .customers-engagement-chart {
-    height: ~"calc(@{impac-big-widget-size} - 50px)";
-  }
-
-}
-
 .analytics .widget-item .content.sales-cycle {
   .simple-summary-widget();
 }
 .analytics .widget-item .content.sales-days-between-visits {
   h6 {
     text-align: center;
-    text-transform: uppercase;
-    color: #ABC4C6;
-    font-size: 11px;
+    .font(11px, 300, @impac-widget-text-color);
     margin-top: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 
   .options {
@@ -4371,7 +4364,57 @@ chart-threshold {
 .analytics .widget-item .content.sales-new-customers {
   h6 {
     text-align: center;
-    color: #ABC4C6;
+    .font(11px, 300, @impac-widget-text-color);
+    margin-top: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .options {
+    width: 150px;
+    margin: auto;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #e6e6e6;
+    .font(@impac-widget-hist-text-size,500,@impac-widget-hist-text-color);
+    a {
+      .font(@impac-widget-hist-text-size,500,@impac-widget-hist-text-color);
+      text-transform: @impac-widget-hist-text-transform;
+      &.active {
+        color: @impac-widget-link-color;
+      }
+    }
+  }
+
+  .arrow-container {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    top: -14px;
+    margin: auto;
+    &.right {
+      left: 46px;
+    }
+    &.left {
+      left: -30px;
+    }
+    .arrow-border {
+      border-top: 14px solid #e6e6e6;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      width: 0px;
+      height: 0px;
+    }
+    .arrow {
+      border-top: 14px solid @impac-widget-background-color;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      position: relative;
+      top: 12px;
+      width: 0px;
+      height: 0px;
+    }
   }
 }
 
@@ -4443,7 +4486,72 @@ chart-threshold {
 .analytics .widget-item .content.sales-repeat-customers {
   h6 {
     text-align: center;
+    text-transform: uppercase;
     color: #ABC4C6;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  td {
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+  }
+
+  .title {
+    .font(11px, 300, @impac-widget-text-color);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .options {
+    width: 150px;
+    margin: auto;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #e6e6e6;
+    .font(@impac-widget-hist-text-size,500,@impac-widget-hist-text-color);
+    a {
+      .font(@impac-widget-hist-text-size,500,@impac-widget-hist-text-color);
+      text-transform: @impac-widget-hist-text-transform;
+      &.active {
+        color: @impac-widget-link-color;
+      }
+    }
+  }
+
+  .arrow-container {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    top: -14px;
+    margin: auto;
+    &.right {
+      left: 46px;
+    }
+    &.left {
+      left: -30px;
+    }
+    .arrow-border {
+      border-top: 14px solid #e6e6e6;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      width: 0px;
+      height: 0px;
+    }
+    .arrow {
+      border-top: 14px solid @impac-widget-background-color;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      position: relative;
+      top: 12px;
+      width: 0px;
+      height: 0px;
+    }
   }
 }
 
@@ -4473,6 +4581,15 @@ chart-threshold {
 
     .fa.fa-info-circle { float: left; }
   }
+}
+
+.analytics .widget-item .content.sales-spend-share-by-day-of-week {
+  .tall-widget();
+
+  .customers-engagement-chart {
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
+  }
+
 }
 
 .analytics .widget-item .content.sales-summary {
@@ -4549,7 +4666,9 @@ chart-threshold {
   }
 }
 .analytics .widget-item .content.sales-transaction-by-time-of-day {
-  // component specific styles
-  // -------------------------
+  .tall-widget();
 
+  .transaction-chart {
+    height: ~"calc(@{impac-big-widget-size} - 50px)";
+  }
 }
