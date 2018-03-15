@@ -2655,6 +2655,46 @@ dashboard-templates-selector {
   }
 }
 
+#duplicate-transactions-list {
+  .top {
+    height: 40px;
+    a.back-link { font-weight: normal; }
+    .pagination { margin: 0px; }
+  }
+
+  .table-striped {
+    tr.origin:nth-of-type(2n+1) {
+      background-color: #f9f9f9;
+    }
+  }
+
+  .table-container {
+    max-height: ~"calc(@{impac-big-widget-size} - 60px)";
+    overflow: auto;
+
+    div[uib-datepicker-popup-wrap] {
+      display: inline-block;
+    }
+
+    input.btn.btn-xs { margin-top: -2px; }
+    button.btn.reset-date { margin-top: -2px; }
+    .fa.fa-times {
+      color: @brand-danger;
+      cursor: pointer;
+    }
+
+    tr.total {
+      font-weight: bold;
+      &.invoices {
+        background-color: lighten(#8eab71, 20%);
+      }
+      &.bills {
+        background-color: lighten(#c76379, 20%);
+      }
+    }
+  }
+}
+
 #transactions-add {
   .widget-popup();
   .message {
@@ -2943,6 +2983,7 @@ dashboard-templates-selector {
     width: 180px;
     display: inline-block;
     overflow: auto;
+    max-height: 100%;
   }
 
   #cash-balance-legend {
@@ -2991,6 +3032,18 @@ dashboard-templates-selector {
   }
 }
 
+.analytics .widget-item .content.accounts-cash-summary {
+  .drill-down-widget();
+  .right-panel .widget-lines-container {
+    max-height: 215px;
+  }
+
+  .row.lines-group.cash {
+    border-top: solid 1px;
+    border-bottom: double;
+  }
+}
+
 .analytics .widget-item .content.accounts-cash-projection {
   .tall-widget();
 
@@ -3022,18 +3075,6 @@ dashboard-templates-selector {
 
   transactions-list {
     font-size: 12px;
-  }
-}
-
-.analytics .widget-item .content.accounts-cash-summary {
-  .drill-down-widget();
-  .right-panel .widget-lines-container {
-    max-height: 215px;
-  }
-
-  .row.lines-group.cash {
-    border-top: solid 1px;
-    border-bottom: double;
   }
 }
 
@@ -3177,6 +3218,44 @@ dashboard-templates-selector {
     font-size: 12px;
     margin-left: 0px;
     text-align: center;
+  }
+}
+
+.analytics .widget-item .content.accounts-live-balance {
+  h3 {
+    .center-bold(0px);
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 1px;
+  }
+
+  .statement-title {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .balance-title {
+    font-size: 12px;
+  }
+
+  .currency-centered {
+    .center-small()
+  }
+
+  .headers {
+    text-align: center;
+  }
+
+  .spacer {
+    min-height: 30px;
+  }
+
+  .price {
+    .center-bold(0px);
+  }
+
+  .negative2 {
+    font-size: 14px;
   }
 }
 
@@ -4075,6 +4154,9 @@ chart-threshold {
   }
 }
 
+.analytics .widget-item .content .settings.select-account {
+  padding: 0px 5px;
+}
 .analytics .widget-item .content .settings.chart-filters {
   .row {
     margin: 0px;
@@ -4206,16 +4288,17 @@ chart-threshold {
         float: right;
         font-size: 20px;
         cursor: pointer;
-        &.fa-toggle-on {
+        &.fa-toggle-on, &.fa-check-circle {
           color: @impac-widget-link-color;
         }
-        &.fa-toggle-off {
+        &.fa-toggle-off, &.fa-circle-thin {
           color: @impac-widget-text-color-medium;
         }
       }
     }
   }
 }
+
 .analytics .widget-item .content .settings.param-selector {
   display: inline-block;
 
