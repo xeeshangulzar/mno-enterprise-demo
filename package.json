@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "impac-angular": "git+https://git@github.com/manu-d/impac-angular.git#lmi",
-    "mno-enterprise-angular": "git+https://git@github.com/manu-d/mno-enterprise-angular.git#lmi",
+    "mno-enterprise-angular": "git+https://git@github.com/manu-d/mno-enterprise-angular.git#teapot",
     "mnoe-admin-panel": "git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0"
   },
   "engines": {
