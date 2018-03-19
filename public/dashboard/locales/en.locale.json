@@ -852,8 +852,6 @@
   "mno_enterprise.templates.components.language_selectbox.language": "Language",
   "mno_enterprise.errors.503.title": "Looks like we're having some server issues.",
   "mno_enterprise.errors.503.description": "We will redirect you as soon as it's online. Otherwise try again in a moment.",
-  "mno_enterprise.errors.500.title": "Looks like we're having some server issues.",
-  "mno_enterprise.errors.500.description": "If the problem persists, please contact support at %{support_email}.",
   "mno_enterprise.errors.429.title": "Too many requests.",
   "mno_enterprise.errors.429.description": "We are receiving too many requests. Please try again in a moment.",
   "mno_enterprise.errors.redirection": "Go to Homepage",
