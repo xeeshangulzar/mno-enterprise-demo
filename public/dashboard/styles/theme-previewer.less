@@ -1156,13 +1156,28 @@ body {
   }
 }
 
+#connect-addon-modal {
+  .not-active {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  ul.breadcrumb {
+    margin-bottom: 0px;
+  }
+
+  h4 {
+    margin-bottom: 25px;
+  }
+}
+
 #app-dock-container {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   text-align: center;
-  
+
   .top-right-corner {
     line-height: 0;
     margin-right: -10px;
@@ -1286,6 +1301,7 @@ ul.dock {
       .box-shadow(@mno-dock-sub-menu-box-shadow);
       .menu-item {
         cursor: pointer;
+        white-space: nowrap;
 
         &:hover {
           background-color: @mno-dock-sub-menu-hover;
@@ -2024,7 +2040,7 @@ theme-editor {
 
     &.closed {
       //right: 25px;
-      transform: translate3d(95%, 0, 0);
+      transform: translate3d(~'calc(100% - 30px)', 0, 0);
     }
 
     .collapse-switch-btn {
@@ -2046,32 +2062,6 @@ theme-editor {
     .alert.alert-info {
       display: inline-block;
     }
-  }
-
-  .sp-container {
-    z-index: 10000;
-  }
-
-  .sp-replacer {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  .sp-preview {
-    margin: 2px;
-    width: ~"calc(100% - 18px)";
-    border-radius: 4px;
-    border-color: #ccc;
-    z-index:150;
-  }
-
-  .sp-preview-inner {
-    border-radius: 4px;
-  }
-
-  .sp-dd {
-    margin: 2px 2px 2px;
   }
 }
 
@@ -3414,13 +3404,6 @@ form.editable-wrap .editable-controls input {
 
 #subscription {
   .well {
-    h3 {
-      margin-top: 0;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed @subscription-txt-color;
-    }
-
     background-color: @subscription-box-color;
   }
 
@@ -3447,31 +3430,6 @@ form.editable-wrap .editable-controls input {
 
   .has-success .form-control {
     border-color: transparent;
-  }
-
-  .well.subscription-info {
-    .form-group {
-      display: flex;
-    }
-
-    div, ul {
-      width: 100%;
-      margin-left: 14px;
-    }
-
-    label {
-      width: 180px;
-      padding-top: 6px;
-    }
-  }
-
-  .subscription-events .subscription-event {
-    padding-top: 5px;
-  }
-
-  .subscription-events .subscription-event-provisioning-data {
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
   }
 }
 
@@ -3641,6 +3599,11 @@ form.editable-wrap .editable-controls input {
 #app-settings-modal {
 
   .modal-body {
+    .container-fluid {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     padding: 5px;
 
     div.app-name {
@@ -3696,6 +3659,15 @@ form.editable-wrap .editable-controls input {
       .deletion-sentence {
         color: @deletion-sentence-color;
       }
+    }
+
+    .pagination {
+      margin: 0 0;
+    }
+
+    .panel-group {
+      margin-top: 5px;
+      margin-bottom: 0px;
     }
   }
 }
