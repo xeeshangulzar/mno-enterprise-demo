@@ -20,6 +20,9 @@ pricing:
 # Enable the App Dock
 dock:
   enabled: true
+# Display the Developer section on "My Account"
+developer:
+  enabled: true
 # Enable Reviews in the marketplace
 reviews:
   enabled: true
