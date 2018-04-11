@@ -58,6 +58,7 @@ angular.module 'mnoEnterpriseAngular'
         'maestrano/finance/expenses_revenue'
         'maestrano/finance/overall_turnover'
         'maestrano/finance/profit_and_loss'
+        'maestrano/finance/payable_receivable'
       ]
 
   ImpacThemingProvider.configure(options)
