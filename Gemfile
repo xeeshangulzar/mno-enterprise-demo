@@ -12,7 +12,7 @@ gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise', branch
 gem 'intercom', '~> 3.5.4'
 
 # Use puma as the app server
-gem 'puma'
+gem 'puma', require: false
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
