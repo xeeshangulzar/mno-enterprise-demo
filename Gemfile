@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Allow to use github without bundle audit complaining about insecure sources
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
 gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
