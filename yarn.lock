@@ -10,6 +10,6 @@
   version "2.0.0-dev"
   resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#38cb134a0b008608de61a111dac9d361417411d5"
 
-"mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
+"mnoe-admin-panel@https://github.com/NickenChuggets/mnoe-admin-panel.git#bug/991-Demo-company-appearing-in-organization-metrics":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#dc040c0bfd77cd90ab285b0e47aa51bfec7a368b"
+  resolved "https://github.com/NickenChuggets/mnoe-admin-panel.git#453ac633bd67b7eb5e542155f5ab7e9323b718c3"
