@@ -3,8 +3,8 @@
 
 
 "impac-angular@git+https://git@github.com/maestrano/impac-angular.git#1.6":
-  version "1.6.9"
-  resolved "git+https://git@github.com/maestrano/impac-angular.git#cea0e7f31c55db77f2ba9fed57d163968d776e8c"
+  version "1.6.10"
+  resolved "git+https://git@github.com/maestrano/impac-angular.git#79df9fca8bcf4b5b09ab2edb4b18c461c5700bd1"
 
 "mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#2.0":
   version "2.0.0-dev"
@@ -12,4 +12,4 @@
 
 "mnoe-admin-panel@https://github.com/NickenChuggets/mnoe-admin-panel.git#bug/991-Demo-company-appearing-in-organization-metrics":
   version "2.0.0-dev"
-  resolved "https://github.com/NickenChuggets/mnoe-admin-panel.git#453ac633bd67b7eb5e542155f5ab7e9323b718c3"
+  resolved "https://github.com/NickenChuggets/mnoe-admin-panel.git#57ceeb0508c41afe85c91eaef8078b093eb7e09f"
