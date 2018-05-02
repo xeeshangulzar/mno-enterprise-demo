@@ -35,6 +35,13 @@ module MnoEnterpriseDemo
       password: ENV['SMTP_PASSWORD']
     }
 
+    # Cache Store
+    config.cache_store = if ENV['REDIS_URL'].present?
+                           [:redis_store, File.join(ENV['REDIS_URL'], 'cache')]
+                         else
+                           :memory_store
+                         end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

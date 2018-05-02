@@ -17,6 +17,9 @@ gem 'intercom', '~> 3.5.4'
 # Use puma as the app server
 gem 'puma', require: false
 
+# Redis cache
+gem 'redis-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
