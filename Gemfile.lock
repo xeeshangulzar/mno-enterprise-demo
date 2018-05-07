@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/maestrano/mno-enterprise
-  revision: fa8074e13eb2caf1b9b253b96bf5b25773c3f656
-  branch: 4.0
+  remote: https://github.com/rheasunshine/mno-enterprise
+  revision: 6138395a240c46734a38650ac99e753802039150
+  branch: bug/1014-team-member-app-access
   specs:
     mno-enterprise (4.0.0.pre.dev)
       mno-enterprise-api (= 4.0.0.pre.dev)
