@@ -60,6 +60,7 @@ angular.module 'mnoEnterpriseAngular'
         'maestrano/finance/profit_and_loss'
         'maestrano/finance/accounts_comparison'
         'maestrano/finance/payable_receivable'
+        'maestrano/finance/aged_payables_receivables'
       ]
 
   ImpacThemingProvider.configure(options)
