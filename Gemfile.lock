@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/iseessel/mno-enterprise
-  revision: 47663d20738c253a45428bc9f377f19491ad6636
+  revision: 4f616e082349c9712bfd3be47ab8066033c89c04
   branch: feature/429-subscription-workflow
   specs:
     mno-enterprise (4.0.0.pre.dev)
@@ -326,7 +326,7 @@ GEM
     ruby-progressbar (1.9.0)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
-    sanitize (4.6.4)
+    sanitize (4.6.5)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4)

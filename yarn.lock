@@ -12,4 +12,4 @@
 
 "mnoe-admin-panel@https://github.com/iseessel/mnoe-admin-panel.git#feature/429-customer-request-edit-actions":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mnoe-admin-panel.git#c3817c480e3e3cc9e3bca6b1403586986e46e700"
+  resolved "https://github.com/iseessel/mnoe-admin-panel.git#8622d23e625e763d8be944e53cc68cf570da3710"
