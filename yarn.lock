@@ -8,7 +8,7 @@
 
 "mno-enterprise-angular@https://github.com/iseessel/mno-enterprise-angular.git#feature/mnoe-1113-frontend-cancel-sub":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mno-enterprise-angular.git#f5b0d270521e28c3cd85ee74928a3aeaddb0ff6e"
+  resolved "https://github.com/iseessel/mno-enterprise-angular.git#ddf0062a080d81f5a47e2bbde63b52ad148553ab"
 
 "mnoe-admin-panel@https://github.com/iseessel/mnoe-admin-panel.git#feature/429-customer-request-edit-actions":
   version "2.0.0-dev"
