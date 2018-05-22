@@ -1814,6 +1814,18 @@ impersonification-notification {
   }
 }
 
+#address {
+  .address-sub-label {
+    font-size: x-small;
+    font-weight: lighter;
+    font-style: italic;
+    opacity: 0.6;
+  }
+  .country-select {
+    display:none;
+  }
+}
+
 #app-features {
   border: @onboarding-app-features-border;
   color: @onboarding-app-features-color;
@@ -1874,16 +1886,6 @@ mno-impersonation-bar {
     @media (max-width: @screen-xs-max) {
       padding-top: 40px;
     }
-  }
-}
-
-mno-inline-message {
-  .mno-inline-checked {
-    color: @dashboard-account-inline-text-color-checked;
-  }
-
-  .mno-inline-unchecked {
-    color: @dashboard-account-inline-text-color-unchecked;
   }
 }
 
@@ -3360,6 +3362,16 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+mno-inline-message {
+  .mno-inline-checked {
+    color: @dashboard-account-inline-text-color-checked;
+  }
+
+  .mno-inline-unchecked {
+    color: @dashboard-account-inline-text-color-unchecked;
+  }
+}
+
 #provisioning-confirm {
 
 }
@@ -3863,6 +3875,17 @@ form.editable-wrap .editable-controls input {
   [class^="mnoe-icon-cc-icons-mno-cc-"].enabled,
   [class*="mnoe-icon-cc-icons-mno-cc-"].enabled {
     opacity: 1;
+  }
+}
+
+.settings-address {
+  .address-sub-label {
+    margin-bottom: -15px;
+  }
+
+  .address-field {
+    margin-left: 25%;
+    margin-top: -12px;
   }
 }
 
