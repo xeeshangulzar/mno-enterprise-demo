@@ -1918,6 +1918,16 @@ mno-loader {
   position: relative;
 }
 
+mno-inline-message {
+  .mno-inline-checked {
+    color: @dashboard-account-inline-text-color-checked;
+  }
+
+  .mno-inline-unchecked {
+    color: @dashboard-account-inline-text-color-unchecked;
+  }
+}
+
 mno-pagination {
   display: block;
   overflow: auto;
@@ -3359,16 +3369,6 @@ form.editable-wrap .editable-controls input {
   .next-button-wrapper {
     width: 100%;
     float: left;
-  }
-}
-
-mno-inline-message {
-  .mno-inline-checked {
-    color: @dashboard-account-inline-text-color-checked;
-  }
-
-  .mno-inline-unchecked {
-    color: @dashboard-account-inline-text-color-unchecked;
   }
 }
 
