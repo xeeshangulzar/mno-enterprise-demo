@@ -1608,6 +1608,23 @@ dashboard-language-selectbox {
   }
 }
 
+#app-features {
+  border: @onboarding-app-features-border;
+  color: @onboarding-app-features-color;
+
+  .center-element {
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
+
+  .fa-check-square-o {
+    color: @onboarding-app-features-checked;
+  }
+  .fa-square-o {
+    color: @onboarding-app-features-unchecked;
+  }
+}
+
 dashboard-menu {
   /*-----------------------------------------------------------------------*/
   /*                         Mobile menu                                   */
@@ -1808,6 +1825,22 @@ dashboard-menu {
   }
 }
 
+mno-app-onboarding-btn {
+  display: block;
+
+  .button-check {
+    color: @onboarding-app-connect-check;
+  }
+
+  .button-loader {
+    color: @onboarding-app-connect-loader;
+  }
+
+  .btn {
+    margin-top: 5px;
+  }
+}
+
 impersonification-notification {
   .notifications {
     padding-top: 70px;
@@ -1823,39 +1856,6 @@ impersonification-notification {
   }
   .country-select {
     display:none;
-  }
-}
-
-#app-features {
-  border: @onboarding-app-features-border;
-  color: @onboarding-app-features-color;
-
-  .center-element {
-    margin-left: 10px;
-    margin-bottom: 12px;
-  }
-
-  .fa-check-square-o {
-    color: @onboarding-app-features-checked;
-  }
-  .fa-square-o {
-    color: @onboarding-app-features-unchecked;
-  }
-}
-
-mno-app-onboarding-btn {
-  display: block;
-
-  .button-check {
-    color: @onboarding-app-connect-check;
-  }
-
-  .button-loader {
-    color: @onboarding-app-connect-loader;
-  }
-
-  .btn {
-    margin-top: 5px;
   }
 }
 
@@ -1928,6 +1928,21 @@ mno-loader {
   position: relative;
 }
 
+mno-password {
+  display: block;
+}
+
+mno-without-organisation {
+  .well {
+    background-color: @without-organisation-well-bg;
+    color: @without-organisation-text-color;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
 mno-pagination {
   display: block;
   overflow: auto;
@@ -1946,21 +1961,6 @@ mno-pagination {
       @media (max-width: @screen-xs-max) {
         margin-top: 15px;
       }
-    }
-  }
-}
-
-mno-password {
-  display: block;
-}
-
-mno-without-organisation {
-  .well {
-    background-color: @without-organisation-well-bg;
-    color: @without-organisation-text-color;
-
-    h2 {
-      margin-top: 0;
     }
   }
 }
