@@ -8,8 +8,8 @@
 
 "mno-enterprise-angular@https://github.com/paulstuartparker/mno-enterprise-angular.git#2.0":
   version "2.0.0-dev"
-  resolved "https://github.com/paulstuartparker/mno-enterprise-angular.git#4f7a66bb38be42f2cf15e7db375e2e4cef0b77a9"
+  resolved "https://github.com/paulstuartparker/mno-enterprise-angular.git#525bcff4ecc028c1d799788c384142646ae8547d"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#4dc6aa2468b30a5f960f7e9751bc08b64de9b2a8"
+  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#cd8fa2b00217a781ad206b46d4b9f3da9be61d6d"
