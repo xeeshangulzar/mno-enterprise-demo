@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rheasunshine/mno-enterprise
-  revision: 6138395a240c46734a38650ac99e753802039150
+  revision: 8e257445718e41b7e3cd072e88e4595cad924de0
   branch: bug/1014-team-member-app-access
   specs:
     mno-enterprise (4.0.0.pre.dev)
@@ -87,7 +87,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
     ast (2.4.0)
-    bcrypt (3.1.11)
+    bcrypt (3.1.12)
     brakeman (4.1.1)
     builder (3.2.3)
     bundler-audit (0.6.0)
@@ -135,7 +135,7 @@ GEM
     factory_girl_rails (4.9.0)
       factory_girl (~> 4.9.0)
       railties (>= 3.0.0)
-    faraday (0.15.0)
+    faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
@@ -168,7 +168,7 @@ GEM
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     i18n_data (0.7.0)
-    intercom (3.5.23)
+    intercom (3.5.25)
       json (>= 1.8)
     jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
@@ -205,7 +205,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    money (6.11.2)
+    money (6.11.3)
       i18n (>= 0.6.4, < 1.1)
     multi_json (1.13.1)
     multi_xml (0.6.0)
@@ -326,7 +326,7 @@ GEM
     ruby-progressbar (1.9.0)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
-    sanitize (4.6.4)
+    sanitize (4.6.5)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4)
