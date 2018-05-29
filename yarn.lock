@@ -8,7 +8,7 @@
 
 "mno-enterprise-angular@git+https://git@github.com/NickenChuggets/mno-enterprise-angular.git#bug/1140-can-provision-app-from-admin-panel-but-not-marketplace":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/NickenChuggets/mno-enterprise-angular.git#f3f59c2cde9ce178d006adf47f24c7ee236db2fe"
+  resolved "git+https://git@github.com/NickenChuggets/mno-enterprise-angular.git#9fdc3caf798f0aab11c50559df9a246bc7f91834"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
   version "2.0.0-dev"
