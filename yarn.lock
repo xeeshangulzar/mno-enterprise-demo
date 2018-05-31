@@ -6,10 +6,10 @@
   version "1.6.10"
   resolved "git+https://git@github.com/maestrano/impac-angular.git#79df9fca8bcf4b5b09ab2edb4b18c461c5700bd1"
 
-"mno-enterprise-angular@https://github.com/maestrano/mno-enterprise-angular.git#2.0":
+"mno-enterprise-angular@https://github.com/jin521/mno-enterprise-angular.git#MNOE-1037-tab-lost-on-refresh":
   version "2.0.0-dev"
-  resolved "https://github.com/maestrano/mno-enterprise-angular.git#b649f1e64ca0cb6ad51e1180701563496dc51e38"
+  resolved "https://github.com/jin521/mno-enterprise-angular.git#0d6bb0edc06d4fd9eccd637efa5d3841005c38ec"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#cd8fa2b00217a781ad206b46d4b9f3da9be61d6d"
+  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#76e0fac16d948d087e1768a6d8885fcc9b663e2d"
