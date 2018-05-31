@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.6",
-    "mno-enterprise-angular": "git+https://git@github.com/NickenChuggets/mno-enterprise-angular.git#bug/1140-can-provision-app-from-admin-panel-but-not-marketplace",
+    "mno-enterprise-angular": "git+https://git@github.com/rheasunshine/mno-enterprise-angular.git#bug/cart-access-conditional",
     "mnoe-admin-panel": "git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0"
   },
   "engines": {

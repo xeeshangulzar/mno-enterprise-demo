@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rheasunshine/mno-enterprise
-  revision: 8e257445718e41b7e3cd072e88e4595cad924de0
+  revision: 98e55f226aae2f71eeff2afcd5a09836e1be505a
   branch: bug/1014-team-member-app-access
   specs:
     mno-enterprise (4.0.0.pre.dev)
