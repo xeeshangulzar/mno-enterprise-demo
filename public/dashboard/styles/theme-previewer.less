@@ -1404,23 +1404,6 @@ a.disabled.btn, fieldset[disabled] a.btn {
   pointer-events: auto;
 }
 
-mno-audit-events-list {
-  .table > thead > tr {
-    color: @table-cell-header-text-color;
-    background-color: @table-cell-header-bg-color;
-  }
-
-  .table-striped > tbody > tr {
-    &:nth-of-type(even) {
-      background-color: @table-cell-row-even-bg-color
-    }
-
-    &:nth-of-type(odd) {
-      background-color: @table-cell-row-odd-bg-color
-    }
-  }
-}
-
 mno-app-onboarding-btn {
   display: block;
 
@@ -1437,15 +1420,19 @@ mno-app-onboarding-btn {
   }
 }
 
-mno-impersonation-bar {
-  #impersonate-bar {
-    color: @text-inverse-strong-color;
-    background-color: @bg-inverse-color;
-    padding-top: 3px;
-    padding-bottom: 3px;
+mno-audit-events-list {
+  .table > thead > tr {
+    color: @table-cell-header-text-color;
+    background-color: @table-cell-header-bg-color;
+  }
 
-    @media (max-width: @screen-xs-max) {
-      padding-top: 40px;
+  .table-striped > tbody > tr {
+    &:nth-of-type(even) {
+      background-color: @table-cell-row-even-bg-color
+    }
+
+    &:nth-of-type(odd) {
+      background-color: @table-cell-row-odd-bg-color
     }
   }
 }
@@ -1487,6 +1474,19 @@ mno-loader {
 
 .loader-content {
   position: relative;
+}
+
+mno-impersonation-bar {
+  #impersonate-bar {
+    color: @text-inverse-strong-color;
+    background-color: @bg-inverse-color;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    @media (max-width: @screen-xs-max) {
+      padding-top: 40px;
+    }
+  }
 }
 
 mno-pagination {
