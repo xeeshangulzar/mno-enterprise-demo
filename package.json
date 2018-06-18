@@ -3,8 +3,8 @@
   "private": true,
   "dependencies": {
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.6",
-    "mno-enterprise-angular": "https://github.com/maestrano/mno-enterprise-angular.git#2.0",
-    "mnoe-admin-panel": "git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0"
+    "mno-enterprise-angular": "https://github.com/paulstuartparker/mno-enterprise-angular.git#feature/1088-order-quotes",
+    "mnoe-admin-panel": "git+https://git@github.com/paulstuartparker/mnoe-admin-panel.git#feature/1088-quote-based-pricing"
   },
   "engines": {
     "node": ">= 6.9.0"

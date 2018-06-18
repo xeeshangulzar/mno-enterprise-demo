@@ -7,7 +7,7 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise', branch: '4.0'
+gem 'mno-enterprise', git: 'https://github.com/paulstuartparker/mno-enterprise', branch: 'feature/MNOE-1088-quote-based-pricing'
 
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
