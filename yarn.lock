@@ -6,10 +6,10 @@
   version "1.6.10"
   resolved "git+https://git@github.com/maestrano/impac-angular.git#79df9fca8bcf4b5b09ab2edb4b18c461c5700bd1"
 
-"mno-enterprise-angular@https://github.com/maestrano/mno-enterprise-angular.git#2.0":
+"mno-enterprise-angular@https://github.com/paulstuartparker/mno-enterprise-angular.git#feature/1088-order-quotes":
   version "2.0.0-dev"
-  resolved "https://github.com/maestrano/mno-enterprise-angular.git#d1885971d9e6ae69394413d297577b3dac2fa237"
+  resolved "https://github.com/paulstuartparker/mno-enterprise-angular.git#2eb1dab06cb89b00a2cdd5abdbb53513881c7a04"
 
-"mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
+"mnoe-admin-panel@git+https://git@github.com/paulstuartparker/mnoe-admin-panel.git#feature/1088-quote-based-pricing":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#7a806a118c3b89c2456d85a88cc7620a64c103b7"
+  resolved "git+https://git@github.com/paulstuartparker/mnoe-admin-panel.git#ddb518130b1b69e19df03068bf41d5511b5fd808"
