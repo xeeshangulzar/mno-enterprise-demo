@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/maestrano/mno-enterprise
-  revision: fa7329e4c652496876dffa32ef146780b46db3a9
-  branch: 4.0
+  remote: https://github.com/Maestrano/mno-enterprise
+  revision: 50b1450357fd997dd9845aeec9d96b45f43d3fc0
+  branch: feature/1213-delete-staff-client
   specs:
     mno-enterprise (4.0.0.pre.dev)
       mno-enterprise-api (= 4.0.0.pre.dev)
