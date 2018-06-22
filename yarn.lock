@@ -10,6 +10,6 @@
   version "2.0.0-dev"
   resolved "https://github.com/jin521/mno-enterprise-angular.git#80d17fefb964201b360c0116a56881f94e8ecf06"
 
-"mnoe-admin-panel@git+https://git@github.com/MAhsenArif/mnoe-admin-panel.git#customer_page_efficiency":
+"mnoe-admin-panel@git+https://git@github.com/ouranos/mnoe-admin-panel.git#feature/1213-staff-role-change-warning":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/MAhsenArif/mnoe-admin-panel.git#54b802828b9c8170c5a173efedfea6ca7b8a9e48"
+  resolved "git+https://git@github.com/ouranos/mnoe-admin-panel.git#a2aeb70813924871c4bb64995c624d9afc03991d"

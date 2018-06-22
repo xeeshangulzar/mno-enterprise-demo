@@ -4,7 +4,7 @@
   "dependencies": {
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.6",
     "mno-enterprise-angular": "https://github.com/jin521/mno-enterprise-angular.git#MNOE-1186",
-    "mnoe-admin-panel": "git+https://git@github.com/MAhsenArif/mnoe-admin-panel.git#customer_page_efficiency"
+    "mnoe-admin-panel": "git+https://git@github.com/ouranos/mnoe-admin-panel.git#feature/1213-staff-role-change-warning"
   },
   "engines": {
     "node": ">= 6.9.0"
