@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/paulstuartparker/mno-enterprise
-  revision: b30cc25f6da0620c78ec9dd0dd2ef6882ae1c844
+  revision: 6db0748feb193e4413501558dd0e0729c4aaf8f2
   branch: feature/MNOE-1088-quote-based-pricing
   specs:
     mno-enterprise (4.0.0.pre.dev)
@@ -353,7 +353,7 @@ GEM
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)

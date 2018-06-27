@@ -8,8 +8,8 @@
 
 "mno-enterprise-angular@https://github.com/paulstuartparker/mno-enterprise-angular.git#feature/1088-order-quotes":
   version "2.0.0-dev"
-  resolved "https://github.com/paulstuartparker/mno-enterprise-angular.git#2eb1dab06cb89b00a2cdd5abdbb53513881c7a04"
+  resolved "https://github.com/paulstuartparker/mno-enterprise-angular.git#556ff52f6af8ab73032a75fa539600e5b38b3810"
 
 "mnoe-admin-panel@git+https://git@github.com/paulstuartparker/mnoe-admin-panel.git#feature/1088-quote-based-pricing":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/paulstuartparker/mnoe-admin-panel.git#ddb518130b1b69e19df03068bf41d5511b5fd808"
+  resolved "git+https://git@github.com/paulstuartparker/mnoe-admin-panel.git#94f8224e68d87ecb84578327d432af43d3e50868"
