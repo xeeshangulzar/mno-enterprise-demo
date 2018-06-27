@@ -1951,6 +1951,35 @@ mno-inline-message {
   }
 }
 
+mno-loader {
+  display: block;
+
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: @dashboard-loader-color;
+
+    .loader-icon {
+      @dashboard-loader-icon();
+    }
+
+    .background-layer {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: grey;
+      opacity: 0.6;
+    }
+  }
+}
+
+.loader-content {
+  position: relative;
+}
+
 mno-pagination {
   display: block;
   overflow: auto;
@@ -1986,35 +2015,6 @@ mno-without-organisation {
       margin-top: 0;
     }
   }
-}
-
-mno-loader {
-  display: block;
-
-  .loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: @dashboard-loader-color;
-
-    .loader-icon {
-      @dashboard-loader-icon();
-    }
-
-    .background-layer {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: grey;
-      opacity: 0.6;
-    }
-  }
-}
-
-.loader-content {
-  position: relative;
 }
 
 average-star-rating, star-rating {
