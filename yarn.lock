@@ -10,6 +10,6 @@
   version "2.0.0-dev"
   resolved "https://github.com/adamaziz15/mno-enterprise-angular.git#60fbe3e9bd8e6fe6356f0255742f1fc80266702c"
 
-"mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#2.0":
+"mnoe-admin-panel@git+https://git@github.com/adamaziz15/mnoe-admin-panel.git#bug/1229-pricing-language":
   version "2.0.0-dev"
-  resolved "git+https://git@github.com/maestrano/mnoe-admin-panel.git#9168c5c778f1d28417b349fc68c05607396282a8"
+  resolved "git+https://git@github.com/adamaziz15/mnoe-admin-panel.git#de037be5d379ae7f86fca42e1534185b739008cd"
