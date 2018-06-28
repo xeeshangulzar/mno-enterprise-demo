@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/iseessel/mno-enterprise
-  revision: 7e162f5fa43ca1109ecd09f1ddb91caebadde0f3
+  revision: efe21e2f43dcebeac888eefe4acfab3633fa2bf1
   branch: bug/mnoe-1110-custom-data-being-copied-over
   specs:
     mno-enterprise (4.0.0.pre.dev)

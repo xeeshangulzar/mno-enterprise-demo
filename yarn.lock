@@ -12,4 +12,4 @@
 
 "mnoe-admin-panel@https://github.com/iseessel/mnoe-admin-panel.git#bug/mnoe-1110-custom-data-being-copied-over":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mnoe-admin-panel.git#c4b6a0a99ab49e07fcced86767e90ddf4eeec3d9"
+  resolved "https://github.com/iseessel/mnoe-admin-panel.git#1fe610b1532dd2cd39a69addc2c731f3fbefd061"
