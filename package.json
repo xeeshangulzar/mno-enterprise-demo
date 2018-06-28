@@ -3,8 +3,8 @@
   "private": true,
   "dependencies": {
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.6",
-    "mno-enterprise-angular": "https://github.com/iseessel/mno-enterprise-angular.git#feature/mnoe-1113-frontend-cancel-sub",
-    "mnoe-admin-panel": "https://github.com/iseessel/mnoe-admin-panel.git#feature/429-customer-request-edit-actions"
+    "mno-enterprise-angular": "https://github.com/iseessel/mno-enterprise-angular.git#bug/1110-order-details-copying-over",
+    "mnoe-admin-panel": "https://github.com/iseessel/mnoe-admin-panel.git#bug/mnoe-1110-custom-data-being-copied-over"
   },
   "engines": {
     "node": ">= 6.9.0"

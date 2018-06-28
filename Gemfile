@@ -7,7 +7,7 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', github: 'iseessel/mno-enterprise', branch: 'feature/429-subscription-workflow'
+gem 'mno-enterprise', github: 'iseessel/mno-enterprise', branch: 'bug/mnoe-1110-custom-data-being-copied-over'
 
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
