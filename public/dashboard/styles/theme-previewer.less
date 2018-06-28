@@ -325,6 +325,8 @@ body {
 @dashboard-side-menu-btn-dashboard-active:      { .icon-fa(th); @_default_style_active(); };
 @dashboard-side-menu-btn-impac:                 { .icon-fa(pie-chart); @_default_style(); };
 @dashboard-side-menu-btn-impac-active:          { .icon-fa(pie-chart); @_default_style_active(); };
+@dashboard-side-menu-btn-app-management:        { .icon-fa(th-large); @_default_style(); };
+@dashboard-side-menu-btn-app-management-active: { .icon-fa(th-large); @_default_style_active(); };
 @dashboard-side-menu-btn-account:               { .icon-fa(user); @_default_style(); margin-left: 5px; };
 @dashboard-side-menu-btn-account-active:        { .icon-fa(user); @_default_style_active(); margin-left: 5px; };
 @dashboard-side-menu-btn-company:               { .icon-fa(briefcase); @_default_style(); };
@@ -335,6 +337,15 @@ body {
 @dashboard-side-menu-btn-marketplace-active:    { .icon-fa(plus-square-o); @_default_style_active(); margin-left: 5px; };
 @dashboard-side-menu-btn-logout:                { .icon-fa(lock); @_default_style(); margin-left: 6px; };
 @dashboard-side-menu-btn-logout-active:         { .icon-fa(lock); @_default_style_active(); margin-left: 6px; };
+
+// Company Cart (top right)
+//--------------------------------------
+@dashboard-cart-width:             100px;
+@dashboard-cart-height:            70px;
+@dashboard-cart-bg-color:          @bg-inverse-color;
+@dashboard-cart-text-size:         25px;
+@dashboard-cart-border-radius:     0 0 0 6px;
+@dashboard-cart-border-color:      @text-inverse-color;
 
 // Company select box (top right)
 //--------------------------------------
@@ -373,6 +384,11 @@ body {
 
 @dashboard-apps-tile-add-color:                 @dashboard-apps-tile-text-color;
 @dashboard-apps-tile-add-bg-color:              @dashboard-apps-tile-bg-color;
+
+/*-----------------------------------------------------------------------*/
+/*                        Dashboard > App Management Section                       */
+/*-----------------------------------------------------------------------*/
+@dashboard-app-management-border-color:         #000;
 
 /*-----------------------------------------------------------------------*/
 /*                      Dashboard > My account Section                   */
@@ -1447,6 +1463,34 @@ ul.dock > li.prev img.app-logo {
   }
 }
 
+dashboard-company-cart {
+  .company-cart {
+    position: absolute;
+    right: 300px;
+    width: @dashboard-cart-width;
+    height: @dashboard-cart-height;
+    background-color: @dashboard-cart-bg-color;
+    font-size: @dashboard-cart-text-size;
+    border-left: 1px solid @dashboard-cart-border-color;
+    border-bottom: 1px solid @dashboard-cart-border-color;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    i {
+      font-size: 37px;
+      vertical-align: bottom;
+    }
+  }
+}
+
 dashboard-company-selectbox {
   /*-----------------------------------------------------------------------*/
   /*                       Company Select Box                              */
@@ -1766,6 +1810,14 @@ dashboard-menu {
       @dashboard-side-menu-btn-impac-active();
     }
 
+    .dashboard-button i.dhb-icon-app-management {
+      @dashboard-side-menu-btn-app-management();
+    }
+    .dashboard-button.active i.dhb-icon-app-management,
+    .dashboard-button:hover i.dhb-icon-app-management {
+      @dashboard-side-menu-btn-app-management-active();
+    }
+
     .dashboard-button i.dhb-icon-account {
       @dashboard-side-menu-btn-account();
     }
@@ -1811,6 +1863,18 @@ dashboard-menu {
 impersonification-notification {
   .notifications {
     padding-top: 70px;
+  }
+}
+
+#address {
+  .address-sub-label {
+    font-size: x-small;
+    font-weight: lighter;
+    font-style: italic;
+    opacity: 0.6;
+  }
+  .country-select {
+    display:none;
   }
 }
 
@@ -2463,6 +2527,42 @@ form.editable-wrap .editable-controls input {
       &:hover {
         color: @brand-warning;
       }
+    }
+  }
+}
+
+.dashboard-apps-management {
+  .apps-wrapper {
+    border: 1px solid @dashboard-app-management-border-color;
+    border-radius: 3px;
+    padding: 20px;
+  }
+  .app-section {
+    border-bottom: 1px solid @dashboard-app-management-border-color;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .app-logo-wrapper,
+  .app-btn-events,
+  .app-info {
+    flex: 1;
+  }
+
+  .app-btn-events {
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  .app-info {
+    span, strong {
+      display: block;
     }
   }
 }
@@ -3361,7 +3461,13 @@ form.editable-wrap .editable-controls input {
 }
 
 #provisioning-confirm {
+  .add-to-cart {
+    padding: 3px 9px 3px 7px;
 
+    i {
+      font-size: 25px;
+    }
+  }
 }
 
 #provisioning-details {
@@ -3418,6 +3524,10 @@ form.editable-wrap .editable-controls input {
 }
 
 #subscription {
+  a {
+    cursor: pointer;
+  }
+
   .well {
     h3 {
       margin-top: 0;
@@ -3851,6 +3961,16 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+.dashboard-app-management {
+  .margin-left-20 {
+    margin-left: 20px;
+  }
+
+  .order-histroy {
+    background-color: white;
+  }
+}
+
 .dashboard-organization {
   // credit card icons display modes
   //---------------------------------
@@ -3863,6 +3983,17 @@ form.editable-wrap .editable-controls input {
   [class^="mnoe-icon-cc-icons-mno-cc-"].enabled,
   [class*="mnoe-icon-cc-icons-mno-cc-"].enabled {
     opacity: 1;
+  }
+}
+
+.settings-address {
+  .address-sub-label {
+    margin-bottom: -15px;
+  }
+
+  .address-field {
+    margin-left: 25%;
+    margin-top: -12px;
   }
 }
 
