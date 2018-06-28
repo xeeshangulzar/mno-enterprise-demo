@@ -6,10 +6,10 @@
   version "1.6.10"
   resolved "git+https://git@github.com/maestrano/impac-angular.git#79df9fca8bcf4b5b09ab2edb4b18c461c5700bd1"
 
-"mno-enterprise-angular@https://github.com/iseessel/mno-enterprise-angular.git#feature/mnoe-1113-frontend-cancel-sub":
+"mno-enterprise-angular@https://github.com/iseessel/mno-enterprise-angular.git#bug/1110-order-details-copying-over":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mno-enterprise-angular.git#ddf0062a080d81f5a47e2bbde63b52ad148553ab"
+  resolved "https://github.com/iseessel/mno-enterprise-angular.git#911ba5b7357b785f93e519870f1e2ba6e9285994"
 
-"mnoe-admin-panel@https://github.com/iseessel/mnoe-admin-panel.git#feature/429-customer-request-edit-actions":
+"mnoe-admin-panel@https://github.com/iseessel/mnoe-admin-panel.git#bug/mnoe-1110-custom-data-being-copied-over":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mnoe-admin-panel.git#8622d23e625e763d8be944e53cc68cf570da3710"
+  resolved "https://github.com/iseessel/mnoe-admin-panel.git#c4b6a0a99ab49e07fcced86767e90ddf4eeec3d9"
