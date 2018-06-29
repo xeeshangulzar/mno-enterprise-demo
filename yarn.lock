@@ -8,8 +8,8 @@
 
 "mno-enterprise-angular@https://github.com/iseessel/mno-enterprise-angular.git#bug/1110-order-details-copying-over":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mno-enterprise-angular.git#911ba5b7357b785f93e519870f1e2ba6e9285994"
+  resolved "https://github.com/iseessel/mno-enterprise-angular.git#c773dfdb734e9ba0cb7e41ae73a7e073fcb52aee"
 
 "mnoe-admin-panel@https://github.com/iseessel/mnoe-admin-panel.git#bug/mnoe-1110-custom-data-being-copied-over":
   version "2.0.0-dev"
-  resolved "https://github.com/iseessel/mnoe-admin-panel.git#1fe610b1532dd2cd39a69addc2c731f3fbefd061"
+  resolved "https://github.com/iseessel/mnoe-admin-panel.git#895e2268c6e9d93e6d456edfce2e154298565953"
