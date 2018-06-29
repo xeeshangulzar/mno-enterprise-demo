@@ -7,7 +7,7 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise', branch: '4.0'
+gem 'mno-enterprise', github: 'jin521/mno-enterprise', branch: 'MNOE-1204-update-locales'
 
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
